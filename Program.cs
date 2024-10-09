@@ -6,7 +6,7 @@
         {
             IEjecutarEjercicio ejercicio;
 
-            ejercicio = new Ejercicio4();
+            ejercicio = new Ejercicio10();
             ejercicio.Ejecutar();
 
         }
