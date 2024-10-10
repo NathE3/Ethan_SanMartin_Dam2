@@ -11,49 +11,58 @@ namespace EjerciciosC_
     {
         public void Ejecutar()
         {
-            Console.WriteLine("Dame una serie de numeros separados por espacio");
+            Console.WriteLine("Dame una serie de numeros separados por ,");
             string? numeros = Console.ReadLine();
             string[] numerosArray = numeros.Split(',');
-            Dictionary<int,int> arrayNumeros = new Dictionary<int,int>();
+            Dictionary<int, int> arrayNumeros = new Dictionary<int, int>();
 
             foreach (string numero in numerosArray)
             {
                 int.TryParse(numero, out int num);
-                arrayNumeros.Add(num,0);
+
+                if (!arrayNumeros.ContainsKey(num))
+                {
+                    arrayNumeros.Add(num, 1);
+                }
+                else
+                {
+                    arrayNumeros[num]++;
+                }
+
             }
 
-            buscarRepetidosImpares(arrayNumeros);
+            Dictionary<int, int> listaImpares = buscarRepetidosImpares(arrayNumeros);
+            mostrarImpares(listaImpares);
 
         }
 
-        public void buscarRepetidosImpares(Dictionary<int,int> lista) {
-            int numeroVeces = 0;
-            Dictionary<int,int> listaImpares = new Dictionary<int,int>();
+        public Dictionary<int, int> buscarRepetidosImpares(Dictionary<int, int> lista)
+        {
+
+            Dictionary<int, int> listaImpares = new Dictionary<int, int>();
+
             foreach (KeyValuePair<int, int> numero in lista)
             {
-                if (!lista.ContainsKey(numero.Key))
+                if (numero.Value % 2 != 0)
                 {
-                    lista.Add(numero.Key, 1);
-
+                    listaImpares.Add(numero.Key, numero.Value);
                 }
-                else if (lista.ContainsKey(numero.Key)) {
-                    lista.Add((numero.Value + 1));
-                }
-            
             }
+            return listaImpares;
 
-            foreach (KeyValuePair<int, int> numero in lista) {
-                {
-                    if (numero.Value % 2 == 1)
-                    {
-                        listaImpares.Add(numero.Key, numero.Value);
-
-                    }
-                }
-                Console.WriteLine($"Tus números impares es {listaImpares}");
 
         }
-        
+
+
+        public void mostrarImpares(Dictionary<int, int> listaImpares)
+        {
+
+            Console.WriteLine("Tus números repetidos son:");
+            foreach (KeyValuePair<int, int> impar in listaImpares)
+            {
+                Console.WriteLine($"Número: {impar.Key}, Veces: {impar.Value}");
+            }
+
         }
     }
 }

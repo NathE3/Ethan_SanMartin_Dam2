@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjerciciosC_
 {
-    internal class Ejercicio2 : IEjecutarEjercicio
+     class Ejercicio2 : IEjecutarEjercicio
     {
         public void Ejecutar()
         {
