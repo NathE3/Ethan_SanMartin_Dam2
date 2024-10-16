@@ -1,0 +1,46 @@
+﻿<Window x:Class="Sukaton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sukaton"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="403" Width="300">
+
+
+    <Grid Margin="0,0,10,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273" Height="39"/>
+
+
+        <Button x:Name="boton1" Content="1" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="boton2" Content="2" HorizontalAlignment="Left" Margin="70,80,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="boton3" Content="3" HorizontalAlignment="Left" Margin="130,80,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="sumar"  Content="+" HorizontalAlignment="Left" Margin="190,80,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Operador_Click"/>
+
+
+        <Button x:Name="boton4" Content="4" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="boton5" Content="5" HorizontalAlignment="Left" Margin="70,140,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="boton6" Content="6" HorizontalAlignment="Left" Margin="130,140,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="restar" Content="-" HorizontalAlignment="Left" Margin="190,140,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Operador_Click"/>
+
+
+        <Button x:Name="boton7" Content="7" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="boton8" Content="8" HorizontalAlignment="Left" Margin="70,200,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="boton9" Content="9" HorizontalAlignment="Left" Margin="130,200,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="multiplicar" Content="x" HorizontalAlignment="Left" Margin="190,200,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Operador_Click"/>
+
+        <Button x:Name="boton0"  Content="0" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Numero_Click"/>
+        <Button x:Name="botonpi" Content="π" HorizontalAlignment="Left" Margin="70,260,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Pi_Click"/>
+        <Button x:Name="dividir" Content="÷" HorizontalAlignment="Left" Margin="130,260,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Operador_Click"/>
+        <Button x:Name="igual"   Content="=" HorizontalAlignment="Left" Margin="190,260,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="20" Click="Igual_Click"/>
+
+
+        <Button x:Name="borrar" Content="C" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top" Height="50" Width="230" FontSize="20" Click="Borrar_Click"/>
+
+    </Grid>
+</Window>
