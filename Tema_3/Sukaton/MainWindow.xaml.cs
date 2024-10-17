@@ -11,7 +11,7 @@ namespace Sukaton
     public partial class MainWindow : Window
     {
         private double valorActual = 0;
-        private double resultado = 0;
+        private double primerNumero = 0;
         private string operadorActual = "";
         private bool nuevaOperacion = false;
 
@@ -22,18 +22,19 @@ namespace Sukaton
 
         private void Numero_Click(object listener, RoutedEventArgs e)
         {
-            Button boton = (Button)listener;
-
-
-            if (nuevaOperacion)
+            if (listener is Button boton)
             {
-                textBox.Clear();
-                nuevaOperacion = false;
+                if (nuevaOperacion)
+                {
+                    textBox.Clear();
+                    nuevaOperacion = false;
+                }
+
+
+                textBox.Text += boton.Content.ToString();
             }
-
-
-            textBox.Text += boton.Content.ToString();
         }
+    
 
 
         private void Operador_Click(object listener, RoutedEventArgs e)
@@ -48,7 +49,7 @@ namespace Sukaton
                 return;
             }
 
-            if (!double.TryParse(textBox.Text, out resultado))
+            if (!double.TryParse(textBox.Text, out primerNumero))
             {
                 textBox.Text = "Error: entrada inválida";
                 return;
@@ -78,17 +79,17 @@ namespace Sukaton
             switch (operadorActual)
             {
                 case "+":
-                    resultado += valorActual;
+                    primerNumero += valorActual;
                     break;
                 case "-":
-                    resultado -= valorActual;
+                    primerNumero -= valorActual;
                     break;
                 case "x":
-                    resultado *= valorActual;
+                    primerNumero *= valorActual;
                     break;
                 case "÷":
                     if (valorActual != 0)
-                        resultado /= valorActual;
+                        primerNumero /= valorActual;
                     else
                     {
                         textBox.Text = "Error: División por cero";
@@ -101,7 +102,7 @@ namespace Sukaton
             }
 
 
-            textBox.Text = resultado.ToString();
+            textBox.Text = primerNumero.ToString();
             nuevaOperacion = true;
         }
 
@@ -116,7 +117,7 @@ namespace Sukaton
         private void Borrar_Click(object listener, RoutedEventArgs e)
         {
             textBox.Clear();
-            resultado = 0;
+            primerNumero = 0;
             valorActual = 0;
             operadorActual = "";
             nuevaOperacion = false;

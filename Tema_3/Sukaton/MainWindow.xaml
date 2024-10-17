@@ -42,5 +42,5 @@
 
         <Button x:Name="borrar" Content="C" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top" Height="50" Width="230" FontSize="20" Click="Borrar_Click"/>
 
-    </Grid>
+    </Grid>l
 </Window>
