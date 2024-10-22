@@ -20,7 +20,7 @@ namespace CambioDivisa
         {
         
             InitializeComponent();
-            leer();
+            Leer();
 
         }
 
@@ -28,23 +28,27 @@ namespace CambioDivisa
         double resultado;
         string divisaOrigen;
         string divisaDestino;
-        private const double euroDolar = 1.05;
-        private const double libraDolar = 1.30;
-        string ruta = "D:\\historial.txt";
+
+        private const double EURO_DOLLAR = 1.05;
+        private const double LIBRA_DOLLAR = 1.30;
+        private const string RUTA = "D:\\historial.txt";
+        private const string EURO = "Euro";
+        private const string LIBRA = "Libra";
+        private const string DOLLAR = "Dollar";
 
 
         private void CargarValor(string mensajeHistorial)
         {
-            StreamWriter escribir = new StreamWriter(ruta, true);
+            StreamWriter escribir = new StreamWriter(RUTA, true);
             escribir.WriteLine(mensajeHistorial);
             escribir.Close();
         }
 
-        private void leer() 
+        private void Leer() 
         {
-            if (File.Exists(ruta))
+            if (File.Exists(RUTA))
             {
-                historial.Content = File.ReadAllText(ruta);
+                historial.Content = File.ReadAllText(RUTA);
             }
         }
         
@@ -55,38 +59,38 @@ namespace CambioDivisa
                 return;
 
            
-            divisaOrigen = (primeraDivisa.SelectedItem as ComboBoxItem).Content.ToString();
-            divisaDestino = (segundaDivisa.SelectedItem as ComboBoxItem).Content.ToString();
+            divisaOrigen = (primeraDivisa.SelectedItem as ComboBoxItem)?.Content?.ToString()??"Resultado erroneo";
+            divisaDestino = (segundaDivisa.SelectedItem as ComboBoxItem)?.Content?.ToString()??"Resultado erroneo";
 
            
-            if (divisaOrigen == "Euro" && divisaDestino == "Libra")
+            if (divisaOrigen == EURO && divisaDestino == LIBRA)
                 {
-                resultado = (cantidad * euroDolar) / libraDolar;
+                resultado = (cantidad * EURO_DOLLAR) / LIBRA_DOLLAR;
                 }
 
-            else if (divisaOrigen == "Libra" && divisaDestino == "Euro")
+            else if (divisaOrigen == LIBRA && divisaDestino == EURO)
                 {
-                resultado = (cantidad * libraDolar) / euroDolar;
+                resultado = (cantidad * LIBRA_DOLLAR) / EURO_DOLLAR;
                 }
 
-            else if (divisaOrigen == "Dollar" && divisaDestino == "Euro")
+            else if (divisaOrigen == DOLLAR && divisaDestino == EURO)
                 {
-                resultado = cantidad / euroDolar;
+                resultado = cantidad / EURO_DOLLAR;
                 }
 
-            else if (divisaOrigen == "Euro" && divisaDestino == "Dollar")
+            else if (divisaOrigen == EURO && divisaDestino == DOLLAR)
                 {
-                resultado = cantidad * euroDolar;
+                resultado = cantidad * EURO_DOLLAR;
                 }
 
-            else if (divisaOrigen == "Dollar" && divisaDestino == "Libra")
+            else if (divisaOrigen == DOLLAR && divisaDestino == LIBRA)
                 {
-                resultado = cantidad / libraDolar;
+                resultado = cantidad / LIBRA_DOLLAR;
                 }
 
-            else if (divisaOrigen == "Libra" && divisaDestino == "Dollar")
+            else if (divisaOrigen == LIBRA && divisaDestino == DOLLAR)
                 {
-                resultado = cantidad * libraDolar;
+                resultado = cantidad * LIBRA_DOLLAR;
                  }
 
             else
@@ -97,7 +101,7 @@ namespace CambioDivisa
             }
 
 
-        private void boton_1_Click(object sender, RoutedEventArgs e)
+        private void Btn_Convertir(object sender, RoutedEventArgs e)
         {
            
             if (string.IsNullOrEmpty(importe.Text))
@@ -112,10 +116,6 @@ namespace CambioDivisa
                 return;
             }
 
-         
-            Calcular(null, null);
-
-    
             MostrarResultadoConFecha();
         }
 
@@ -127,10 +127,17 @@ namespace CambioDivisa
        
             string mensajeHistorial = $"Fecha: {fechaActual} | {cantidad} {divisaOrigen} = {resultado.ToString("F2")} {divisaDestino}";
             CargarValor(mensajeHistorial);
-            leer();
+            Leer();
             
         }
 
+        private void CambioMoneda_Click(object sender, RoutedEventArgs e)
+        {
+            int aux;
+            aux = primeraDivisa.SelectedIndex;
+            primeraDivisa.SelectedIndex  = segundaDivisa.SelectedIndex;
+            segundaDivisa.SelectedIndex = aux;
+        }
     }
 
 

@@ -30,7 +30,7 @@
         </ComboBox>
 
       
-        <Button Name="boton_1" Content="Convertir" HorizontalAlignment="Right" Margin="0,100,10,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="14" Background="#007ACC" Foreground="White" Click="boton_1_Click"/>
+        <Button Name="boton_1" Content="Convertir" HorizontalAlignment="Right" Margin="0,100,10,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="14" Background="#007ACC" Foreground="White" Click="Btn_Convertir"/>
 
        
         <Label Content="Historial de conversiones:" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="180" FontSize="14" FontWeight="Bold"/>
@@ -38,6 +38,7 @@
         <ScrollViewer HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" Width="510" Height="200" BorderBrush="#007ACC" BorderThickness="1">
             <Label Name="historial" Content="" Padding="5" FontSize="12"/>
         </ScrollViewer>
+        <Button x:Name="CambioMoneda" Content="↔" HorizontalAlignment="Left" Margin="305,41,0,0" VerticalAlignment="Top" Click="CambioMoneda_Click" Width="40" FontSize="14"/>
     </Grid>
 </Window>
 
