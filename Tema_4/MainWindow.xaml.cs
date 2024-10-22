@@ -29,6 +29,7 @@ namespace CambioDivisa
         string divisaOrigen;
         string divisaDestino;
 
+        private const double DOLLAR_MONEDA = 1.0;
         private const double EURO_DOLLAR = 1.05;
         private const double LIBRA_DOLLAR = 1.30;
         private const string RUTA = "D:\\historial.txt";
@@ -54,11 +55,13 @@ namespace CambioDivisa
         
         private void Calcular(object sender, SelectionChangedEventArgs e)
             {
-           
-            if (primeraDivisa.SelectedItem == null || segundaDivisa.SelectedItem == null)
-                return;
 
+            if (primeraDivisa.SelectedItem == null || segundaDivisa.SelectedItem == null)
+            {
+                return;
+            }
            
+
             divisaOrigen = (primeraDivisa.SelectedItem as ComboBoxItem)?.Content?.ToString()??"Resultado erroneo";
             divisaDestino = (segundaDivisa.SelectedItem as ComboBoxItem)?.Content?.ToString()??"Resultado erroneo";
 
@@ -116,6 +119,7 @@ namespace CambioDivisa
                 return;
             }
 
+            Calcular(null,null);
             MostrarResultadoConFecha();
         }
 
