@@ -28,7 +28,7 @@ namespace GestionArchivos.ViewModel
         private void CargarDatos()
         {
             // Obtener la ruta del proyecto,  carpeta bin
-            string carpetaProyectoRaiz = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
+            string carpetaProyectoRaiz = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Utils.Constants.raiz));
 
             // crear o acceder a los archivos en carpeta "pruebaClase"
             string carpetaDestino = Path.Combine(carpetaProyectoRaiz, "pruebaClase");
@@ -56,9 +56,9 @@ namespace GestionArchivos.ViewModel
                 string fileName = PromptForName("Introduce el nombre de tu archivo:");
                 if (!string.IsNullOrWhiteSpace(fileName)) 
                     {
-                string folderPath = Path.Combine(@"..\..\pruebaClase", fileName+".txt");
+                string folderPath = Path.Combine(Utils.Constants.path, fileName+".txt");
                 File.Create(folderPath).Close();
-                Item.Add(new DatosCarpetasArchivos(fileName, @"..\..\pruebaClase", false));
+                Item.Add(new DatosCarpetasArchivos(fileName, Utils.Constants.path, false));
                 
                     }
             }
@@ -70,9 +70,9 @@ namespace GestionArchivos.ViewModel
             string folderName = PromptForName("Introduce el nombre de tu archivo:");
             if (!string.IsNullOrWhiteSpace(folderName))
             {
-                string folderPath = Path.Combine(@"..\..\pruebaClase", folderName);
-                Directory.CreateDirectory(@"..\..\pruebaClase");
-                Item.Add(new DatosCarpetasArchivos(folderName, @"..\..\pruebaClase",true));
+                string folderPath = Path.Combine(Utils.Constants.path, folderName);
+                Directory.CreateDirectory(Utils.Constants.path);
+                Item.Add(new DatosCarpetasArchivos(folderName, Utils.Constants.path, true));
             }
         }
 
