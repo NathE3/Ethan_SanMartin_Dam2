@@ -1,10 +1,5 @@
-﻿using GestionArchivos.Interface;
-using GestionArchivos.Service;
-using GestionArchivos.View;
-using GestionArchivos.ViewModel;
+﻿using GestionArchivos.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
-using System.Configuration;
-using System.Data;
 using System.Windows;
 
 namespace GestionArchivos

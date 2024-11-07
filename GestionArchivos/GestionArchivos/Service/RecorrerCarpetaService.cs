@@ -1,7 +1,5 @@
 ﻿using GestionArchivos.Interface;
 using GestionArchivos.Utils;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 
