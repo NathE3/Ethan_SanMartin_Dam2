@@ -1,0 +1,52 @@
+﻿<Window x:Class="GestionArchivos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:GestionArchivos.ViewModel" 
+        xmlns:view="clr-namespace:GestionArchivos.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance Type=viewModel:MainViewModel}">
+
+
+
+
+    <Window.Resources>
+        
+        <DataTemplate DataType="{x:Type viewModel:InfoViewModel}">
+            <view:InfoView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:InicioViewModel}">
+            <view:InicioView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:FileViewModel}">
+            <view:FileView/>
+        </DataTemplate>
+        
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Menu FontSize="15" Grid.Row="0">
+            <MenuItem Header="_Info" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding InfoViewModel}"/>
+
+
+            <MenuItem Header="_File">
+                <MenuItem Header="_Guardar"/>
+                <MenuItem Header="_Borrar"/>
+                <MenuItem Header="_Abrir" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding FileViewModel}"/>
+            </MenuItem>
+        </Menu>
+
+        <ContentControl  Grid.Row="1" Content="{Binding SelectedViewModel}"/>
+
+    </Grid>
+</Window>
+
+

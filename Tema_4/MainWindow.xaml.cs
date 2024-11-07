@@ -53,56 +53,59 @@ namespace CambioDivisa
             }
         }
         
-        private void Calcular(object sender, SelectionChangedEventArgs e)
-            {
+        private void Calcular(object sender , SelectionChangedEventArgs e)
+        {
+            Calcular_Divisas();
+        }
 
+        private void Calcular_Divisas()
+        {
             if (primeraDivisa.SelectedItem == null || segundaDivisa.SelectedItem == null)
             {
                 return;
             }
-           
 
-            divisaOrigen = (primeraDivisa.SelectedItem as ComboBoxItem)?.Content?.ToString()??"Resultado erroneo";
-            divisaDestino = (segundaDivisa.SelectedItem as ComboBoxItem)?.Content?.ToString()??"Resultado erroneo";
 
-           
+            divisaOrigen = (primeraDivisa.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "Resultado erroneo";
+            divisaDestino = (segundaDivisa.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "Resultado erroneo";
+
+
             if (divisaOrigen == EURO && divisaDestino == LIBRA)
-                {
+            {
                 resultado = (cantidad * EURO_DOLLAR) / LIBRA_DOLLAR;
-                }
-
-            else if (divisaOrigen == LIBRA && divisaDestino == EURO)
-                {
-                resultado = (cantidad * LIBRA_DOLLAR) / EURO_DOLLAR;
-                }
-
-            else if (divisaOrigen == DOLLAR && divisaDestino == EURO)
-                {
-                resultado = cantidad / EURO_DOLLAR;
-                }
-
-            else if (divisaOrigen == EURO && divisaDestino == DOLLAR)
-                {
-                resultado = cantidad * EURO_DOLLAR;
-                }
-
-            else if (divisaOrigen == DOLLAR && divisaDestino == LIBRA)
-                {
-                resultado = cantidad / LIBRA_DOLLAR;
-                }
-
-            else if (divisaOrigen == LIBRA && divisaDestino == DOLLAR)
-                {
-                resultado = cantidad * LIBRA_DOLLAR;
-                 }
-
-            else
-                {
-             
-                resultado = cantidad;
-                }
             }
 
+            else if (divisaOrigen == LIBRA && divisaDestino == EURO)
+            {
+                resultado = (cantidad * LIBRA_DOLLAR) / EURO_DOLLAR;
+            }
+
+            else if (divisaOrigen == DOLLAR && divisaDestino == EURO)
+            {
+                resultado = cantidad / EURO_DOLLAR;
+            }
+
+            else if (divisaOrigen == EURO && divisaDestino == DOLLAR)
+            {
+                resultado = cantidad * EURO_DOLLAR;
+            }
+
+            else if (divisaOrigen == DOLLAR && divisaDestino == LIBRA)
+            {
+                resultado = cantidad / LIBRA_DOLLAR;
+            }
+
+            else if (divisaOrigen == LIBRA && divisaDestino == DOLLAR)
+            {
+                resultado = cantidad * LIBRA_DOLLAR;
+            }
+
+            else
+            {
+
+                resultado = cantidad;
+            }
+        }
 
         private void Btn_Convertir(object sender, RoutedEventArgs e)
         {
@@ -119,7 +122,7 @@ namespace CambioDivisa
                 return;
             }
 
-            Calcular(null,null);
+            Calcular_Divisas();
             MostrarResultadoConFecha();
         }
 
