@@ -2,7 +2,7 @@
 
 namespace GestionArchivos.Utils
 {
-    public class DatosCarpetasArchivos : ICarpetasArchivos
+    public class DatosCarpetasArchivos 
     {
         public DatosCarpetasArchivos(string nombre,string ruta,bool esCarpeta) 
         {

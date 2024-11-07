@@ -1,4 +1,6 @@
 ﻿using GestionArchivos.ViewModel;
+using GestionArchivos.Service;
+using GestionArchivos.Interface;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
@@ -39,7 +41,7 @@ namespace GestionArchivos
             services.AddTransient<InicioViewModel>();
 
             //Services
-          
+            services.AddSingleton<IRecorrerCarpeta,RecorrerCarpetaService>();
             return services.BuildServiceProvider();
         }
     }

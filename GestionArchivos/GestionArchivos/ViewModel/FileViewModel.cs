@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
-using GestionArchivos.Service;
+using GestionArchivos.Interface;
 using GestionArchivos.Utils;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -10,12 +10,16 @@ namespace GestionArchivos.ViewModel
 {
     public partial class FileViewModel : ViewModelBase
     {
+        //Importante crear la inyeccion de servicios
+        private readonly IRecorrerCarpeta _recorrerCarpeta;
+
         //importante crearla ObservableCollection para que se actualice nada mas crearlo 
         public ObservableCollection<DatosCarpetasArchivos> Item { get; set; }
 
-        //meterla en el contructor para poder utilizarla en el FileViewModel
-        public FileViewModel()
+        //meterla en el contructor para poder utilizarla en el FileViewModel, hay que meterlo en la App y ademas pasarlo como parametro.
+        public FileViewModel(IRecorrerCarpeta recorrerCarpeta)
         {
+            _recorrerCarpeta = recorrerCarpeta;
             Item = new ObservableCollection<DatosCarpetasArchivos>();
             CargarDatos();
         }
@@ -31,9 +35,7 @@ namespace GestionArchivos.ViewModel
 
             try
             {
-              
-                var service = new RecorrerCarpetaService();
-                var datos = service.ProcesarCarpeta(carpetaDestino); 
+                var datos = _recorrerCarpeta.ProcesarCarpeta(carpetaDestino); 
 
                 // Llenar la colección Item con los datos
                 foreach (var dato in datos)
