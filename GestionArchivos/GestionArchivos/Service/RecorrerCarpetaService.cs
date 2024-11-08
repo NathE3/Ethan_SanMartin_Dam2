@@ -38,9 +38,9 @@ namespace GestionArchivos.Service
                     }
 
                     // Agregar los datos a la lista
-                    datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "nuevaCarpeta", Ruta = nuevaCarpeta, EsCarpeta = true });
-                    datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "archivo1.txt", Ruta = archivo1, EsCarpeta = false });
-                    datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "archivo2.txt", Ruta = archivo2, EsCarpeta = false });
+                    datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "nuevaCarpeta", Ruta = nuevaCarpeta, EsCarpeta = true, Imagen = Constants.ICONO_CARPETA });
+                    datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "archivo1.txt", Ruta = archivo1, EsCarpeta = false , Imagen = Constants.ICONO_ARCHIVO });
+                    datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "archivo2.txt", Ruta = archivo2, EsCarpeta = false , Imagen = Constants.ICONO_ARCHIVO });
                 }
                 else
                 {
@@ -48,9 +48,11 @@ namespace GestionArchivos.Service
                     string[] archivos = Directory.GetFileSystemEntries(path);
                     foreach (var archivo in archivos)
                     {
-                      
-                     // Si es un archivo o carpeta, agregar a la lista
-                     datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = Path.GetFileName(archivo), Ruta = archivo, EsCarpeta = Directory.Exists(archivo)});
+
+                        // Si es un archivo o carpeta, agregar a la lista
+                        datosCarpetasArchivos.Add(new DatosCarpetasArchivos
+                        {
+                            Nombre = Path.GetFileName(archivo),Ruta = archivo,EsCarpeta = Directory.Exists(archivo),Imagen = Directory.Exists(archivo) ? Constants.ICONO_CARPETA : Constants.ICONO_ARCHIVO});
                         
                     }
                 }

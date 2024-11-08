@@ -19,7 +19,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Image Source="{Binding EsCarpeta, Converter={StaticResource CarpetaOarchivo}}" Width="24" Height="24"/>
+                        <Image Source="{Binding Imagen}" Width="24" Height="24"/>
                         <TextBlock Text="{Binding Nombre}" Margin="5,0,0,0"/>
                     </StackPanel>
                 </DataTemplate>

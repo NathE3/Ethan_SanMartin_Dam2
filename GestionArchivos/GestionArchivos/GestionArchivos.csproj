@@ -15,9 +15,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\iconoArchivo.png" />
-    <Resource Include="Resources\iconoCarpeta.png" />
-    <Resource Include="Resources\itachi.jpg" />
+    <Resource Include="Resources\iconoArchivo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\iconoCarpeta.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\itachi.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 	<ItemGroup>
