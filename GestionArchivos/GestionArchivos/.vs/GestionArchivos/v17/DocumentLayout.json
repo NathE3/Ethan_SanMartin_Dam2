@@ -1,0 +1,162 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\gestionarchivos\\gestionarchivos\\viewmodel\\fileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:viewmodel\\fileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\gestionarchivos\\gestionarchivos\\view\\fileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:view\\fileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\gestionarchivos\\gestionarchivos\\view\\infoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:view\\infoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\gestionarchivos\\gestionarchivos\\viewmodel\\infoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:viewmodel\\infoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\gestionarchivos\\gestionarchivos\\utils\\datoscarpetasarchivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:utils\\datoscarpetasarchivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\gestionarchivos\\gestionarchivos\\service\\recorrercarpetaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:service\\recorrercarpetaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\gestionarchivos\\gestionarchivos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\gestionarchivos\\gestionarchivos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\gestionarchivos\\gestionarchivos\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InfoView.xaml",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\View\\InfoView.xaml",
+              "RelativeDocumentMoniker": "View\\InfoView.xaml",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\View\\InfoView.xaml",
+              "RelativeToolTip": "View\\InfoView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-28T19:18:56.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InfoViewModel.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\ViewModel\\InfoViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\InfoViewModel.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\ViewModel\\InfoViewModel.cs",
+              "RelativeToolTip": "ViewModel\\InfoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T19:18:54.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DatosCarpetasArchivos.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\Utils\\DatosCarpetasArchivos.cs",
+              "RelativeDocumentMoniker": "Utils\\DatosCarpetasArchivos.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\Utils\\DatosCarpetasArchivos.cs",
+              "RelativeToolTip": "Utils\\DatosCarpetasArchivos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T19:14:25.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RecorrerCarpetaService.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\Service\\RecorrerCarpetaService.cs",
+              "RelativeDocumentMoniker": "Service\\RecorrerCarpetaService.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\Service\\RecorrerCarpetaService.cs",
+              "RelativeToolTip": "Service\\RecorrerCarpetaService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T19:13:48.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T15:59:25.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T15:59:16.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-12T15:58:02.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileViewModel.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\ViewModel\\FileViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\FileViewModel.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\ViewModel\\FileViewModel.cs",
+              "RelativeToolTip": "ViewModel\\FileViewModel.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwBAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T15:13:25.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileView.xaml",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\View\\FileView.xaml",
+              "RelativeDocumentMoniker": "View\\FileView.xaml",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\GestionArchivos\\GestionArchivos\\View\\FileView.xaml",
+              "RelativeToolTip": "View\\FileView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-08T17:32:07.707Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

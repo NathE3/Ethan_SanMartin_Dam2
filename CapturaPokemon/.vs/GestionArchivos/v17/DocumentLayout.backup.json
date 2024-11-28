@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\pokemoncaptura\\capturapokemon\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\pokemoncaptura\\capturapokemon\\view\\fileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:view\\fileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\pokemoncaptura\\capturapokemon\\viewmodel\\fileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:viewmodel\\fileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\pokemoncaptura\\capturapokemon\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|d:\\ejerciciosdec\\ejerciciosc\\pokemoncaptura\\capturapokemon\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T15:59:25.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T15:59:16.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-12T15:58:02.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileViewModel.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\ViewModel\\FileViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\FileViewModel.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\ViewModel\\FileViewModel.cs",
+              "RelativeToolTip": "ViewModel\\FileViewModel.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T15:13:25.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileView.xaml",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\View\\FileView.xaml",
+              "RelativeDocumentMoniker": "View\\FileView.xaml",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\PokemonCaptura\\CapturaPokemon\\View\\FileView.xaml",
+              "RelativeToolTip": "View\\FileView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-08T17:32:07.707Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
