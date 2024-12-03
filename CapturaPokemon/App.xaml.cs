@@ -42,6 +42,7 @@ namespace CapturaPokemon
 
             //Services
             services.AddSingleton<IPokemonService,PokemonService>();
+            services.AddSingleton<IPokemonServiceToApi,PokemonServiceToApi>();
             return services.BuildServiceProvider();
         }
     }

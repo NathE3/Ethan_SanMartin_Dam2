@@ -22,5 +22,20 @@ namespace CapturaPokemon.Utils
                 }
            
         }
+
+        public static async Task<HttpResponseMessage> Post(string url, T data)
+        {
+            using HttpClient httpClient = new HttpClient();
+            {
+                // Serializar el objeto 'data' a JSON
+                string jsonContent = JsonSerializer.Serialize(data);
+
+                // Crear el contenido HTTP con el tipo adecuado para enviar JSON
+                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+                // Realizar la solicitud POST
+                return await httpClient.PostAsync(url, content);
+            }
+        }
     }
 }

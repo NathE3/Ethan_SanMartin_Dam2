@@ -175,11 +175,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\EjerciciosDeC\\EjerciciosC\\CapturaPokemon\\CapturaPokemon.csproj",
+      "projectUniqueName": "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\CapturaPokemon.csproj",
       "projectName": "CapturaPokemon",
-      "projectPath": "D:\\EjerciciosDeC\\EjerciciosC\\CapturaPokemon\\CapturaPokemon.csproj",
+      "projectPath": "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\CapturaPokemon.csproj",
       "packagesPath": "C:\\Users\\Vespertino\\.nuget\\packages\\",
-      "outputPath": "D:\\EjerciciosDeC\\EjerciciosC\\CapturaPokemon\\obj\\",
+      "outputPath": "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

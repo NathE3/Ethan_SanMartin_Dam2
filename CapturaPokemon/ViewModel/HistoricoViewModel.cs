@@ -1,5 +1,5 @@
 ﻿
-using CapturaPokemon.Utils;
+using CapturaPokemon.Models;
 using CapturaPokemon.Interface;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;

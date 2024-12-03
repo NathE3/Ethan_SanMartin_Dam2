@@ -1,4 +1,4 @@
-﻿using CapturaPokemon.Utils;
+﻿using CapturaPokemon.Models;
 
 
 namespace CapturaPokemon.Interface

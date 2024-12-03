@@ -9,9 +9,10 @@ namespace CapturaPokemon.Utils
 {
     public static class Constants
     {
-        public const string MISSINGNO_IMAGE_PATH = "../Resources/uchiha.png";
         public const string ATTACK = "attack";
         public const string HP = "hp";
         public const string POKE_URL = "https://pokeapi.co/api/v2/pokemon/";
-    }
+        public const string POKEUS_URL = "http://localhost:5279/api/pokemon/";
+        public const int VIDAMAXIMA = 2000;
+    }   
 }

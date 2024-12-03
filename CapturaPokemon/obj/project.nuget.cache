@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c4sjEQBzi9I=",
+  "dgSpecHash": "81w60vL3tGI=",
   "success": true,
-  "projectFilePath": "D:\\EjerciciosDeC\\EjerciciosC\\CapturaPokemon\\CapturaPokemon.csproj",
+  "projectFilePath": "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\CapturaPokemon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vespertino\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
     "C:\\Users\\Vespertino\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
