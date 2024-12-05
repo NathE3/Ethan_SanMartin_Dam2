@@ -7,17 +7,6 @@ namespace CapturaPokemon.Service
 
    public class PokemonServiceToApi : IPokemonServiceToApi
    {
-        public static List<PokemonDTO>? ListaPokemon;
-
-        public static List<PokemonDTO> GetInstance()
-            {
-                if (ListaPokemon == null)
-                 {
-                     ListaPokemon = new List<PokemonDTO>();
-                 } 
-                    return ListaPokemon;
-   }
-
     public async Task<PokemonDTO> GetPokemon()
         {
         
@@ -28,59 +17,33 @@ namespace CapturaPokemon.Service
          return pokemon;
          }
 
-   public async Task AddPokemonToApi(PokemonDTO pokemon)
+   public async Task AddPokemonToApi(object pokemon)
         {
-            if (pokemon == null) throw new ArgumentNullException(nameof(pokemon));
-
-          
-            string url = Constants.POKEUS_URL; 
-
-           
-            var response = await HttpJsonClient<PokemonDTO>.Post(url, pokemon);
-            ListaPokemon?.Add(pokemon);
-
-            if (!response.IsSuccessStatusCode)
+            try
             {
-            throw new Exception($"Error al añadir Pokémon a la API: {response.ReasonPhrase}");
+                if (pokemon == null) return;
+                var response = await HttpJsonClient<PokemonDTO>.Post(Constants.POKEUS_URL, pokemon);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
          }
 
-    public async Task<List<PokemonDTO>> ProcesarPokemons()
-    {
-
-        return await Task.FromResult(ListaPokemon ?? new List<PokemonDTO>());
-
-    }
-
-   public PokemonDTO ConvertirDTO(Pokemon pokemon, DateTime dateStart, DateTime dateEnd, int damageDoneTrainer, int damageReceivedTrainer, int damageDonePokemon)
-     {
-            if (pokemon == null)
-                throw new ArgumentNullException(nameof(pokemon));
-
-           
-            return (new PokemonDTO
+        public async Task<List<PokemonDTO>> GetAllPokemons()
+        {
+            try
             {
-                Id = pokemon.Id,
-                PokeName = pokemon.PokemonName,
-                PokeImagen = pokemon.ImagePath,
-                Capturado = pokemon.Captura, 
-                Shiny = pokemon.Shiny,
-
-                
-                DateStart = dateStart,  
-                DateEnd = dateEnd,  
-                DamageDoneTrainer =damageDoneTrainer, 
-                DamageReceivedTrainer = damageReceivedTrainer,
-                DamageDonePokemon = damageDonePokemon
-            });
+                var pokemons = await HttpJsonClient<List<PokemonDTO>>.Get(Constants.POKEUS_URL);
+                return pokemons ?? new List<PokemonDTO>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error de la  API: {ex.Message}");
+                return new List<PokemonDTO>();
+            }
         }
 
-
-
-
-
-
-
-   }
+    }
    
 }

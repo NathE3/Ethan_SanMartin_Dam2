@@ -9,11 +9,9 @@ namespace CapturaPokemon.Interface
         Task<PokemonDTO> GetPokemon();
 
         // Agrega un Pokémon a la API
-        Task AddPokemonToApi(PokemonDTO pokemon);
+        Task AddPokemonToApi(object pokemon);
 
         // Procesa y devuelve la lista de Pokémon almacenados
-        Task<List<PokemonDTO>> ProcesarPokemons();
-
-        PokemonDTO ConvertirDTO(Pokemon pokemon, DateTime dateStart, DateTime dateEnd, int damageDoneTrainer, int damageReceivedTrainer, int damageDonePokemon);
+        Task<List<PokemonDTO>> GetAllPokemons();
     }
 }

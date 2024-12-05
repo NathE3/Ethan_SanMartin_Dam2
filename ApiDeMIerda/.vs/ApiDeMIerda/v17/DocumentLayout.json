@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\2DAM\\DesarrolloInterfaces\\ApiDeMIerda\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|h:\\2dam\\desarrollointerfaces\\apidemierda\\apidemierda\\controllers\\pokemoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|solutionrelative:apidemierda\\controllers\\pokemoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|h:\\2dam\\desarrollointerfaces\\apidemierda\\apidemierda\\dto\\pokemondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|solutionrelative:apidemierda\\dto\\pokemondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PokemonController.cs",
+              "DocumentMoniker": "H:\\2DAM\\DesarrolloInterfaces\\ApiDeMIerda\\ApiDeMIerda\\Controllers\\PokemonController.cs",
+              "RelativeDocumentMoniker": "ApiDeMIerda\\Controllers\\PokemonController.cs",
+              "ToolTip": "H:\\2DAM\\DesarrolloInterfaces\\ApiDeMIerda\\ApiDeMIerda\\Controllers\\PokemonController.cs",
+              "RelativeToolTip": "ApiDeMIerda\\Controllers\\PokemonController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T14:59:01.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PokemonDTO.cs",
+              "DocumentMoniker": "H:\\2DAM\\DesarrolloInterfaces\\ApiDeMIerda\\ApiDeMIerda\\DTO\\PokemonDTO.cs",
+              "RelativeDocumentMoniker": "ApiDeMIerda\\DTO\\PokemonDTO.cs",
+              "ToolTip": "H:\\2DAM\\DesarrolloInterfaces\\ApiDeMIerda\\ApiDeMIerda\\DTO\\PokemonDTO.cs",
+              "RelativeToolTip": "ApiDeMIerda\\DTO\\PokemonDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T14:58:59.569Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

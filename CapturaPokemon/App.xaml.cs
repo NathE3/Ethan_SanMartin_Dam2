@@ -3,6 +3,9 @@ using CapturaPokemon.Service;
 using CapturaPokemon.Interface;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
+using CapturaPokemon.Services;
+using CapturaPokemon.Models;
+using static CapturaPokemon.Interface.IFileService;
 
 namespace CapturaPokemon
 {
@@ -43,6 +46,7 @@ namespace CapturaPokemon
             //Services
             services.AddSingleton<IPokemonService,PokemonService>();
             services.AddSingleton<IPokemonServiceToApi,PokemonServiceToApi>();
+            services.AddSingleton(typeof(IFileService<>), typeof(FileService<>));
             return services.BuildServiceProvider();
         }
     }

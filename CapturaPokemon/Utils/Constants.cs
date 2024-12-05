@@ -12,7 +12,9 @@ namespace CapturaPokemon.Utils
         public const string ATTACK = "attack";
         public const string HP = "hp";
         public const string POKE_URL = "https://pokeapi.co/api/v2/pokemon/";
-        public const string POKEUS_URL = "http://localhost:5279/api/pokemon/";
+        public const string POKEUS_URL = "https://localhost:7106/Pokemon";
         public const int VIDAMAXIMA = 2000;
-    }   
+        public const string JSON_FILTER = "JSON Files (*.json)|*.json|All Files (*.*)|*.*";
+
+    }
 }

@@ -10,33 +10,27 @@
              Background="Black"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <ScrollViewer Grid.Row="1">
-            <StackPanel>
-                <ItemsControl ItemsSource="{Binding Pokemons}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel Orientation="Horizontal"/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border Margin="5">
-                                <StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-                                    <Border Height="100" Padding="5">
-                                        <Image Source="{Binding ImagePath}" Stretch="Uniform"/>
-                                    </Border>
+        <DataGrid 
+    Grid.Row="0" 
+    x:Name="MyDataGrid"       
+    ItemsSource="{Binding Pokemons}" 
+    AutoGenerateColumns="True" 
+    Margin="10" 
+    CanUserResizeColumns="True"
+    CanUserResizeRows="False"
+    VerticalAlignment="Top"
+    HorizontalAlignment="Left"
+    MinRowHeight="25"
+    MaxHeight="400" 
+    ColumnWidth="Auto"
+    ScrollViewer.VerticalScrollBarVisibility="Auto"
+    ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
 
-                                    <Border Background="DarkOrange" Height="50">
-                                        <TextBlock Text="{Binding PokemonName}" 
-                                                   HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
-                                    </Border>
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </StackPanel>
-        </ScrollViewer>
+    <Button Grid.Row="1" Content="Save" Command="{Binding SaveToFileCommand}" Width="100" Height="50"/>
     </Grid>
 </UserControl>

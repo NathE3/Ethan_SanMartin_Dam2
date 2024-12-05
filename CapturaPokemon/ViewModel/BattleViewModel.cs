@@ -14,11 +14,11 @@ namespace CapturaPokemon.ViewModel
         private readonly IPokemonService _pokemonService;
         private readonly IPokemonServiceToApi _pokemonServiceToApi;
 
-        DateTime dateStart;
-        DateTime dateEnd;
+        string dateStart;
+        string dateEnd;
         int damageDoneTrainer;
         int damageReceivedTrainer;
-        int damageDonePokemon;
+        int? damageDonePokemon;
 
         [ObservableProperty]
         private int? _VidaUsuario = Constants.VIDAMAXIMA;
@@ -67,7 +67,7 @@ namespace CapturaPokemon.ViewModel
                 {
                     AsirgnarVidaPokemon();
                 }
-                dateStart = DateTime.Now;
+                dateStart = DateTime.Now.ToString("O");
             }
         }
 
@@ -78,7 +78,7 @@ namespace CapturaPokemon.ViewModel
         }
 
         [RelayCommand]
-        private async Task Huir_Click(object? parameter)
+        public async Task Huir_Click(object? parameter)
         {
 
             Pokemon = await _pokemonService.GetPokemon();
@@ -96,28 +96,28 @@ namespace CapturaPokemon.ViewModel
         }
 
         [RelayCommand]
-        private async Task Attack_Click(object? parameter) 
+        public async Task Attack_Click(object? parameter)
         {
-            
             if (Pokemon != null)
             {
-                AtacarPokemon();
+                AtacarPokemon(); // Calcula y actualiza daño hecho al Pokémon
 
                 if (Pokemon.PokeHp > 0)
                 {
+                    // Si el Pokémon aún tiene vida, realiza su ataque
                     int ataquePokemon = Pokemon.PokeAtaque;
-                    damageReceivedTrainer = ataquePokemon;
-                    VidaActual -= ataquePokemon;
-                    VidaPorcentaje = CalcularVidaPorcentaje(VidaActual, VidaUsuario);
+                    damageReceivedTrainer += ataquePokemon; // Acumula daño recibido por el entrenador
+                    VidaActual -= ataquePokemon; // Reduce vida del entrenador
+                    VidaPorcentaje = CalcularVidaPorcentaje(VidaActual, VidaUsuario); // Actualiza porcentaje de vida
                 }
-
 
                 if (Pokemon.PokeHp <= 0)
                 {
-                    dateEnd = DateTime.Now;
-                    AñadirPokemonApi();
-                    damageReceivedTrainer = 0;
-                    await NuevoPokemon();
+                    // Si el Pokémon es derrotado
+                    dateEnd = DateTime.Now.ToString("O"); // Registra el tiempo final
+                    await AñadirPokemonApi(); // Añade Pokémon derrotado a la API
+                    damageReceivedTrainer = 0; // Resetea daño recibido (nuevo combate)
+                    await NuevoPokemon(); // Genera un nuevo Pokémon
                 }
             }
         }
@@ -147,23 +147,27 @@ namespace CapturaPokemon.ViewModel
             await CaputuraExitosaOno(vidaRestantePorcentaje, resultado);
         }
 
-        private async Task CaputuraExitosaOno(int vidaRestantePorcentaje, int resultado)
+        public async Task CaputuraExitosaOno(int vidaRestantePorcentaje, int resultado)
         {
-            if (resultado > vidaRestantePorcentaje) 
+            if (resultado > vidaRestantePorcentaje)
             {
-              
+                // El Pokémon ha sido capturado exitosamente
                 if (Pokemon.Shiny)
                 {
-                    VidaActual = Constants.VIDAMAXIMA; 
+                    // Si el Pokémon es shiny, restaura la vida del entrenador a máxima
+                    VidaActual = Constants.VIDAMAXIMA;
+                    VidaPorcentaje = CalcularVidaPorcentaje(VidaActual, VidaUsuario);
+                    Pokemon.Captura = true;
                 }
                 else
                 {
+                    // Incrementa un 5% de la vida máxima del entrenador (sin exceder el máximo)
                     VidaActual = Math.Min(Constants.VIDAMAXIMA, (int)(VidaActual + (Constants.VIDAMAXIMA * 5 / 100)));
+                    VidaPorcentaje = CalcularVidaPorcentaje(VidaActual, VidaUsuario);
+                    Pokemon.Captura = true;
                 }
-
-                VidaPorcentaje = CalcularVidaPorcentaje(VidaActual, VidaUsuario);
-
-                // Añade el Pokémon a la API
+                        
+                // Añade el Pokémon capturado a la API
                 await AñadirPokemonApi();
 
                 // Genera un nuevo Pokémon
@@ -175,20 +179,20 @@ namespace CapturaPokemon.ViewModel
         {
             try
             {
-                PokemonDTO pokemon = _pokemonServiceToApi.ConvertirDTO(Pokemon, dateStart,dateEnd, damageDoneTrainer, damageReceivedTrainer, damageDonePokemon);
+                var pokemon = CreatePoke();
                 await _pokemonServiceToApi.AddPokemonToApi(pokemon);
             }
             catch (Exception ex)
             {
- 
+                Console.WriteLine(ex.ToString());
             }
         }
 
-        private void AtacarPokemon()
+        public void AtacarPokemon()
         {
             Random rn = new Random();
-            int ataqueUsuario = rn.Next(0, 60);
-            damageDoneTrainer += ataqueUsuario;
+            int ataqueUsuario = rn.Next(0, 60); // Daño aleatorio del entrenador
+            damageDoneTrainer += ataqueUsuario; // Acumula daño hecho al Pokémon
             int? vidaPokemon = Pokemon.PokeHp - ataqueUsuario;
 
             if (vidaPokemon > 0)
@@ -197,18 +201,19 @@ namespace CapturaPokemon.ViewModel
             }
             else
             {
-                damageDoneTrainer = 0;
-                Pokemon.PokeHp = 0;
+                // El Pokémon es derrotado
+                damageDonePokemon += Pokemon.PokeHp; // Acumula el daño final necesario para derrotarlo
+                AñadirPokemonApi();
+                Pokemon.PokeHp = 0; // Asegura que la vida no sea negativa
             }
 
             VidaActualPokemon = Pokemon.PokeHp;
-
             VidaPorcentajePokemon = CalcularVidaPorcentaje(VidaActualPokemon, VidaMaximaPokemon);
         }
 
         private string CalcularVidaPorcentaje(int? vida, int? vidaMax)
         {
-            if (vida != 0)
+            if (vida > 0)
             {
                 return  $"{vida * 100 / vidaMax}%";
             }
@@ -217,6 +222,24 @@ namespace CapturaPokemon.ViewModel
                return "0%";
             }
              
+        }
+
+        private object CreatePoke()
+        {
+            return new
+            {
+                Id = Pokemon.Id,
+                DateStart = dateStart,
+                DateEnd = dateEnd,
+                PokeName = Pokemon.PokemonName,
+                DamageDoneTrainer = damageDoneTrainer,
+                DamageReceivedTrainer = damageReceivedTrainer,
+                DamageDonePokemon = damageDonePokemon,
+                PokeImagen = Pokemon.ImagePath,
+                Capturado = Pokemon.Captura,
+                Shiny = Pokemon.Shiny
+            };
+            
         }
     }
 }
