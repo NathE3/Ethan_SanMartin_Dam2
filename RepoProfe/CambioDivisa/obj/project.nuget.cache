@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "6WgmtRjzSLk=",
+  "success": true,
+  "projectFilePath": "H:\\2DAM\\DesarrolloInterfaces\\RepoProfe\\CambioDivisa\\CambioDivisa.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vespertino\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
+    "C:\\Users\\Vespertino\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\Vespertino\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

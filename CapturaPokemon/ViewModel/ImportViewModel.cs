@@ -23,7 +23,7 @@ namespace CapturaPokemon.ViewModel
 
 
         [RelayCommand]
-        public void LoadFromFile()
+        public async Task LoadFromFile()
         {
             var openFileDialog = new OpenFileDialog
             {
@@ -32,9 +32,9 @@ namespace CapturaPokemon.ViewModel
 
             if (openFileDialog.ShowDialog() == true)
             {
-                var loadedPokemons = _fileService.Load(openFileDialog.FileName);
-                var actualizarPokemons = HttpJsonClient<PokemonDTO>.DeleteAll(Constants.POKEUS_URL);
-                foreach (var pokemon in loadedPokemons) 
+                var datos = _fileService.Load(openFileDialog.FileName);
+                await HttpJsonClient<PokemonDTO>.DeleteAll(Constants.POKEUS_URL + "deleteAll");
+                foreach (var pokemon in datos)
                 {
                     HttpJsonClient<PokemonDTO>.Post(Constants.POKEUS_URL, pokemon);
                 }

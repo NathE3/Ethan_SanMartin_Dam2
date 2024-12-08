@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiDeMIerda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+241438d3bf746707a17efb6d5287fcb035c7bf7a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92d39c83052b12c328d1f69bd5794536afd79f98")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiDeMIerda")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiDeMIerda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

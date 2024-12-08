@@ -66,16 +66,15 @@ namespace CapturaPokemon.Utils
     }
 
 
-        public static async Task DeleteAll(string url) 
+        public static async Task DeleteAll(string url)
         {
             using HttpClient httpClient = new HttpClient();
 
             var response = await httpClient.DeleteAsync(url);
-
-            if (!response.IsSuccessStatusCode) 
+            if (!response.IsSuccessStatusCode)
             {
                 string errorDetails = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"Error:{response.StatusCode }");
+                Console.WriteLine($"Error:{response.StatusCode}");
                 Console.WriteLine($"Detalles:{errorDetails}");
 
             }

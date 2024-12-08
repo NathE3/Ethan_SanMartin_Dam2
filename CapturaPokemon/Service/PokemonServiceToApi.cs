@@ -47,7 +47,7 @@ namespace CapturaPokemon.Service
         public int GenerarIdAleatorio()
         {
             Random random = new Random();          
-            return random.Next(1, 2001);
+            return random.Next(1, 9000);
         }
 
     }

@@ -78,17 +78,17 @@ namespace FirstAPI.Controllers
 
 
         [HttpDelete("deleteAll")]
-        public IActionResult DeleteAll() 
+        public IActionResult DeleteAll()
+        {
+            if (Pokemons.Count == 0)
             {
-               if (Pokemons.Count == 0) 
-                {
-                    return NoContent();
-                }
+                return NoContent();
+            }
 
-               Pokemons.Clear();
+            Pokemons.Clear();
             return Ok("Todos los pokemons han borrados");
         }
-            
+
     }
 
 
