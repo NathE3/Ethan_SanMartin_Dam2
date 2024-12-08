@@ -9,32 +9,37 @@
         Title="CapturaPokemon" Height="450" Width="800"
         d:DataContext="{d:DesignInstance Type=viewModel:MainViewModel}">
 
-
-
-
     <Window.Resources>
 
         <DataTemplate DataType="{x:Type viewModel:HistoricoViewModel}">
             <view:HistoricoView/>
         </DataTemplate>
-        
+
         <DataTemplate DataType="{x:Type viewModel:BattleViewModel}">
-        <view:BattleView/>
+            <view:BattleView/>
         </DataTemplate>
-        
+
+        <DataTemplate DataType="{x:Type viewModel:TeamViewModel}">
+            <view:TeamView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:ImportViewModel}">
+            <view:ImportView/>
+        </DataTemplate>
     </Window.Resources>
-    
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25" />
+            <RowDefinition Height="40" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Menu FontSize="15" Grid.Row="0">
-            <MenuItem Header="_Team" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding HistoricoViewModel}"/>
+        <Menu FontSize="15" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+            <MenuItem Header="_Team" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding TeamViewModel}"/>
             <MenuItem Header="_Historico" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding HistoricoViewModel}"/>
             <MenuItem Header="_Battle" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding BattleViewModel}"/>
+            <MenuItem Header="_Import" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding ImportViewModel}"/>
 
         </Menu>
 

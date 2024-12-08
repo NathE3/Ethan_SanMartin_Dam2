@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "81w60vL3tGI=",
+  "dgSpecHash": "48dDOzOoBkc=",
   "success": true,
-  "projectFilePath": "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\CapturaPokemon.csproj",
+  "projectFilePath": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\CapturaPokemon.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vespertino\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
-    "C:\\Users\\Vespertino\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
-    "C:\\Users\\Vespertino\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+    "C:\\Users\\ethaa\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
+    "C:\\Users\\ethaa\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\ethaa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
   ],
   "logs": []
 }

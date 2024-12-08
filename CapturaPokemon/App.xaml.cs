@@ -40,8 +40,11 @@ namespace CapturaPokemon
             services.AddTransient<MainViewModel>();
             services.AddTransient<BattleViewModel>();
             services.AddTransient<HistoricoViewModel>();
+            services.AddTransient<TeamViewModel>();
+            services.AddTransient<ImportViewModel>();
             services.AddTransient<ViewModelBase>();
-           
+      
+
 
             //Services
             services.AddSingleton<IPokemonService,PokemonService>();

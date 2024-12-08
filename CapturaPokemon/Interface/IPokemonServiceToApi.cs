@@ -13,5 +13,7 @@ namespace CapturaPokemon.Interface
 
         // Procesa y devuelve la lista de Pokémon almacenados
         Task<List<PokemonDTO>> GetAllPokemons();
+
+        public int GenerarIdAleatorio();
     }
 }

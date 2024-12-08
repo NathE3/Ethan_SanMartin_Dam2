@@ -13,6 +13,12 @@
     <Compile Update="View\HistoricoView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ImportView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\TeamView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -22,6 +28,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\HistoricoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ImportView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\TeamView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

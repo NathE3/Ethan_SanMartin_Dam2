@@ -34,7 +34,7 @@ namespace CapturaPokemon.Models
         public string? PokeImagen { get; set; }
 
         [JsonPropertyName("capturado")]
-        public bool? Capturado { get; set; }
+        public bool Capturado { get; set; }
 
         [JsonPropertyName("shiny")]
         public bool Shiny { get; set; }

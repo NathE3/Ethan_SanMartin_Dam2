@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-H:\2DAM\DesarrolloInterfaces\CapturaPokemon\obj\Debug\net8.0-windows\
+D:\MiRepo\Ethan_SanMartin_Dam2\CapturaPokemon\obj\Debug\net8.0-windows\
 CapturaPokemon
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-H:\2DAM\DesarrolloInterfaces\CapturaPokemon\App.xaml
-3-1904454713
+D:\MiRepo\Ethan_SanMartin_Dam2\CapturaPokemon\App.xaml
+5-1573522499
 
-22-566853001
-2011289108668
-MainWindow.xaml;View\BattleView.xaml;View\HistoricoView.xaml;
+26-1441432861
+201-1634961186
+MainWindow.xaml;View\BattleView.xaml;View\HistoricoView.xaml;View\ImportView.xaml;View\TeamView.xaml;
 
 False
 

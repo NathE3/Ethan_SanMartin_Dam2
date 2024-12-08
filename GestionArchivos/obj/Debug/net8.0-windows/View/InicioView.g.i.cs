@@ -61,7 +61,7 @@ namespace GestionArchivos.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GestionArchivos;V1.0.0.0;component/view/inicioview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GestionArchivos;component/view/inicioview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\InicioView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

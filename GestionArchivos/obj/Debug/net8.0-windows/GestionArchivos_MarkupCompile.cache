@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\EjerciciosDeC\EjerciciosC\GestionArchivos\GestionArchivos\obj\Debug\net8.0-windows\
+H:\2DAM\DesarrolloInterfaces\GestionArchivos\obj\Debug\net8.0-windows\
 GestionArchivos
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\EjerciciosDeC\EjerciciosC\GestionArchivos\GestionArchivos\App.xaml
+H:\2DAM\DesarrolloInterfaces\GestionArchivos\App.xaml
 4-1260049330
 
-161587125588
+181175759472
 2011289108668
 MainWindow.xaml;View\FileView.xaml;View\InfoView.xaml;View\InicioView.xaml;
 

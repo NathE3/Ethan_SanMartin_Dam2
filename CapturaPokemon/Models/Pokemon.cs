@@ -15,7 +15,7 @@ namespace CapturaPokemon.Models
 
         public int PokeAtaque { get; set; }
 
-        public int? PokeHp { get; set; }
+        public int PokeHp { get; set; }
 
         public bool Shiny { get; set; }
 

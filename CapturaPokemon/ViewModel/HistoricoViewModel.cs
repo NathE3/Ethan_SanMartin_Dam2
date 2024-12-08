@@ -9,7 +9,6 @@ using Microsoft.Win32;
 using static CapturaPokemon.Interface.IFileService;
 using System.Reflection.Metadata;
 using CapturaPokemon.Utils;
-using CapturaPokemon.Services;
 
 namespace CapturaPokemon.ViewModel
 {
@@ -53,7 +52,6 @@ namespace CapturaPokemon.ViewModel
                 _fileService.Save(saveFileDialog.FileName, Pokemons);
             }
         }
-
 
     }
 }

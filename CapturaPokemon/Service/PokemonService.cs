@@ -29,7 +29,7 @@ namespace CapturaPokemon.Service
             Random rnd = new Random();
 
             //Obtener los detalles del Pokémon seleccionado de al Api de forma aleatoria
-            PokemonAPI pokemonDetalles = await HttpJsonClient<PokemonAPI>.Get(Constants.POKE_URL + rnd.Next(1, 101));
+            PokemonAPI pokemonDetalles = await HttpJsonClient<PokemonAPI>.Get(Constants.POKE_URL + rnd.Next(1, 100));
 
             if (pokemonDetalles == null)
             {
@@ -56,9 +56,10 @@ namespace CapturaPokemon.Service
                 Id = pokemonDetalles.Id,
                 ImagePath = pokemonImage,
                 PokemonName = pokemonDetalles?.Name,
-                PokeAtaque = (int)(pokemonDetalles.ListaStats?.FirstOrDefault(x => x.Stat.Name == Constants.ATTACK).Base_stat),
-                PokeHp = pokemonDetalles?.ListaStats?.FirstOrDefault(x => x.Stat?.Name == Constants.HP)?.Base_stat,
-                Captura = esShiny
+                PokeAtaque = (int)(pokemonDetalles.ListaStats?.FirstOrDefault(static x => x.Stat.Name == Constants.ATTACK).Base_stat),
+                PokeHp = (int)(pokemonDetalles.ListaStats.FirstOrDefault(x => x.Stat?.Name == Constants.HP).Base_stat),
+                Captura = false,
+                Shiny = esShiny,
             };
 
             ListaPokemon?.Add(pokemonPropio);

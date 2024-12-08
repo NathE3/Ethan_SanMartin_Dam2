@@ -80,7 +80,7 @@ namespace CapturaPokemon.ViewModel
         [RelayCommand]
         public async Task Huir_Click(object? parameter)
         {
-
+            await AñadirPokemonApi();
             Pokemon = await _pokemonService.GetPokemon();
             if (Pokemon.PokeHp != null)
             {
@@ -106,7 +106,8 @@ namespace CapturaPokemon.ViewModel
                 {
                     // Si el Pokémon aún tiene vida, realiza su ataque
                     int ataquePokemon = Pokemon.PokeAtaque;
-                    damageReceivedTrainer += ataquePokemon; // Acumula daño recibido por el entrenador
+                    damageReceivedTrainer += ataquePokemon; 
+                    damageDonePokemon += ataquePokemon;
                     VidaActual -= ataquePokemon; // Reduce vida del entrenador
                     VidaPorcentaje = CalcularVidaPorcentaje(VidaActual, VidaUsuario); // Actualiza porcentaje de vida
                 }
@@ -114,9 +115,11 @@ namespace CapturaPokemon.ViewModel
                 if (Pokemon.PokeHp <= 0)
                 {
                     // Si el Pokémon es derrotado
+                    damageDonePokemon = Constants.VIDAMAXIMA - (Pokemon.PokeAtaque + VidaActual);
                     dateEnd = DateTime.Now.ToString("O"); // Registra el tiempo final
-                    await AñadirPokemonApi(); // Añade Pokémon derrotado a la API
+                    await AñadirPokemonApi(); // Añade Pokémon derrotado a la API                                                             
                     damageReceivedTrainer = 0; // Resetea daño recibido (nuevo combate)
+                    damageDonePokemon = 0;
                     await NuevoPokemon(); // Genera un nuevo Pokémon
                 }
             }
@@ -158,6 +161,7 @@ namespace CapturaPokemon.ViewModel
                     VidaActual = Constants.VIDAMAXIMA;
                     VidaPorcentaje = CalcularVidaPorcentaje(VidaActual, VidaUsuario);
                     Pokemon.Captura = true;
+                    Pokemon.Shiny = true;
                 }
                 else
                 {
@@ -191,19 +195,15 @@ namespace CapturaPokemon.ViewModel
         public void AtacarPokemon()
         {
             Random rn = new Random();
-            int ataqueUsuario = rn.Next(0, 60); // Daño aleatorio del entrenador
-            damageDoneTrainer += ataqueUsuario; // Acumula daño hecho al Pokémon
-            int? vidaPokemon = Pokemon.PokeHp - ataqueUsuario;
-
+            int ataqueUsuario = rn.Next(0, 60); 
+            damageDoneTrainer += ataqueUsuario; 
+            int vidaPokemon = Pokemon.PokeHp - ataqueUsuario;
             if (vidaPokemon > 0)
             {
                 Pokemon.PokeHp = vidaPokemon;
             }
             else
             {
-                // El Pokémon es derrotado
-                damageDonePokemon += Pokemon.PokeHp; // Acumula el daño final necesario para derrotarlo
-                AñadirPokemonApi();
                 Pokemon.PokeHp = 0; // Asegura que la vida no sea negativa
             }
 
@@ -228,7 +228,7 @@ namespace CapturaPokemon.ViewModel
         {
             return new
             {
-                Id = Pokemon.Id,
+                Id = _pokemonServiceToApi.GenerarIdAleatorio(),
                 DateStart = dateStart,
                 DateEnd = dateEnd,
                 PokeName = Pokemon.PokemonName,

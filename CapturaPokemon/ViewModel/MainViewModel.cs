@@ -7,10 +7,12 @@ namespace CapturaPokemon.ViewModel
     {
         private ViewModelBase? _selectedViewModel;
 
-        public MainViewModel(HistoricoViewModel historicoViewModel, BattleViewModel battleViewModel)
+        public MainViewModel(HistoricoViewModel historicoViewModel, BattleViewModel battleViewModel, TeamViewModel teamViewModel, ImportViewModel importViewModel)
         {
             HistoricoViewModel = historicoViewModel;
             BattleViewModel = battleViewModel;
+            TeamViewModel = teamViewModel;
+            ImportViewModel = importViewModel;
             _selectedViewModel = battleViewModel; 
         }
 
@@ -22,6 +24,8 @@ namespace CapturaPokemon.ViewModel
 
         public HistoricoViewModel HistoricoViewModel { get; }
         public BattleViewModel BattleViewModel { get; }
+        public TeamViewModel TeamViewModel { get; }
+        public ImportViewModel ImportViewModel { get; }
 
         public override async Task LoadAsync()
         {

@@ -75,6 +75,20 @@ namespace FirstAPI.Controllers
             }            
             return Pokemons.Remove(PokemonBBDD);
         }
+
+
+        [HttpDelete("deleteAll")]
+        public IActionResult DeleteAll() 
+            {
+               if (Pokemons.Count == 0) 
+                {
+                    return NoContent();
+                }
+
+               Pokemons.Clear();
+            return Ok("Todos los pokemons han borrados");
+        }
+            
     }
 
 

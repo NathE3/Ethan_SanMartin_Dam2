@@ -128,5 +128,15 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "FirstAPI.Controllers.PokemonController",
+    "Method": "DeleteAll",
+    "RelativePath": "Pokemon/deleteAll",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

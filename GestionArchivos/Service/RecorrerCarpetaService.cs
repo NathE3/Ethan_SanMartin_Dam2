@@ -36,25 +36,11 @@ namespace GestionArchivos.Service
                     {
                         wr2.WriteLine("Este es el contenido del archivo 2");
                     }
-
-                    // Agregar los datos a la lista
-                    datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "nuevaCarpeta", Ruta = nuevaCarpeta, EsCarpeta = true, Imagen = Constants.ICONO_CARPETA });
-                    datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "archivo1.txt", Ruta = archivo1, EsCarpeta = false , Imagen = Constants.ICONO_ARCHIVO });
-                    datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "archivo2.txt", Ruta = archivo2, EsCarpeta = false , Imagen = Constants.ICONO_ARCHIVO });
+                    CrearArchivosDatos(nuevaCarpeta, archivo1, archivo2, datosCarpetasArchivos);
                 }
                 else
                 {
-                    // Si la carpeta ya existe, procesar sus archivos y carpetas
-                    string[] archivos = Directory.GetFileSystemEntries(path);
-                    foreach (var archivo in archivos)
-                    {
-
-                        // Si es un archivo o carpeta, agregar a la lista
-                        datosCarpetasArchivos.Add(new DatosCarpetasArchivos
-                        {
-                            Nombre = Path.GetFileName(archivo),Ruta = archivo,EsCarpeta = Directory.Exists(archivo),Imagen = Directory.Exists(archivo) ? Constants.ICONO_CARPETA : Constants.ICONO_ARCHIVO});
-                        
-                    }
+                    RecorrerCarpetas(path, datosCarpetasArchivos);
                 }
             }
             catch (StackOverflowException e)
@@ -67,6 +53,34 @@ namespace GestionArchivos.Service
             }
 
             return datosCarpetasArchivos;
+        }
+
+        private static void CrearArchivosDatos(string nuevaCarpeta, string archivo1, string archivo2, List<DatosCarpetasArchivos> datosCarpetasArchivos)
+        {
+
+            // Agregar los datos a la lista
+            datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "nuevaCarpeta", Ruta = nuevaCarpeta, EsCarpeta = true, Imagen = Constants.ICONO_CARPETA });
+            datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "archivo1.txt", Ruta = archivo1, EsCarpeta = false, Imagen = Constants.ICONO_ARCHIVO });
+            datosCarpetasArchivos.Add(new DatosCarpetasArchivos { Nombre = "archivo2.txt", Ruta = archivo2, EsCarpeta = false, Imagen = Constants.ICONO_ARCHIVO });
+        }
+
+        private static void RecorrerCarpetas(string path, List<DatosCarpetasArchivos> datosCarpetasArchivos)
+        {
+            // Si la carpeta ya existe, procesar sus archivos y carpetas
+            string[] archivos = Directory.GetFileSystemEntries(path);
+            foreach (var archivo in archivos)
+            {
+
+                // Si es un archivo o carpeta, agregar a la lista
+                datosCarpetasArchivos.Add(new DatosCarpetasArchivos
+                {
+                    Nombre = Path.GetFileName(archivo),
+                    Ruta = archivo,
+                    EsCarpeta = Directory.Exists(archivo),
+                    Imagen = Directory.Exists(archivo) ? Constants.ICONO_CARPETA : Constants.ICONO_ARCHIVO
+                });
+
+            }
         }
     }
 }

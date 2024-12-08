@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|h:\\2dam\\desarrollointerfaces\\gestionarchivos\\utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|h:\\2dam\\desarrollointerfaces\\gestionarchivos\\service\\recorrercarpetaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:service\\recorrercarpetaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|h:\\2dam\\desarrollointerfaces\\gestionarchivos\\viewmodel\\fileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:viewmodel\\fileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|h:\\2dam\\desarrollointerfaces\\gestionarchivos\\view\\fileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:view\\fileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|h:\\2dam\\desarrollointerfaces\\gestionarchivos\\view\\infoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:view\\infoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|h:\\2dam\\desarrollointerfaces\\gestionarchivos\\viewmodel\\fileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:viewmodel\\fileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|h:\\2dam\\desarrollointerfaces\\gestionarchivos\\utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|GestionArchivos.csproj|solutionrelative:utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +30,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "RecorrerCarpetaService.cs",
+              "DocumentMoniker": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\Service\\RecorrerCarpetaService.cs",
+              "RelativeDocumentMoniker": "Service\\RecorrerCarpetaService.cs",
+              "ToolTip": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\Service\\RecorrerCarpetaService.cs",
+              "RelativeToolTip": "Service\\RecorrerCarpetaService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAcwD4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T18:44:29.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileView.xaml",
+              "DocumentMoniker": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\View\\FileView.xaml",
+              "RelativeDocumentMoniker": "View\\FileView.xaml",
+              "ToolTip": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\View\\FileView.xaml",
+              "RelativeToolTip": "View\\FileView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-29T18:44:11.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "InfoView.xaml",
               "DocumentMoniker": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\View\\InfoView.xaml",
               "RelativeDocumentMoniker": "View\\InfoView.xaml",
@@ -38,26 +71,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Constants.cs",
               "DocumentMoniker": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\Utils\\Constants.cs",
               "RelativeDocumentMoniker": "Utils\\Constants.cs",
               "ToolTip": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\Utils\\Constants.cs",
               "RelativeToolTip": "Utils\\Constants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T19:16:19.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T19:16:19.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FileViewModel.cs",
               "DocumentMoniker": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\ViewModel\\FileViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\FileViewModel.cs",
               "ToolTip": "H:\\2DAM\\DesarrolloInterfaces\\GestionArchivos\\ViewModel\\FileViewModel.cs",
               "RelativeToolTip": "ViewModel\\FileViewModel.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwDwAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwDwAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T19:16:03.728Z",
               "EditorCaption": ""

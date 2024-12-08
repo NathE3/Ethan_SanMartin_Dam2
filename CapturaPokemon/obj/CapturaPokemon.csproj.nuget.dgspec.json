@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\CapturaPokemon.csproj": {}
+    "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\CapturaPokemon.csproj": {}
   },
   "projects": {
-    "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\CapturaPokemon.csproj": {
+    "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\CapturaPokemon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\CapturaPokemon.csproj",
+        "projectUniqueName": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\CapturaPokemon.csproj",
         "projectName": "CapturaPokemon",
-        "projectPath": "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\CapturaPokemon.csproj",
-        "packagesPath": "C:\\Users\\Vespertino\\.nuget\\packages\\",
-        "outputPath": "H:\\2DAM\\DesarrolloInterfaces\\CapturaPokemon\\obj\\",
+        "projectPath": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\CapturaPokemon.csproj",
+        "packagesPath": "C:\\Users\\ethaa\\.nuget\\packages\\",
+        "outputPath": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Vespertino\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ethaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
