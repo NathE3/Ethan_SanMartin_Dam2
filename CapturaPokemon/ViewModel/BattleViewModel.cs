@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CapturaPokemon.Models;
 using CapturaPokemon.Utils;
 using CapturaPokemon.Service;
+using System.Windows;
 
 
 namespace CapturaPokemon.ViewModel
@@ -122,6 +123,11 @@ namespace CapturaPokemon.ViewModel
                     damageDonePokemon = 0;
                     await NuevoPokemon(); // Genera un nuevo Pokémon
                 }
+                if (VidaActual <= 0) 
+                    {
+                    MessageBox.Show("Game over pringado");
+                    Application.Current.Shutdown();
+                    }
             }
         }
 
@@ -165,7 +171,7 @@ namespace CapturaPokemon.ViewModel
                 }
                 else
                 {
-                    // Incrementa un 5% de la vida máxima del entrenador (sin exceder el máximo)
+                    // Incrementa un 5% de la vida máxima del entrenador 
                     VidaActual = Math.Min(Constants.VIDAMAXIMA, (int)(VidaActual + (Constants.VIDAMAXIMA * 5 / 100)));
                     VidaPorcentaje = CalcularVidaPorcentaje(VidaActual, VidaUsuario);
                     Pokemon.Captura = true;
@@ -204,7 +210,7 @@ namespace CapturaPokemon.ViewModel
             }
             else
             {
-                Pokemon.PokeHp = 0; // Asegura que la vida no sea negativa
+                Pokemon.PokeHp = 0; 
             }
 
             VidaActualPokemon = Pokemon.PokeHp;

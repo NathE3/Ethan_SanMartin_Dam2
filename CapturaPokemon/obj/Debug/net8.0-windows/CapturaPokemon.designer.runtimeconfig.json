@@ -12,8 +12,9 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\ethaa\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ethaa\\.nuget\\packages"
+      "C:\\Users\\Vespertino\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Vespertino\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
       "MVVMTOOLKIT_ENABLE_INOTIFYPROPERTYCHANGING_SUPPORT": true,

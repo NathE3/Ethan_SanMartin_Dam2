@@ -37,8 +37,7 @@ namespace CapturaPokemon.ViewModel
                 foreach (var pokemon in datos)
                 {
                     HttpJsonClient<PokemonDTO>.Post(Constants.POKEUS_URL, pokemon);
-                }
-
+                }             
             }
         }
     }

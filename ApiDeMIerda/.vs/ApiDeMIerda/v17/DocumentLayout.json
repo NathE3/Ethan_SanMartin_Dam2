@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ApiDeMIerda\\",
+  "WorkspaceRootPath": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\apidemierda\\apidemierda\\controllers\\pokemoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|d:\\ejerciciosdec\\ejerciciosc\\apidemierda\\apidemierda\\controllers\\pokemoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|solutionrelative:apidemierda\\controllers\\pokemoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,9 +20,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "PokemonController.cs",
-              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ApiDeMIerda\\ApiDeMIerda\\Controllers\\PokemonController.cs",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\Controllers\\PokemonController.cs",
               "RelativeDocumentMoniker": "ApiDeMIerda\\Controllers\\PokemonController.cs",
-              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ApiDeMIerda\\ApiDeMIerda\\Controllers\\PokemonController.cs",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\Controllers\\PokemonController.cs",
               "RelativeToolTip": "ApiDeMIerda\\Controllers\\PokemonController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAhwCMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

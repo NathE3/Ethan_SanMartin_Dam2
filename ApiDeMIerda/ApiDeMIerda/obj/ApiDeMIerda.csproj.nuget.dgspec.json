@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.csproj": {}
+    "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.csproj": {}
   },
   "projects": {
-    "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.csproj": {
+    "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.csproj",
+        "projectUniqueName": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.csproj",
         "projectName": "ApiDeMIerda",
-        "projectPath": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.csproj",
-        "packagesPath": "C:\\Users\\ethaa\\.nuget\\packages\\",
-        "outputPath": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ApiDeMIerda\\ApiDeMIerda\\obj\\",
+        "projectPath": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.csproj",
+        "packagesPath": "C:\\Users\\Vespertino\\.nuget\\packages\\",
+        "outputPath": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ethaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vespertino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
