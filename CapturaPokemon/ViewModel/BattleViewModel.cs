@@ -160,7 +160,7 @@ namespace CapturaPokemon.ViewModel
         {
             if (resultado > vidaRestantePorcentaje)
             {
-                // El Pokémon ha sido capturado exitosamente
+                // El Pokémon ha sido capturado 
                 if (Pokemon.Shiny)
                 {
                     // Si el Pokémon es shiny, restaura la vida del entrenador a máxima
@@ -230,9 +230,9 @@ namespace CapturaPokemon.ViewModel
              
         }
 
-        private object CreatePoke()
+        private PokemonDTO CreatePoke()
         {
-            return new
+            return new PokemonDTO
             {
                 Id = _pokemonServiceToApi.GenerarIdAleatorio(),
                 DateStart = dateStart,
@@ -242,7 +242,7 @@ namespace CapturaPokemon.ViewModel
                 DamageReceivedTrainer = damageReceivedTrainer,
                 DamageDonePokemon = damageDonePokemon,
                 PokeImagen = Pokemon.ImagePath,
-                Capturado = Pokemon.Captura,
+                Capturado = Pokemon.Captura ?? false,
                 Shiny = Pokemon.Shiny
             };
             

@@ -6,7 +6,6 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using CapturaPokemon.Interface;
-using static CapturaPokemon.Interface.IFileService;
 
 
 namespace CapturaPokemon.Services

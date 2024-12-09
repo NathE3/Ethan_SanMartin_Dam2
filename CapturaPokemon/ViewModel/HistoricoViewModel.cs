@@ -6,7 +6,6 @@ using System.Collections.ObjectModel;
 using CapturaPokemon.Service;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Win32;
-using static CapturaPokemon.Interface.IFileService;
 using System.Reflection.Metadata;
 using CapturaPokemon.Utils;
 

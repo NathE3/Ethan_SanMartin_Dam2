@@ -46,6 +46,7 @@ namespace CapturaPokemon.Service
 
         public int GenerarIdAleatorio()
         {
+            //TODO HACKER, GUID
             Random random = new Random();          
             return random.Next(1, 9000);
         }
