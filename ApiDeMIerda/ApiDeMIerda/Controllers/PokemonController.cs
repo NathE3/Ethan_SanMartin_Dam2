@@ -25,7 +25,7 @@ namespace FirstAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public PokemonDTO GetOne(int id)
+        public PokemonDTO GetOne(Guid id)
         {
             return Pokemons.FirstOrDefault(x=>x.Id == id);
         }
@@ -42,7 +42,7 @@ namespace FirstAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public PokemonDTO Put([FromBody] PokemonDTO pokemon,int id)
+        public PokemonDTO Put([FromBody] PokemonDTO pokemon, Guid id)
         {
             if (id != pokemon?.Id)
             {
@@ -66,7 +66,7 @@ namespace FirstAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public bool Remove(int id)
+        public bool Remove(Guid id)
         {
             PokemonDTO? PokemonBBDD = Pokemons.FirstOrDefault(x => x.Id == id);
             if (PokemonBBDD == null)

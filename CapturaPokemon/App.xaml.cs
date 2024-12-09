@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 using CapturaPokemon.Services;
 using CapturaPokemon.Models;
-using static CapturaPokemon.Interface.IFileService;
 
 namespace CapturaPokemon
 {

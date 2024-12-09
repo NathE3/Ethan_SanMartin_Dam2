@@ -6,7 +6,6 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
-using static CapturaPokemon.Interface.IFileService;
 
 namespace CapturaPokemon.ViewModel
 {

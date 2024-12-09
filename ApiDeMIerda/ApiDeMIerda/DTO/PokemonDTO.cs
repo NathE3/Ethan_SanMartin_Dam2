@@ -2,7 +2,7 @@
 {
     public class PokemonDTO
     {
-        public int Id { get; set; } 
+        public Guid Id { get; set; } 
         public string DateStart { get; set; }
         public string DateEnd { get; set; }
         public string? PokeName { get; set; }

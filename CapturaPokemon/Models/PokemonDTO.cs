@@ -10,7 +10,7 @@ namespace CapturaPokemon.Models
     public class PokemonDTO
     {
         [JsonPropertyName("id")]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [JsonPropertyName("dateStart")]
         public string DateStart { get; set; }
