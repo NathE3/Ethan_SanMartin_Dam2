@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\service\\pokemonservicetoapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:service\\pokemonservicetoapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\interface\\ipokemonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:interface\\ipokemonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\viewmodel\\teamviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:viewmodel\\teamviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\models\\pokemonapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:models\\pokemonapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\viewmodel\\battleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:viewmodel\\battleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\models\\pokemondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:models\\pokemondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\service\\pokemonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:service\\pokemonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\view\\battleview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:view\\battleview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|d:\\mirepo\\ethan_sanmartin_dam2\\capturapokemon\\viewmodel\\importviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFBC02B-FBC8-4F10-BDEA-1E614A545E37}|CapturaPokemon.csproj|solutionrelative:viewmodel\\importviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,52 +51,115 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PokemonServiceToApi.cs",
-              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Service\\PokemonServiceToApi.cs",
-              "RelativeDocumentMoniker": "Service\\PokemonServiceToApi.cs",
-              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Service\\PokemonServiceToApi.cs",
-              "RelativeToolTip": "Service\\PokemonServiceToApi.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwC8AAAAJAAAAAAAAAA==",
+              "Title": "IPokemonService.cs",
+              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Interface\\IPokemonService.cs",
+              "RelativeDocumentMoniker": "Interface\\IPokemonService.cs",
+              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Interface\\IPokemonService.cs",
+              "RelativeToolTip": "Interface\\IPokemonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T19:12:09.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BattleViewModel.cs",
-              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\ViewModel\\BattleViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\BattleViewModel.cs",
-              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\ViewModel\\BattleViewModel.cs",
-              "RelativeToolTip": "ViewModel\\BattleViewModel.cs",
-              "ViewState": "AgIAAMIAAAAAAAAAAAAswLkAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T19:11:48.042Z",
+              "WhenOpened": "2024-12-11T00:15:27.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TeamViewModel.cs",
-              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\ViewModel\\TeamViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\TeamViewModel.cs",
-              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\ViewModel\\TeamViewModel.cs",
-              "RelativeToolTip": "ViewModel\\TeamViewModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB4AAABQAAAAAAAAAA==",
+              "Title": "PokemonAPI.cs",
+              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Models\\PokemonAPI.cs",
+              "RelativeDocumentMoniker": "Models\\PokemonAPI.cs",
+              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Models\\PokemonAPI.cs",
+              "RelativeToolTip": "Models\\PokemonAPI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T19:08:27.224Z",
+              "WhenOpened": "2024-12-11T00:07:58.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PokemonDTO.cs",
+              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Models\\PokemonDTO.cs",
+              "RelativeDocumentMoniker": "Models\\PokemonDTO.cs",
+              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Models\\PokemonDTO.cs",
+              "RelativeToolTip": "Models\\PokemonDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T00:07:49.254Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "PokemonService.cs",
+              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Service\\PokemonService.cs",
+              "RelativeDocumentMoniker": "Service\\PokemonService.cs",
+              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\Service\\PokemonService.cs",
+              "RelativeToolTip": "Service\\PokemonService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwDUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T23:57:02.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T23:29:35.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "AssemblyInfo.cs",
+              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\AssemblyInfo.cs",
+              "RelativeToolTip": "AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T23:29:33.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BattleView.xaml",
               "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\View\\BattleView.xaml",
               "RelativeDocumentMoniker": "View\\BattleView.xaml",
               "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\View\\BattleView.xaml",
               "RelativeToolTip": "View\\BattleView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-02T15:28:49.893Z"
+              "WhenOpened": "2024-12-10T23:18:53.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ImportViewModel.cs",
+              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\ViewModel\\ImportViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\ImportViewModel.cs",
+              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\ViewModel\\ImportViewModel.cs",
+              "RelativeToolTip": "ViewModel\\ImportViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T22:58:02.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\CapturaPokemon\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T22:52:37.392Z"
             }
           ]
         }

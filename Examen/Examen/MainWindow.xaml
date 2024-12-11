@@ -1,0 +1,51 @@
+﻿<Window x:Class="Examen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Examen" xmlns:viewmodel="clr-namespace:Examen.ViewModel" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:viewModel="clr-namespace:Examen.ViewModel"
+        xmlns:view="clr-namespace:Examen.View"
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}">
+
+    <Window.Resources>
+
+        <DataTemplate DataType="{x:Type viewModel:Pagina1ViewModel}">
+            <view:Pagina1View/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:Pagina2ViewModel}">
+            <view:Pagina2View/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:Pagina3ViewModel}">
+            <view:Pagina3View/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:Pagina4ViewModel}">
+            <view:Pagina4View/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Menu FontSize="15" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+            <MenuItem Header="_Pagina1" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding Pagina1ViewModel}"/>
+            <MenuItem Header="_Pagina2" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding Pagina2ViewModel}"/>
+            <MenuItem Header="_Pagina3" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding Pagina3ViewModel}"/>
+            <MenuItem Header="_Pagina4" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding Pagina4ViewModel}"/>
+
+        </Menu>
+
+        <ContentControl  Grid.Row="1" Content="{Binding SelectedViewModel}"/>
+
+    </Grid>
+</Window>

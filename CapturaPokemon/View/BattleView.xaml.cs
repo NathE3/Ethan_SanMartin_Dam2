@@ -1,9 +1,4 @@
-﻿using CapturaPokemon.Interface;
-using CapturaPokemon.Service;
-using CapturaPokemon.ViewModel;
-using Microsoft.Extensions.DependencyInjection;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 
 namespace CapturaPokemon.View
