@@ -18,17 +18,17 @@ namespace CapturaPokemon.Service
          }
 
         public async Task AddPokemonToApi(object pokemon)
-            {
-                try
+        {
+               try
                 {
                     if (pokemon == null) return;
                     var response = await HttpJsonClient<PokemonDTO>.Post(Constants.POKEUS_URL, pokemon);
                 }
-                catch (Exception ex)
+               catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
             }
-            }
+        }
 
         public async Task<List<PokemonDTO>> GetAllPokemons()
         {
