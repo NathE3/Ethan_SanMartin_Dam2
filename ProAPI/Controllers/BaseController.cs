@@ -44,6 +44,27 @@
                 }
             }
 
+            [ApiExplorerSettings(IgnoreApi = true)]
+            [Authorize(Roles = "admin")]
+            [HttpGet("{id:int}", Name = "[controller]_GetEntity")]
+            [ProducesResponseType(StatusCodes.Status200OK)]
+            [ProducesResponseType(StatusCodes.Status404NotFound)]
+            public async Task<IActionResult> Get(int id)
+            {
+                try
+                {
+                    var entity = await _repository.GetAsync(id);
+                    if (entity == null) return NotFound();
+
+                    return Ok(_mapper.Map<TDto>(entity));
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error fetching data");
+                    return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                }
+            }
+
             [Authorize(Roles = "admin")]
             [HttpPost]
             [ProducesResponseType(StatusCodes.Status201Created)]
@@ -58,7 +79,7 @@
                     await _repository.CreateAsync(entity);
 
                     var dto = _mapper.Map<TDto>(entity);
-                    return CreatedAtRoute("GetEntity", new { id = entity.GetHashCode() }, dto);
+                    return CreatedAtRoute($"{ControllerContext.ActionDescriptor.ControllerName}_GetEntity", new { id = entity.GetHashCode() }, dto);
                 }
                 catch (Exception ex)
                 {
