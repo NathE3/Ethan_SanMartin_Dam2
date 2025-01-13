@@ -1,7 +1,7 @@
-using ApiPelicula.AutoMapper;
-using ApiPelicula.Data;
-using ApiPelicula.Repository;
-using ApiPelicula.Repository.IRepository;
+using RestAPI.AutoMapper;
+using RestAPI.Data;
+using RestAPI.Repository;
+using RestAPI.Repository.IRepository;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -22,7 +22,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 // Add services to the container.
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IDictadorRepository, DictadorRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddAutoMapper(typeof(ApplicationMapper));
 //Logger setup

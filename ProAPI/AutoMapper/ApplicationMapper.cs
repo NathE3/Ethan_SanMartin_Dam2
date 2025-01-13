@@ -1,16 +1,16 @@
-﻿using ApiPelicula.Models.DTOs.CategoryDto;
-using ApiPelicula.Models.DTOs.UserDto;
+﻿using RestAPI.Models.DTOs.DictadorDto;
+using RestAPI.Models.DTOs.UserDto;
 using AutoMapper;
 using RestAPI.Models.Entity;
 
-namespace ApiPelicula.AutoMapper
+namespace RestAPI.AutoMapper
 {
     public class ApplicationMapper : Profile
     {
         public ApplicationMapper()
         {
-            CreateMap<Category, CategoryDto>().ReverseMap();
-            CreateMap<Category, CreateCategoryDto>().ReverseMap();
+            CreateMap<DictadorEntity, DictadorDto>().ReverseMap();
+            CreateMap<DictadorEntity, CreateDictadorDto>().ReverseMap();
             CreateMap<AppUser, UserDto>().ReverseMap();
         }
     }

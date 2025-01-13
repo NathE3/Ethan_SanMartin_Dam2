@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|d:\\ejerciciosdec\\ejerciciosc\\apidemierda\\apidemierda\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|solutionrelative:apidemierda\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|d:\\ejerciciosdec\\ejerciciosc\\apidemierda\\apidemierda\\apidemierda.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|solutionrelative:apidemierda\\apidemierda.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|d:\\ejerciciosdec\\ejerciciosc\\apidemierda\\apidemierda\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|solutionrelative:apidemierda\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|d:\\ejerciciosdec\\ejerciciosc\\apidemierda\\apidemierda\\controllers\\pokemoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04952F31-4AEB-4975-9904-A1BF417200E2}|ApiDeMIerda\\ApiDeMIerda.csproj|solutionrelative:apidemierda\\controllers\\pokemoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,11 +30,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ApiDeMIerda\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ApiDeMIerda\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-10T20:06:45.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ApiDeMIerda.http",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.http",
+              "RelativeDocumentMoniker": "ApiDeMIerda\\ApiDeMIerda.http",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\ApiDeMIerda.http",
+              "RelativeToolTip": "ApiDeMIerda\\ApiDeMIerda.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-12-10T20:06:33.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\appsettings.json",
+              "RelativeDocumentMoniker": "ApiDeMIerda\\appsettings.json",
+              "ToolTip": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\appsettings.json",
+              "RelativeToolTip": "ApiDeMIerda\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-10T20:06:27.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PokemonDTO.cs",
               "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\DTO\\PokemonDTO.cs",
               "RelativeDocumentMoniker": "ApiDeMIerda\\DTO\\PokemonDTO.cs",
@@ -30,12 +81,11 @@
               "RelativeToolTip": "ApiDeMIerda\\DTO\\PokemonDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T16:23:24.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T16:23:24.211Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PokemonController.cs",
               "DocumentMoniker": "D:\\EjerciciosDeC\\EjerciciosC\\ApiDeMIerda\\ApiDeMIerda\\Controllers\\PokemonController.cs",
               "RelativeDocumentMoniker": "ApiDeMIerda\\Controllers\\PokemonController.cs",

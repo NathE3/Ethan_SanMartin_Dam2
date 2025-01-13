@@ -7,6 +7,7 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
     using global::RestAPI.Repository;
+    using global::AutoMapper;
 
     namespace RestAPI.Controllers
     {
@@ -35,26 +36,6 @@
                 {
                     var entities = _mapper.Map<List<TDto>>(await _repository.GetAllAsync());
                     return Ok(entities);
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error fetching data");
-                    return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-                }
-            }
-
-            [AllowAnonymous]
-            [HttpGet("{id:int}", Name = "GetEntity")]
-            [ProducesResponseType(StatusCodes.Status200OK)]
-            [ProducesResponseType(StatusCodes.Status404NotFound)]
-            public async Task<IActionResult> Get(int id)
-            {
-                try
-                {
-                    var entity = await _repository.GetAsync(id);
-                    if (entity == null) return NotFound();
-
-                    return Ok(_mapper.Map<TDto>(entity));
                 }
                 catch (Exception ex)
                 {
@@ -107,27 +88,6 @@
                 catch (Exception ex)
                 {
                     _logger.LogError(ex, "Error updating data");
-                    return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-                }
-            }
-
-            [Authorize(Roles = "admin")]
-            [HttpDelete("{id:int}")]
-            [ProducesResponseType(StatusCodes.Status200OK)]
-            [ProducesResponseType(StatusCodes.Status404NotFound)]
-            public async Task<IActionResult> Delete(int id)
-            {
-                try
-                {
-                    var entity = await _repository.GetAsync(id);
-                    if (entity == null) return NotFound();
-
-                    await _repository.DeleteAsync(id);
-                    return Ok();
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error deleting data");
                     return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
                 }
             }

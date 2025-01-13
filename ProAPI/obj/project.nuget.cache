@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GJNvlUzrIeI=",
+  "dgSpecHash": "xhB4pHvl8Yo=",
   "success": true,
-  "projectFilePath": "D:\\RepoProfe\\damv2_2024\\ProAPI\\RestAPI.csproj",
+  "projectFilePath": "D:\\EjerciciosDeC\\EjerciciosC\\ProAPI\\RestAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vespertino\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Vespertino\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

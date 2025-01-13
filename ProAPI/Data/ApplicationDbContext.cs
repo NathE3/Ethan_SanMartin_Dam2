@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using RestAPI.Models.Entity;
 
-namespace ApiPelicula.Data
+namespace RestAPI.Data
 {
     public class ApplicationDbContext : IdentityDbContext<AppUser>
     {
@@ -15,7 +15,7 @@ namespace ApiPelicula.Data
             base.OnModelCreating(modelBuilder);
         }
         //Add models here
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<DictadorEntity> Dictadors { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
 

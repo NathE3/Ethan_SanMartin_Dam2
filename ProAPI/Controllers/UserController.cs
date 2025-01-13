@@ -1,14 +1,13 @@
-﻿using ApiPelicula.Models.DTOs;
-using ApiPelicula.Models.DTOs.CategoryDto;
-using ApiPelicula.Models.DTOs.UserDto;
-using ApiPelicula.Repository;
-using ApiPelicula.Repository.IRepository;
+﻿using RestAPI.Models.DTOs;
+using RestAPI.Models.DTOs.UserDto;
+using RestAPI.Models.DTOs.DictadorDto;
+using RestAPI.Repository.IRepository;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace ApiPelicula.Controllers
+namespace RestAPI.Controllers
 {
     [Route("api/users")]
     [ApiController]
@@ -22,37 +21,6 @@ namespace ApiPelicula.Controllers
             _userRepository = userRepository;
             _reponseApi = new ResponseApi();
             _mapper = mapper;
-        }
-
-        [Authorize(Roles = "admin")]
-        [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status403Forbidden)]
-        public IActionResult GetUsers()
-        {
-            var userList = _userRepository.GetUsers();
-            var userListDto = new List<UserDto>();
-
-            foreach (var user in userList)
-            {
-                userListDto.Add(_mapper.Map<UserDto>(user));
-            }
-
-            return Ok(userListDto);
-        }
-
-        [Authorize(Roles = "admin")]
-        [HttpGet("{userId:int}", Name = "GetUser")]
-        [ProducesResponseType(StatusCodes.Status403Forbidden)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult GetUser(string userId)
-        {
-            var user = _userRepository.GetUser(userId);
-            if (user == null) { return NotFound(); }
-
-            return Ok(_mapper.Map<CategoryDto>(user));
         }
 
         [AllowAnonymous]

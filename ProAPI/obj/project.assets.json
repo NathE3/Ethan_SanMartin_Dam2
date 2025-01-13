@@ -4594,11 +4594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RepoProfe\\damv2_2024\\ProAPI\\RestAPI.csproj",
+      "projectUniqueName": "D:\\EjerciciosDeC\\EjerciciosC\\ProAPI\\RestAPI.csproj",
       "projectName": "RestAPI",
-      "projectPath": "D:\\RepoProfe\\damv2_2024\\ProAPI\\RestAPI.csproj",
+      "projectPath": "D:\\EjerciciosDeC\\EjerciciosC\\ProAPI\\RestAPI.csproj",
       "packagesPath": "C:\\Users\\Vespertino\\.nuget\\packages\\",
-      "outputPath": "D:\\RepoProfe\\damv2_2024\\ProAPI\\obj\\",
+      "outputPath": "D:\\EjerciciosDeC\\EjerciciosC\\ProAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
