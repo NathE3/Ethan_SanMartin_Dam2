@@ -2,7 +2,7 @@
 
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace WPF_UI.Models
+namespace Pro_WPF.Models
 {
     public class DicatadoresMostrados
     {

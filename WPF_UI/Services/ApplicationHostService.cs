@@ -3,9 +3,10 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
-using Wpf.Ui.Demo.Mvvm.Views;
+using Pro_WPF.Views;
+using Wpf.Ui;
 
-namespace Wpf.Ui.Demo.Mvvm.Services;
+namespace Pro_WPF.Services;
 
 /// <summary>
 /// Managed host of the application.

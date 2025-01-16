@@ -3,7 +3,7 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
-namespace Wpf.Ui.Demo.Mvvm.ViewModels;
+namespace Pro_WPF.ViewModels;
 
 public partial class DashboardViewModel : ViewModel
 {

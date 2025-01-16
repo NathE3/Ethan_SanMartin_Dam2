@@ -1,28 +1,39 @@
-using WPF_UI.Utils;
-using WPF_UI.Interface;
-using WPF_UI.Models;
+using Pro_WPF.Helpers;
+using Pro_WPF.Interface;
+using Pro_WPF.Models;
+using Pro_WPF.Services;
 
-namespace WPF_UI.Service
+
+
+namespace Pro_WPF.Service
 {
 
    public class DicatadorServiceToApi : IDicatadorServiceToApi
    {
-         public async Task<DicatadorDTO> GetDicatador()
+        private readonly IHttpJsonProvider<DicatadorDTO> _httpJsonProvider;
+
+        DicatadorServiceToApi(IHttpJsonProvider<DicatadorDTO>  httpJsonProvider) 
+        {
+            _httpJsonProvider = httpJsonProvider;
+        }
+
+         public async  Task<IEnumerable<DicatadorDTO>> GetDicatadores()
          {
         
-         string url = Constants.BASE_URL; 
+         string url = Constants.BASE_URL;
 
-        
-         DicatadorDTO dicatador = await HttpJsonClient<DicatadorDTO>.Get(url);
-         return dicatador;
+
+            IEnumerable<DicatadorDTO> dicatadores = await _httpJsonProvider.GetAsync(url);
+
+         return dicatadores;
          }
 
-        public async Task PostDicatador(object dicatador)
+        public async Task PostDicatador(DicatadorDTO dicatador)
             {
                 try
                 {
                     if (dicatador == null) return;
-                    var response = await HttpJsonClient<DicatadorDTO>.Post(Constants.BASE_URL, dicatador);
+                    var response = await _httpJsonProvider<DicatadorDTO>.PostAsync(Constants.BASE_URL, dicatador);
                 }
                 catch (Exception ex)
                 {
@@ -34,7 +45,7 @@ namespace WPF_UI.Service
         {
             try
             {
-                var dicatador = await HttpJsonClient<List<DicatadorDTO>>.Get(Constants.BASE_URL);
+                var dicatador = await _httpJsonProvider<List<DicatadorDTO>>.(Constants.BASE_URL);
                 return dicatador ?? new List<DicatadorDTO>();
             }
             catch (Exception ex)

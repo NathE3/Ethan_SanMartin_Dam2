@@ -4,9 +4,10 @@
 // All Rights Reserved.
 
 using System.Collections.ObjectModel;
+using Wpf.Ui;
 using Wpf.Ui.Controls;
 
-namespace Wpf.Ui.Demo.Mvvm.ViewModels;
+namespace Pro_WPF.ViewModels;
 
 public partial class MainWindowViewModel : ViewModel
 {

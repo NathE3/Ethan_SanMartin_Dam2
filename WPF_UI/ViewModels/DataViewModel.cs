@@ -3,10 +3,10 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
+using Pro_WPF.Models;
 using System.Windows.Media;
-using Wpf.Ui.Demo.Mvvm.Models;
 
-namespace Wpf.Ui.Demo.Mvvm.ViewModels;
+namespace Pro_WPF.ViewModels;
 
 public partial class DataViewModel : ViewModel
 {
@@ -23,6 +23,11 @@ public partial class DataViewModel : ViewModel
         }
     }
 
+    public override async Task OnNavigatedToAsync()
+    {
+       await Task.CompletedTask;
+    }
+
     private void InitializeViewModel()
     {
         var random = new Random();
@@ -35,7 +40,7 @@ public partial class DataViewModel : ViewModel
                 {
                     Color = new SolidColorBrush(
                         Color.FromArgb(
-                            (byte)200,
+                            200,
                             (byte)random.Next(0, 250),
                             (byte)random.Next(0, 250),
                             (byte)random.Next(0, 250)

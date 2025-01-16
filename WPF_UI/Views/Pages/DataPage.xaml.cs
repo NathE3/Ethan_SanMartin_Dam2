@@ -4,8 +4,9 @@
 // All Rights Reserved.
 
 using Wpf.Ui.Abstractions.Controls;
+using Pro_WPF.ViewModels; 
 
-namespace Wpf.Ui.Demo.Mvvm.Views.Pages;
+namespace Pro_WPF.Views.Pages;
 
 /// <summary>
 /// Interaction logic for DataView.xaml

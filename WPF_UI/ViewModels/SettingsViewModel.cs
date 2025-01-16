@@ -3,7 +3,7 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
-namespace Wpf.Ui.Demo.Mvvm.ViewModels;
+namespace Pro_WPF.ViewModels;
 
 public partial class SettingsViewModel : ViewModel
 {
@@ -29,7 +29,7 @@ public partial class SettingsViewModel : ViewModel
     private void InitializeViewModel()
     {
         CurrentApplicationTheme = Wpf.Ui.Appearance.ApplicationThemeManager.GetAppTheme();
-        AppVersion = $"Wpf.Ui.Demo.Mvvm - {GetAssemblyVersion()}";
+        AppVersion = $"Pro_WPF - {GetAssemblyVersion()}";
 
         _isInitialized = true;
     }

@@ -5,7 +5,7 @@
 
 using System.Windows.Data;
 
-namespace Wpf.Ui.Demo.Mvvm.Helpers;
+namespace Pro_WPF.Helpers;
 
 internal class EnumToBooleanConverter : IValueConverter
 {

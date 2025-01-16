@@ -5,7 +5,7 @@
 
 using Wpf.Ui.Abstractions.Controls;
 
-namespace Wpf.Ui.Demo.Mvvm.ViewModels;
+namespace Pro_WPF.ViewModels;
 
 public abstract class ViewModel : ObservableObject, INavigationAware
 {

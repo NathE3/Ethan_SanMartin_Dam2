@@ -11,10 +11,10 @@ namespace RestAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DictadorController : BaseController<DictadorEntity, DictadorDto, CreateDictadorDto>
+    public class DicatadorController : BaseController<DictadorEntity, DictadorDto, CreateDictadorDto>
     {
      
-            public DictadorController(IDictadorRepository dictadorRepository,
+            public DicatadorController(IDictadorRepository dictadorRepository,
                 IMapper mapper, ILogger<IDictadorRepository> logger)
                 : base(dictadorRepository, mapper, logger)
             {

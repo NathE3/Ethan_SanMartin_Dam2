@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace WPF_UI.Models
+namespace Pro_WPF.Models
 {
     public class DicatadorDTO
     {

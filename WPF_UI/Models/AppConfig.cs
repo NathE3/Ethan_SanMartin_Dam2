@@ -3,7 +3,7 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
-namespace Wpf.Ui.Demo.Mvvm.Models;
+namespace Pro_WPF.Models;
 
 public class AppConfig
 {

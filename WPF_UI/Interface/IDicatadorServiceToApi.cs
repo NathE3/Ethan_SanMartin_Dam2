@@ -1,7 +1,7 @@
-﻿using WPF_UI.Models;
+﻿using Pro_WPF.Models;
 
 
-namespace WPF_UI.Interface
+namespace Pro_WPF.Interface
 {
     public interface IDicatadorServiceToApi
     {

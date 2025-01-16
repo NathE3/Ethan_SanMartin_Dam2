@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPF_UI.Models
+namespace Pro_WPF.Models
 {
     public class LoginDTO
     {

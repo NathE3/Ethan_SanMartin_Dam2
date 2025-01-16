@@ -7,11 +7,14 @@ using System.IO;
 using System.Windows.Threading;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Wpf.Ui.Demo.Mvvm.Models;
-using Wpf.Ui.Demo.Mvvm.Services;
+using Pro_WPF.ViewModels;
+using Pro_WPF.Models;
+using Pro_WPF.Services;
 using Wpf.Ui.DependencyInjection;
+using Wpf.Ui;
+using Pro_WPF.Interface;
 
-namespace Wpf.Ui.Demo.Mvvm;
+namespace Pro_WPF;
 
 /// <summary>
 /// Interaction logic for App.xaml
@@ -58,9 +61,10 @@ public partial class App
                 _ = services.AddSingleton<Views.Pages.DashboardPage>();
                 _ = services.AddSingleton<ViewModels.DashboardViewModel>();
                 _ = services.AddSingleton<Views.Pages.DataPage>();
-                _ = services.AddSingleton<ViewModels.DataViewModel>();
+                _ = services.AddSingleton<DataViewModel>();
                 _ = services.AddSingleton<Views.Pages.SettingsPage>();
                 _ = services.AddSingleton<ViewModels.SettingsViewModel>();
+                _= services.AddSingleton(typeof(IHttpJsonProvider<>), typeof(HttpJsonService<>));
 
                 // Configuration
                 _ = services.Configure<AppConfig>(context.Configuration.GetSection(nameof(AppConfig)));

@@ -5,7 +5,7 @@
 
 using Wpf.Ui.Abstractions.Controls;
 
-namespace Wpf.Ui.Demo.Mvvm.Views.Pages;
+namespace Pro_WPF.Views.Pages;
 
 /// <summary>
 /// Interaction logic for SettingsPage.xaml
