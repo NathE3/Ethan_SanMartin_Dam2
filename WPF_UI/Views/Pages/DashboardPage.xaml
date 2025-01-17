@@ -6,9 +6,9 @@
     xmlns:local="clr-namespace:Pro_WPF.Views.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    Title="DashboardPage"
-    d:DataContext="{d:DesignInstance local:DashboardPage,
-                                     IsDesignTimeCreatable=False}"
+    xmlns:viewmodels="clr-namespace:Pro_WPF.ViewModels"
+    Title="DashboardPage" 
+    d:DataContext="{d:DesignInstance Type=viewmodels:DashboardViewModel}"
     d:DesignHeight="450"
     d:DesignWidth="800"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
@@ -16,21 +16,32 @@
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     mc:Ignorable="d">
 
-    <Grid Margin="42" VerticalAlignment="Top">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
+    <Grid Margin="42" VerticalAlignment="Top" RenderTransformOrigin="0.502,0.458">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
         <ui:Button
             Grid.Column="0"
             Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
-            Content="Click me!"
-            Icon="{ui:SymbolIcon Fluent24}" />
-        <TextBlock
-            Grid.Column="1"
-            Margin="12,0,0,0"
-            VerticalAlignment="Center"
-            Text="{Binding ViewModel.Counter, Mode=OneWay}" />
+            Content="Dicatador add"
+            Icon="{ui:SymbolIcon Fluent24}" Margin="501,-9,0,0" VerticalAlignment="Top" Width="138" Height="33" />
+
+        <ui:DataGrid
+            Grid.Row="1" 
+            x:Name="MyDataGrid"       
+            ItemsSource="{Binding ViewModel.Dicatadores}" 
+            AutoGenerateColumns="True" 
+            Margin="10" 
+            CanUserResizeColumns="True"
+            CanUserResizeRows="False"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            MinRowHeight="25"
+            MaxHeight="400" 
+            ColumnWidth="Auto"
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
     </Grid>
 </Page>

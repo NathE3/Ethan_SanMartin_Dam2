@@ -1,6 +1,6 @@
 ﻿namespace RestAPI.Models.DTOs.DictadorDto
 {
-    public class DictadorDto : CreateDictadorDto
+    public class DicatadorDto : CreateDicatadorDto
     {
         public int Id { get; set; }
     }

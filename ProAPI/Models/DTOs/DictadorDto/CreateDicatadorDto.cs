@@ -2,7 +2,7 @@
 
 namespace RestAPI.Models.DTOs.DictadorDto
 {
-    public class CreateDictadorDto
+    public class CreateDicatadorDto
     {
      
         [Required(ErrorMessage = "Name is required")]
@@ -13,10 +13,10 @@ namespace RestAPI.Models.DTOs.DictadorDto
 
         [Required(ErrorMessage = "Name is required")]
         [MaxLength(50, ErrorMessage = "Max char is 50")]
-        public string Description { get; set; }
+        public string description { get; set; }
 
         [MaxLength(20, ErrorMessage = "Max char is 20")]
         [Required(ErrorMessage = "Name is required")]
-        public string Pais { get; set; }
+        public string pais { get; set; }
     }
 }

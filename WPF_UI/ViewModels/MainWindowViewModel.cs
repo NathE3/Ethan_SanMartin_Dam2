@@ -40,7 +40,7 @@ public partial class MainWindowViewModel : ViewModel
 
     private void InitializeViewModel()
     {
-        ApplicationTitle = "WPF UI - MVVM Demo";
+        ApplicationTitle = "ProWPF";
 
         NavigationItems =
         [

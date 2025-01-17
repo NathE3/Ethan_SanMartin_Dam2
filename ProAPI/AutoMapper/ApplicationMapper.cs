@@ -9,8 +9,8 @@ namespace RestAPI.AutoMapper
     {
         public ApplicationMapper()
         {
-            CreateMap<DictadorEntity, DictadorDto>().ReverseMap();
-            CreateMap<DictadorEntity, CreateDictadorDto>().ReverseMap();
+            CreateMap<DictadorEntity, DicatadorDto>().ReverseMap();
+            CreateMap<DictadorEntity, CreateDicatadorDto>().ReverseMap();
             CreateMap<AppUser, UserDto>().ReverseMap();
         }
     }

@@ -16,10 +16,10 @@ namespace Pro_WPF.Models
         public string Name { get; set; }
 
         [JsonPropertyName("description")]
-        public string description { get; set; }
+        public string Description { get; set; }
 
         [JsonPropertyName("pais")]
-        public string pais { get; set; }
+        public string Pais { get; set; }
     
         }
     }

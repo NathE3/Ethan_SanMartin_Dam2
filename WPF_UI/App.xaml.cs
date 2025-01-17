@@ -13,6 +13,7 @@ using Pro_WPF.Services;
 using Wpf.Ui.DependencyInjection;
 using Wpf.Ui;
 using Pro_WPF.Interface;
+using Pro_WPF.Service;
 
 namespace Pro_WPF;
 
@@ -65,6 +66,7 @@ public partial class App
                 _ = services.AddSingleton<Views.Pages.SettingsPage>();
                 _ = services.AddSingleton<ViewModels.SettingsViewModel>();
                 _= services.AddSingleton(typeof(IHttpJsonProvider<>), typeof(HttpJsonService<>));
+                _ = services.AddSingleton<IDicatadorServiceToApi, DicatadorServiceToApi>();
 
                 // Configuration
                 _ = services.Configure<AppConfig>(context.Configuration.GetSection(nameof(AppConfig)));

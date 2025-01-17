@@ -12,18 +12,17 @@ namespace Pro_WPF.Service
    {
         private readonly IHttpJsonProvider<DicatadorDTO> _httpJsonProvider;
 
-        DicatadorServiceToApi(IHttpJsonProvider<DicatadorDTO>  httpJsonProvider) 
+        public DicatadorServiceToApi(IHttpJsonProvider<DicatadorDTO>  httpJsonProvider) 
         {
             _httpJsonProvider = httpJsonProvider;
         }
 
+
+
          public async  Task<IEnumerable<DicatadorDTO>> GetDicatadores()
          {
-        
-         string url = Constants.BASE_URL;
-
-
-            IEnumerable<DicatadorDTO> dicatadores = await _httpJsonProvider.GetAsync(url);
+ 
+            IEnumerable<DicatadorDTO> dicatadores = await _httpJsonProvider.GetAsync(Constants.BASE_URL);
 
          return dicatadores;
          }
@@ -33,7 +32,7 @@ namespace Pro_WPF.Service
                 try
                 {
                     if (dicatador == null) return;
-                    var response = await _httpJsonProvider<DicatadorDTO>.PostAsync(Constants.BASE_URL, dicatador);
+                    var response = await _httpJsonProvider.PostAsync(Constants.BASE_URL,dicatador);
                 }
                 catch (Exception ex)
                 {
@@ -41,19 +40,19 @@ namespace Pro_WPF.Service
                 }
         }
 
-        public  async Task<List<DicatadorDTO>> GetAllDicatadores()
+        public async Task PutDicatador(DicatadorDTO dicatador)
         {
             try
             {
-                var dicatador = await _httpJsonProvider<List<DicatadorDTO>>.(Constants.BASE_URL);
-                return dicatador ?? new List<DicatadorDTO>();
+                if (dicatador == null) return;
+                var response = await _httpJsonProvider.PutAsync(Constants.BASE_URL, dicatador);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error de la  API: {ex.Message}");
-                return new List<DicatadorDTO>();
+                Console.WriteLine(ex.Message);
             }
         }
+
 
     }
    
