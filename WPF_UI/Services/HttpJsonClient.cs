@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using Pro_WPF.Helpers;
 using Pro_WPF.Models;
 using Pro_WPF.Interface;
+using System.Windows.Navigation;
+using System.Xml.Linq;
 
 namespace Pro_WPF.Services
 {
@@ -18,12 +20,21 @@ namespace Pro_WPF.Services
 
         public static string Token = string.Empty;
 
-        private LoginDTO loginDTO = new LoginDTO()
+        private LoginDTO loginDTO = new()
         {
-            UserName = "sufrido",
-            Password = "wnD/LbJq?9t,}-628%)",
+            UserName = "",
+            Password = "",
         };
-      
+
+        UserRegistroDTO userRegistroDTO = new()
+        {
+            Name = "",
+            UserName = "",
+            Email = "",
+            Password = "",
+            Role = ""
+        };
+
 
         //CREAR UN METODO SOLO PARA LA RENOVACION DE TOKEN ASI NO HAY QUE ESCRIBIRLO EN EL GET, POST Y PATCH
         public async Task<IEnumerable<T?>> GetAsync(string path)
@@ -109,6 +120,67 @@ namespace Pro_WPF.Services
             }
             return default;
         }
+
+
+        public async Task<T?> LoginPostAsync(string path, LoginDTO data) 
+            {
+            try
+            {
+                using (HttpClient httpClient = new HttpClient())
+                {
+
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+
+                    // Serializar el objeto 'data' (PokemonDTO) a JSON
+                    string jsonContent = JsonSerializer.Serialize(data);
+
+                    // Crear el contenido HTTP con el tipo adecuado para enviar JSON
+                    var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+                    HttpResponseMessage response = await httpClient.PostAsync($"{Constants.BASE_URL}{path}", content);
+
+                    // Leer el contenido de la respuesta y deserializarlo
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    return JsonSerializer.Deserialize<T>(responseBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en la solicitud POST: {ex.Message}");
+            }
+            return default;
+        }
+
+        public async Task<T?> RegisterPostAsync(string path, UserRegistroDTO data)
+        {
+            try
+            {
+                using (HttpClient httpClient = new HttpClient())
+                {
+
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+
+                    // Serializar el objeto 'data' (UserRegistroDTO) a JSON
+                    string jsonContent = JsonSerializer.Serialize(data);
+
+                    // Crear el contenido HTTP con el tipo adecuado para enviar JSON
+                    var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+                    HttpResponseMessage response = await httpClient.PostAsync($"{Constants.BASE_URL}{path}", content);
+
+                    // Leer el contenido de la respuesta y deserializarlo
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    return JsonSerializer.Deserialize<T>(responseBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en la solicitud POST: {ex.Message}");
+            }
+            return default;
+        }
+
+
 
         public async Task<T?> PutAsync(string path, T data)
         {

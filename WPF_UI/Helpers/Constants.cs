@@ -11,9 +11,10 @@ namespace Pro_WPF.Helpers
     {
         public const string JSON_FILTER = "JSON Files (*.json)|*.json|All Files (*.*)|*.*";
 
-        public const string BASE_URL = "https://localhost:7016/api/";
+        public const string BASE_URL = "http://localhost:5072/api/";
         public const string DICATADOR_URL = "Dicatador";
-        public const string LOGIN_PATH = "users";
+        public const string LOGIN_PATH = "users/login";
+        public const string REGISTER_PATH = "users/register";
 
     }
 }

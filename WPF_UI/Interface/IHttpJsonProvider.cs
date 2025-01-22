@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pro_WPF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -13,6 +14,8 @@ namespace Pro_WPF.Interface
         Task<T?> PostAsync(string path, T data);
         Task<T?> PutAsync(string path, T data);
         Task Authenticate(string path, HttpClient httpClient, HttpResponseMessage request);
+        Task<T?> LoginPostAsync(string path, LoginDTO data);
+        Task<T?> RegisterPostAsync(string path, UserRegistroDTO data);
 
     }
 

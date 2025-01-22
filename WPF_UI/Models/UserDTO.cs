@@ -13,10 +13,13 @@ namespace Pro_WPF.Models
         {
             [JsonPropertyName("statusCode")]
             public int StatusCode { get; set; }
+
             [JsonPropertyName("isSuccess")]
             public bool IsSuccess { get; set; }
+
             [JsonPropertyName("errorMessages")]
             public List<object> ErrorMessages { get; set; }
+
             [JsonPropertyName("result")]
             public Result Result { get; set; }
         }

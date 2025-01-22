@@ -3,6 +3,7 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
+using Pro_WPF.ViewModels;
 using Wpf.Ui;
 using Wpf.Ui.Abstractions;
 using Wpf.Ui.Controls;
@@ -14,7 +15,7 @@ namespace Pro_WPF.Views;
 /// </summary>
 public partial class MainWindow : INavigationWindow
 {
-    public ViewModels.MainWindowViewModel ViewModel { get; }
+    public ViewModels.MainWindowViewModel ViewModel { get; }   
 
     public MainWindow(ViewModels.MainWindowViewModel viewModel, INavigationService navigationService)
     {

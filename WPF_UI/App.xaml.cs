@@ -60,6 +60,10 @@ public partial class App
 
                 // Views and ViewModels
                 _ = services.AddSingleton<Views.Pages.DashboardPage>();
+                _ = services.AddSingleton<Views.Pages.LoginView>();
+                _= services.AddSingleton<ViewModels.LoginViewModel>();
+                _= services.AddSingleton<ViewModels.RegistroViewModel>();
+                _= services.AddSingleton<Views.Pages.RegistroView>();
                 _ = services.AddSingleton<ViewModels.DashboardViewModel>();
                 _ = services.AddSingleton<Views.Pages.DataPage>();
                 _ = services.AddSingleton<DataViewModel>();

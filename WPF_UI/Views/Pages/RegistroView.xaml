@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Pro_WPF.Views.Pages.RegistroView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Pro_WPF.Views.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:viewmodels="clr-namespace:Pro_WPF.ViewModels"
+    Title="RegisterPage" 
+    d:DataContext="{d:DesignInstance Type=viewmodels:RegistroViewModel}"
+    mc:Ignorable="d"
+    Background="White" Height="500" Width="600">
+
+    <Grid Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock 
+            Text="Registro de Usuario" 
+            FontSize="24" 
+            FontWeight="Bold" 
+            HorizontalAlignment="Center" 
+            Margin="0,0,0,20" 
+            Grid.Row="0"/>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,20" VerticalAlignment="Center">
+            <ui:TextBox 
+                Background="Gray"
+                PlaceholderText="Nombre Completo" 
+                Width="300" 
+                Margin="0,10,0,0" 
+                Text="{Binding ViewModel.Name, Mode=TwoWay}"/>
+
+            <ui:TextBox 
+                Background="Gray"
+                PlaceholderText="Nombre de Usuario" 
+                Width="300" 
+                Margin="0,10,0,0" 
+                Text="{Binding ViewModel.UserName, Mode=TwoWay}"/>
+
+            <ui:TextBox 
+                Background="Gray"
+                PlaceholderText="Correo Electrónico" 
+                Width="300" 
+                Margin="0,10,0,0" 
+                Text="{Binding ViewModel.Email, Mode=TwoWay}"/>
+
+            <ui:PasswordBox 
+                Background="Gray"
+                PlaceholderText="Contraseña" 
+                Width="300" 
+                Margin="0,10,0,0" 
+                Password="{Binding ViewModel.Password, Mode=TwoWay}"/>
+        </StackPanel>
+
+        <ui:Button 
+            Command="{Binding ViewModel.RegistroCommand, Mode=OneWay}"
+            Content="Registrarse"
+            Icon="{ui:SymbolIcon Symbol=Add20}"
+            Background="Gray"
+            Width="150" 
+            Height="40" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Grid.Row="2" 
+            Margin="0,10,0,0"/>
+    </Grid>
+
+</Page>
