@@ -225,7 +225,7 @@ namespace RestAPI.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("RestAPI.Models.Entity.DictadorEntity", b =>
+            modelBuilder.Entity("RestAPI.Models.Entity.DicatadorEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

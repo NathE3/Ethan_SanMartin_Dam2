@@ -4,7 +4,7 @@ using RestAPI.Repository;
 
 namespace RestAPI.Repository.IRepository
 {
-    public interface IDictadorRepository : IRepository<DictadorEntity>
+    public interface IDictadorRepository : IRepository<DicatadorEntity>
     {
 
     }

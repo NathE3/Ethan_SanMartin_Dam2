@@ -1,0 +1,74 @@
+﻿<UserControl
+    x:Class="LoginRegister.View.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LoginRegister.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel"
+    mc:Ignorable="d"
+    Background="White" Height="400" Width="600">
+   
+    
+    <Grid Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Título -->
+        <TextBlock 
+            Text="Inicio de Sesión" 
+            FontSize="28" 
+            FontWeight="SemiBold" 
+            Foreground="#4A90E2"
+            HorizontalAlignment="Center" 
+            Margin="0,0,0,20" 
+            Grid.Row="0"/>
+
+        <!-- Entradas de usuario -->
+        <StackPanel Grid.Row="1" Margin="0,0,0,20" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <ui:TextBox
+                PlaceholderText="Usuario" 
+                Width="320" 
+                Margin="0,10,0,0" 
+                Background="#F7F7F7"
+                Text="{Binding Name, Mode=TwoWay}"/>
+
+            <ui:PasswordBox 
+                PlaceholderText="Contraseña" 
+                Width="320" 
+                Margin="0,10,0,0" 
+                Background="#F7F7F7"
+                Password="{Binding PasswordView, Mode=TwoWay}"/>
+        </StackPanel>
+
+        <!-- Botón de inicio de sesión -->
+        <ui:Button 
+            Command="{Binding LoginCommand, Mode=OneWay}"
+            Content="Iniciar Sesión"
+            Width="180" 
+            Height="50" 
+            Background="#4A90E2" 
+            Foreground="White"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            CornerRadius="10"
+            Grid.Row="2"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <TextBlock Text="¿No tienes una cuenta? " Foreground="#606060" />
+            <TextBlock Foreground="#4A90E2" Cursor="Hand">
+                <Hyperlink Command="{Binding ToRegisterCommand}">
+                    Regístrate aquí
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>
+
+

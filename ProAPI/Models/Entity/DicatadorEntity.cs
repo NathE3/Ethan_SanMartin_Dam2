@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RestAPI.Models.Entity
 {
-    public class DictadorEntity
+    public class DicatadorEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

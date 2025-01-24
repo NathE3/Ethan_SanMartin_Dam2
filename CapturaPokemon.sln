@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestAPI", "ProAPI\RestAPI.c
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pro_WPF", "WPF_UI\Pro_WPF.csproj", "{DA06592F-F4B2-4A1A-85F0-08E724DED83D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoginRegister", "LoginRegister\LoginRegister.csproj", "{935C10BE-0E32-4368-91C2-AF1BABA5049A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{DA06592F-F4B2-4A1A-85F0-08E724DED83D}.Release|x64.Build.0 = Release|Any CPU
 		{DA06592F-F4B2-4A1A-85F0-08E724DED83D}.Release|x86.ActiveCfg = Release|Any CPU
 		{DA06592F-F4B2-4A1A-85F0-08E724DED83D}.Release|x86.Build.0 = Release|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Debug|x64.Build.0 = Debug|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Debug|x86.Build.0 = Debug|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Release|x64.ActiveCfg = Release|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Release|x64.Build.0 = Release|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Release|x86.ActiveCfg = Release|Any CPU
+		{935C10BE-0E32-4368-91C2-AF1BABA5049A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

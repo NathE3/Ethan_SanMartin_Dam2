@@ -34,9 +34,9 @@ namespace RestAPI.Repository
             _cache.Remove(DictadorCacheKey);
         }
 
-        public async Task<ICollection<DictadorEntity>> GetAllAsync()
+        public async Task<ICollection<DicatadorEntity>> GetAllAsync()
         {
-            if (_cache.TryGetValue(DictadorCacheKey, out ICollection<DictadorEntity> categoriesCached))
+            if (_cache.TryGetValue(DictadorCacheKey, out ICollection<DicatadorEntity> categoriesCached))
                 return categoriesCached;
 
             var categoriesFromDb = await _context.Dictadors.OrderBy(c => c.Name).ToListAsync();
@@ -47,9 +47,9 @@ namespace RestAPI.Repository
             return categoriesFromDb;
         }
 
-        public async Task<DictadorEntity> GetAsync(int id)
+        public async Task<DicatadorEntity> GetAsync(int id)
         {
-            if (_cache.TryGetValue(DictadorCacheKey, out ICollection<DictadorEntity> dictadorCached))
+            if (_cache.TryGetValue(DictadorCacheKey, out ICollection<DicatadorEntity> dictadorCached))
             {
                 var dictadores = dictadorCached.FirstOrDefault(c => c.Id == id);
                 if (dictadores != null)
@@ -64,13 +64,13 @@ namespace RestAPI.Repository
             return await _context.Dictadors.AnyAsync(c => c.Id == id);
         }
 
-        public async Task<bool> CreateAsync(DictadorEntity dictador)
+        public async Task<bool> CreateAsync(DicatadorEntity dictador)
         {
             _context.Dictadors.Add(dictador);
             return await Save();
         }
 
-        public async Task<bool> UpdateAsync(DictadorEntity dictador)
+        public async Task<bool> UpdateAsync(DicatadorEntity dictador)
         {
             _context.Update(dictador);
             return await Save();

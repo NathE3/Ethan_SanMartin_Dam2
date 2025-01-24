@@ -15,7 +15,7 @@ namespace RestAPI.Data
             base.OnModelCreating(modelBuilder);
         }
         //Add models here
-        public DbSet<DictadorEntity> Dictadors { get; set; }
+        public DbSet<DicatadorEntity> Dictadors { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
 
