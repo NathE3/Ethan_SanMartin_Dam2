@@ -30,18 +30,8 @@
     </Window.Resources>
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
 
-        <Menu FontSize="15" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
-            <MenuItem Header="_Dashboard" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding DashboardViewModel}"/>
-            <MenuItem Header="_Settings" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding SettingsViewModel}"/>
-        </Menu>
-
-        <ContentControl  Grid.Row="1" Content="{Binding SelectedViewModel}"/>
+        <ContentControl Content="{Binding SelectedViewModel}"/>
 
     </Grid>
 </Window>

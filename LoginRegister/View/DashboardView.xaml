@@ -6,34 +6,36 @@
     xmlns:local="clr-namespace:LoginRegister.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodels:DashboardViewModel}"
+    d:DesignHeight="450" 
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
     ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Width="750">
 
     <Grid Margin="42" VerticalAlignment="Top" RenderTransformOrigin="0.502,0.458">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="522*"/>
+            <ColumnDefinition Width="167*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <ui:Button
-            Grid.Column="0"
-            Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
+            Command="{Binding AddDicatadorCommand, Mode=OneWay}"
             Content="Dicatador add"
-            Icon="{ui:SymbolIcon Fluent24}" Margin="538,-16,38,0" VerticalAlignment="Top" Height="40" />
+            Icon="{ui:SymbolIcon Fluent24}" Margin="10,-16,55,0" VerticalAlignment="Top" Height="40" Grid.Column="1" />
 
         <ui:DataGrid
             Grid.Row="1" 
             x:Name="MyDataGrid"       
-            ItemsSource="{Binding ViewModel.Dicatadores}" 
+            ItemsSource="{Binding Dicatadores}" 
             AutoGenerateColumns="True" 
-            Margin="10" 
+            Margin="10,0,0,0" 
             CanUserResizeColumns="True"
             CanUserResizeRows="False"
-            VerticalAlignment="Top"
+            VerticalAlignment="Center"
             HorizontalAlignment="Left"
             MinRowHeight="25"
             MaxHeight="400" 

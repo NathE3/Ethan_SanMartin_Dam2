@@ -3,77 +3,74 @@ using CommunityToolkit.Mvvm.Input;
 using LoginRegister.Helpers;
 using LoginRegister.Interface;
 using LoginRegister.Models;
-using LoginRegister.ViewModel;
+using LoginRegister.View;
+using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using Wpf.Ui;
 
 namespace LoginRegister.ViewModel
 {
     public partial class RegistroViewModel : ViewModelBase
     {
         [ObservableProperty]
-        string _name;
+        private string _name;
 
         [ObservableProperty]
-        string _userName;
+        private string _userName;
 
         [ObservableProperty]
-        string _email;
+        private string _email;
 
         [ObservableProperty]
-        string _password;
+        private string _password;
+
+        public LoginViewModel LoginViewModel { get; }
 
         private readonly IHttpJsonProvider<UserDTO> _httpJsonProvider;
-        public INavigationService NavigationService { get; }
 
-        public RegistroViewModel(IHttpJsonProvider<UserDTO> httpJsonProvider, INavigationService navigationService)
+        public RegistroViewModel(IHttpJsonProvider<UserDTO> httpJsonProvider, LoginViewModel loginViewModel)
         {
             _httpJsonProvider = httpJsonProvider;
-            NavigationService = navigationService;
+            LoginViewModel = loginViewModel;
         }
 
         [RelayCommand]
         public async Task Registro()
         {
+            if (string.IsNullOrEmpty(Name) ||
+                string.IsNullOrEmpty(UserName) ||
+                string.IsNullOrEmpty(Email) ||
+                string.IsNullOrEmpty(Password))
+            {
+                MessageBox.Show("Por favor, rellene todos los campos.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
-                UserRegistroDTO userRegistroDTO = new() 
-                { 
-                    Name = Name, 
-                    UserName = UserName, 
-                    Email = Email,
-                    Password = Password, 
-                    Role = "user" };
+            UserRegistroDTO userRegistroDTO = new()
+            {
+                Name = Name,
+                UserName = UserName,
+                Email = Email,
+                Password = Password,
+                Role = "user"
+            };
 
-                if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
-                    {
-                         MessageBox.Show("Porfavor rellene todos los campos");
-                    }
-          
-    
-                try
-                {
-                    
-                    UserDTO user = await _httpJsonProvider.RegisterPostAsync(Constants.REGISTER_PATH, userRegistroDTO);
+            try
+            {
+                UserDTO user = await _httpJsonProvider.RegisterPostAsync(Constants.REGISTER_PATH, userRegistroDTO);
+                if (user != null && user.IsSuccess) {
+                 App.Current.Services.GetService<MainViewModel>().SelectedViewModel = App.Current.Services.GetService<MainViewModel>().LoginViewModel;
 
-                    if (user != null && user.IsSuccess)
-                    {
-                        NavigationService.Navigate(typeof(View.LoginView));
-                    }
-                    else
-                    {
-                        MessageBox.Show("Credenciales incorrectas. Intente de nuevo.", "Error de Inicio de Sesión", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ocurrió un error durante el registro: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error durante el registro: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
+
 

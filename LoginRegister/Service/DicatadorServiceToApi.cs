@@ -22,7 +22,7 @@ namespace LoginRegister.Service
          public async  Task<IEnumerable<DicatadorDTO>> GetDicatadores()
          {
  
-            IEnumerable<DicatadorDTO> dicatadores = await _httpJsonProvider.GetAsync(Constants.BASE_URL);
+            IEnumerable<DicatadorDTO> dicatadores = await _httpJsonProvider.GetAsync(Constants.DICATADOR_URL);
 
          return dicatadores;
          }
@@ -32,7 +32,7 @@ namespace LoginRegister.Service
                 try
                 {
                     if (dicatador == null) return;
-                    var response = await _httpJsonProvider.PostAsync(Constants.BASE_URL,dicatador);
+                    var response = await _httpJsonProvider.PostAsync(Constants.DICATADOR_URL, dicatador);
                 }
                 catch (Exception ex)
                 {
@@ -45,7 +45,7 @@ namespace LoginRegister.Service
             try
             {
                 if (dicatador == null) return;
-                var response = await _httpJsonProvider.PutAsync(Constants.BASE_URL, dicatador);
+                var response = await _httpJsonProvider.PutAsync(Constants.DICATADOR_URL, dicatador);
             }
             catch (Exception ex)
             {

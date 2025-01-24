@@ -7,6 +7,7 @@ using LoginRegister.Services;
 using LoginRegister.Models;
 using LoginRegister.ViewModel;
 using Wpf.Ui;
+using LoginRegister.View;
 
 namespace LoginRegister
 {
@@ -36,9 +37,10 @@ namespace LoginRegister
 
             //view principal
             services.AddSingleton<MainWindow>();
+        
 
             //view viewModels
-            services.AddTransient<MainViewModel>();
+            services.AddSingleton<MainViewModel>();
             services.AddTransient<DashboardViewModel>();
             services.AddTransient<LoginViewModel>();
             services.AddTransient<SettingsViewModel>();

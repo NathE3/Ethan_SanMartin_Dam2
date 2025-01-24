@@ -6,27 +6,27 @@
     xmlns:local="clr-namespace:LoginRegister.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel"
+    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodels:RegistroViewModel}"
     mc:Ignorable="d"
-    Background="Gray" Height="400" Width="600">
+    Background="white" Height="400" Width="600">
 
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Background="#F5F5F5" Height="399" Width="316">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Background="white" Height="399" Width="316">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-          
+
             <RowDefinition Height="Auto" />
-           
+
             <RowDefinition Height="Auto" />
-         
+
             <RowDefinition Height="Auto" />
-           
+
             <RowDefinition Height="Auto" />
-           
+
             <RowDefinition Height="Auto" />
-          
+
         </Grid.RowDefinitions>
 
-    
+
         <TextBlock 
             Text="Registro de Usuario" 
             FontSize="28" 
@@ -36,7 +36,7 @@
             Margin="0,0,0,30" 
             Grid.Row="0"/>
 
-    
+
         <TextBlock Text="Nombre Completo"
                    Foreground="Black"
                    VerticalAlignment="Top"
@@ -54,7 +54,7 @@
             </ui:TextBox.Effect>
         </ui:TextBox>
 
-    
+
         <TextBlock Text="Nombre de Usuario"
                    Foreground="Black"
                    VerticalAlignment="Top"
@@ -74,7 +74,7 @@
             </ui:TextBox.Effect>
         </ui:TextBox>
 
-       
+
         <TextBlock Text="Correo Electrónico"
                    Foreground="Black"
                    VerticalAlignment="Top"
@@ -94,7 +94,7 @@
             </ui:TextBox.Effect>
         </ui:TextBox>
 
-   
+
         <TextBlock Text="Contraseña"
                    Foreground="Black"
                    VerticalAlignment="Top"
@@ -114,7 +114,7 @@
             </ui:PasswordBox.Effect>
         </ui:PasswordBox>
 
-   
+
         <ui:Button 
             Command="{Binding RegistroCommand, Mode=OneWay}"
             Content="Registrarse"
@@ -123,10 +123,10 @@
             Foreground="White"
             Width="200" 
             Height="50" 
-            HorizontalAlignment="Center" 
+            HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
             Grid.Row="5" 
-            Margin="0,173,0,0" 
+            Margin="33,167,0,0" 
             CornerRadius="25"
             FontSize="16">
             <ui:Button.Effect>

@@ -4588,19 +4588,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ethaa\\.nuget\\packages\\": {}
+    "C:\\Users\\Vespertino\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ProAPI\\RestAPI.csproj",
+      "projectUniqueName": "D:\\EjerciciosDeC\\EjerciciosC\\ProAPI\\RestAPI.csproj",
       "projectName": "RestAPI",
-      "projectPath": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ProAPI\\RestAPI.csproj",
-      "packagesPath": "C:\\Users\\ethaa\\.nuget\\packages\\",
-      "outputPath": "D:\\MiRepo\\Ethan_SanMartin_Dam2\\ProAPI\\obj\\",
+      "projectPath": "D:\\EjerciciosDeC\\EjerciciosC\\ProAPI\\RestAPI.csproj",
+      "packagesPath": "C:\\Users\\Vespertino\\.nuget\\packages\\",
+      "outputPath": "D:\\EjerciciosDeC\\EjerciciosC\\ProAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ethaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vespertino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

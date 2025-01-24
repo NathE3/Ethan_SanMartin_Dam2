@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:LoginRegister.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel"
+    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodels:LoginViewModel}"
     mc:Ignorable="d"
     Background="White" Height="400" Width="600">
    
@@ -63,7 +63,7 @@
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
             <TextBlock Text="¿No tienes una cuenta? " Foreground="#606060" />
             <TextBlock Foreground="#4A90E2" Cursor="Hand">
-                <Hyperlink Command="{Binding ToRegisterCommand}">
+                <Hyperlink Command="{Binding RegisterCommand}">
                     Regístrate aquí
                 </Hyperlink>
             </TextBlock>

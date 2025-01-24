@@ -6,6 +6,8 @@ using System.Windows;
 using Wpf.Ui;
 using CommunityToolkit.Mvvm.ComponentModel;
 using LoginRegister.ViewModel;
+using LoginRegister.View;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace LoginRegister.ViewModel
 {
@@ -13,18 +15,16 @@ namespace LoginRegister.ViewModel
     {
         private readonly IHttpJsonProvider<UserDTO> _httpJsonProvider;
 
-        public INavigationService NavigationService { get; }
-
         [ObservableProperty]
         private string _name;
 
         [ObservableProperty]
         private string _passwordView;
 
-        public LoginViewModel(IHttpJsonProvider<UserDTO> httpJsonProvider, INavigationService navigationService)
+        public LoginViewModel(IHttpJsonProvider<UserDTO> httpJsonProvider)
         {
             _httpJsonProvider = httpJsonProvider;
-            NavigationService = navigationService;
+          
         }
 
         [RelayCommand]
@@ -50,8 +50,9 @@ namespace LoginRegister.ViewModel
 
                 if (user != null && user.IsSuccess)
                 {
-                    // Si el inicio de sesión es exitoso, navegar a la página del dashboard
-                    NavigationService.Navigate(typeof(View.DashboardView));
+                    App.Current.Services.GetService<MainViewModel>().SelectedViewModel = App.Current.Services.GetService<MainViewModel>().DashboardViewModel;
+                    App.Current.Services.GetService<MainViewModel>().LoadAsync();
+                 
                 }
                 else
                 {
@@ -68,22 +69,11 @@ namespace LoginRegister.ViewModel
         }
 
         [RelayCommand]
-        private void ToRegister()
+        private async void Register()
         {
-           
-            var mainWindow = Application.Current.MainWindow as Window;
-            if (mainWindow != null)
-            {
-           
-                var registroView = new View.RegistroView();
 
-             
-                mainWindow.Content = registroView;
-            }
-            else
-            {
-                MessageBox.Show("No se pudo encontrar la ventana principal.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            var mainWindow = App.Current.Services.GetService<MainViewModel>();
+            mainWindow.SelectedViewModel = App.Current.Services.GetService<MainViewModel>().RegistroViewModel;
         }
     }
 }

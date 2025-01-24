@@ -8,7 +8,7 @@ using LoginRegister.ViewModel;
 
 namespace LoginRegister.ViewModel;
 
-public partial class MainViewModel : ViewModelBase
+public partial class MainViewModel : ViewModelBase 
 {
        private ViewModelBase? _selectedViewModel;
 
