@@ -1,10 +1,14 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using LoginRegister.Helpers;
 using LoginRegister.Interface;
 using LoginRegister.Models;
+using LoginRegister.Services;
 using LoginRegister.View;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
+using System.Reflection.Metadata;
+using System.Windows.Controls;
 
 namespace LoginRegister.ViewModel;
 
@@ -51,7 +55,7 @@ public partial class DashboardViewModel : ViewModelBase
             IEnumerable<DicatadorDTO> listaDicatadores = await _dicatadorServiceToApi.GetDicatadores();
             Dicatadores.AddRange(listaDicatadores.OrderBy(d => d.Id));
 
-            // Actualizar la primera página
+          
             CurrentPage = 0;
             UpdatePagedDicatadores();
         }
@@ -68,7 +72,6 @@ public partial class DashboardViewModel : ViewModelBase
        
         PagedDicatadores.Clear();
 
-        // Obtén los Dicatadores correspondientes en la página actual   
         var pagedItems = Dicatadores.Skip(CurrentPage * ItemsPerPage).Take(ItemsPerPage).ToList();
         foreach (var item in pagedItems)
         {
@@ -106,7 +109,13 @@ public partial class DashboardViewModel : ViewModelBase
             UpdatePagedDicatadores();
         }
     }
-
+    public async void  MyDataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+    {
+        if (e.Row.Item is DicatadorDTO dicatadorDTO)
+        {
+           await _dicatadorServiceToApi.PutDicatador(dicatadorDTO);
+        }
+    }
     private bool CanGoToPreviousPage() => CurrentPage > 0;
 
     private bool CanGoToNextPage() => CurrentPage < TotalPages - 1;

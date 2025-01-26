@@ -1,21 +1,18 @@
-// This Source Code Form is subject to the terms of the MIT License.
-// If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
-// Copyright (C) Leszek Pomianowski and WPF UI Contributors.
-// All Rights Reserved.
-
-using System.Windows;
+using LoginRegister.ViewModel;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Controls;
-using Wpf.Ui.Abstractions.Controls;
+
 
 namespace LoginRegister.View;
-
-/// <summary>
-/// Interaction logic for DashboardPage.xaml
-/// </summary>
 public partial class DashboardView : UserControl
 {
     public DashboardView()
     {
         InitializeComponent();
+    }
+
+    private void MyDataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+    {
+        App.Current.Services.GetService<DashboardViewModel>().MyDataGrid_CellEditEnding(sender, e);
     }
 }

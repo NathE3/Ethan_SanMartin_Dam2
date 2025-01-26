@@ -3,10 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using LoginRegister.Helpers;
 using LoginRegister.Interface;
 using LoginRegister.Models;
-using LoginRegister.View;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace LoginRegister.ViewModel

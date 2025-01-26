@@ -3,10 +3,7 @@ using LoginRegister.Interface;
 using LoginRegister.Models;
 using LoginRegister.Helpers;
 using System.Windows;
-using Wpf.Ui;
 using CommunityToolkit.Mvvm.ComponentModel;
-using LoginRegister.ViewModel;
-using LoginRegister.View;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace LoginRegister.ViewModel
@@ -49,7 +46,7 @@ namespace LoginRegister.ViewModel
 
             try
             {
-                // Intentar autenticar al usuario
+               
                 UserDTO user = await _httpJsonProvider.LoginPostAsync(Constants.LOGIN_PATH, App.Current.Services.GetService<LoginDTO>());
 
                 if (user != null && user.IsSuccess)
@@ -60,13 +57,13 @@ namespace LoginRegister.ViewModel
                 }
                 else
                 {
-                    // Si las credenciales son incorrectas, mostrar un mensaje y permitir reintentar
+                  
                     MessageBox.Show("Credenciales incorrectas. Intente de nuevo.", "Error de Inicio de Sesión", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             catch (Exception ex)
             {
-                // Manejar errores inesperados, como problemas de red
+                
                 MessageBox.Show($"Ocurrió un error durante el inicio de sesión: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 

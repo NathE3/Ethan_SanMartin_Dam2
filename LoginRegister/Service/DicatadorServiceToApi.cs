@@ -46,7 +46,7 @@ namespace LoginRegister.Service
             try
             {
                 if (dicatador == null) return;
-                var response = await _httpJsonProvider.PutAsync(Constants.DICATADOR_URL, dicatador);
+                var response = await _httpJsonProvider.PutAsync(Constants.DICATADOR_URL + "/" + dicatador.Id, dicatador);
             }
             catch (Exception ex)
             {

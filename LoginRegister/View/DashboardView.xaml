@@ -39,10 +39,11 @@
 
         <ui:DataGrid
             Grid.Row="1"
-            x:Name="MyDataGrid"
+            x:Name="Tabla"
             ItemsSource="{Binding PagedDicatadores}"
             AutoGenerateColumns="True"
             Margin="0,0,0,10"
+            CellEditEnding="MyDataGrid_CellEditEnding"
             CanUserResizeColumns="True"
             CanUserResizeRows="False"
             VerticalAlignment="Top"

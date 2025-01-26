@@ -1,11 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using LoginRegister.Helpers;
 using LoginRegister.Interface;
 using LoginRegister.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
-using System.Xml.Linq;
 
 namespace LoginRegister.ViewModel
 {
