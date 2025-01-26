@@ -48,7 +48,7 @@ namespace LoginRegister.ViewModel
 
             try
             {
-                _dicatadorServiceToApi.PostDicatador(dicatadorDTO);
+                await _dicatadorServiceToApi.PostDicatador(dicatadorDTO);
                  
                  MessageBox.Show("Dicatador añadido con exito");
                  App.Current.Services.GetService<MainViewModel>().LoadAsync();
