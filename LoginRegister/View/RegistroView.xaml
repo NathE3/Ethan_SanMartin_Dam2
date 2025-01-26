@@ -6,11 +6,18 @@
     xmlns:local="clr-namespace:LoginRegister.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodels:RegistroViewModel}"
+    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel" 
+    d:DataContext="{d:DesignInstance Type=viewmodels:RegistroViewModel}"
     mc:Ignorable="d"
-    Background="white" Height="400" Width="600">
+    Height="412" Width="801">
 
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Background="white" Height="399" Width="316">
+    <UserControl.Background>
+        <ImageBrush 
+     ImageSource="/Resources/edificio.jpg" 
+     Stretch="UniformToFill" />
+    </UserControl.Background>
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center"  Height="399" Width="316">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
 
@@ -31,7 +38,7 @@
             Text="Registro de Usuario" 
             FontSize="28" 
             FontWeight="SemiBold" 
-            Foreground="#4A90E2"
+            Foreground="Black"
             HorizontalAlignment="Center" 
             Margin="0,0,0,30" 
             Grid.Row="0"/>
@@ -41,7 +48,7 @@
                    Foreground="Black"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Margin="10,42,0,0"
+                   Margin="73,46,0,0"
                    FontSize="14" 
                    IsHitTestVisible="False"/>
         <ui:TextBox 
@@ -59,7 +66,7 @@
                    Foreground="Black"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Margin="10,5,0,0"
+                   Margin="70,5,0,0"
                    FontSize="14" 
                    IsHitTestVisible="False"
                    Grid.Row="3"/>
@@ -79,7 +86,7 @@
                    Foreground="Black"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Margin="10,43,0,0"
+                   Margin="74,44,0,0"
                    FontSize="14" 
                    IsHitTestVisible="False"
                    Grid.Row="5"/>
@@ -99,7 +106,7 @@
                    Foreground="Black"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Margin="10,99,0,0"
+                   Margin="96,100,0,0"
                    FontSize="14" 
                    IsHitTestVisible="False"
                    Grid.Row="5"/>
@@ -119,7 +126,7 @@
             Command="{Binding RegistroCommand, Mode=OneWay}"
             Content="Registrarse"
             Icon="{ui:SymbolIcon Symbol=Add20}"
-            Background="#4A90E2" 
+            Background="Black" 
             Foreground="White"
             Width="200" 
             Height="50" 

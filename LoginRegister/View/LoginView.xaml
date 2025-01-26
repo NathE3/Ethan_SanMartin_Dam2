@@ -6,45 +6,64 @@
     xmlns:local="clr-namespace:LoginRegister.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodels:LoginViewModel}"
+    xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel" 
+    d:DataContext="{d:DesignInstance Type=viewmodels:LoginViewModel}"
     mc:Ignorable="d"
-    Background="White" Height="400" Width="600">
-   
-    
-    <Grid Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+    Height="434" Width="789" Loaded="UserControl_Loaded">
+
+
+    <UserControl.Background>
+        <ImageBrush 
+            ImageSource="/Resources/edificio.jpg" 
+            Stretch="UniformToFill" />
+    </UserControl.Background>
+
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+
             <RowDefinition Height="*" />
+
             <RowDefinition Height="Auto" />
+
             <RowDefinition Height="Auto" />
+
         </Grid.RowDefinitions>
 
-        <!-- Título -->
+
         <TextBlock 
             Text="Inicio de Sesión" 
             FontSize="28" 
             FontWeight="SemiBold" 
-            Foreground="#4A90E2"
+            Foreground="Black" 
             HorizontalAlignment="Center" 
             Margin="0,0,0,20" 
-            Grid.Row="0"/>
+            Grid.Row="0" />
 
-        <!-- Entradas de usuario -->
-        <StackPanel Grid.Row="1" Margin="0,0,0,20" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+        <StackPanel 
+            Grid.Row="1" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Margin="0,10,0,20">
 
             <ui:TextBox
                 PlaceholderText="Usuario" 
-                Width="320" 
-                Margin="0,10,0,0" 
+                Width="311"
+                Height="20"
+                Margin="0,10,0,10" 
                 Background="#F7F7F7"
-                Text="{Binding Name, Mode=TwoWay}"/>
+                Text="{Binding Name, Mode=TwoWay}" />
 
             <ui:PasswordBox 
                 PlaceholderText="Contraseña" 
-                Width="320" 
-                Margin="0,10,0,0" 
+                Width="311" 
+                Height="20"
+                Margin="0,10,0,10" 
                 Background="#F7F7F7"
-                Password="{Binding PasswordView, Mode=TwoWay}"/>
+                Password="{Binding PasswordView, Mode=TwoWay}" />
         </StackPanel>
 
         <!-- Botón de inicio de sesión -->
@@ -53,22 +72,37 @@
             Content="Iniciar Sesión"
             Width="180" 
             Height="50" 
-            Background="#4A90E2" 
+            Background="Black" 
             Foreground="White"
             HorizontalAlignment="Center" 
             VerticalAlignment="Center" 
             CornerRadius="10"
-            Grid.Row="2"/>
+            Grid.Row="2" />
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
-            <TextBlock Text="¿No tienes una cuenta? " Foreground="#606060" />
-            <TextBlock Foreground="#4A90E2" Cursor="Hand">
+        <!-- Registro -->
+        <StackPanel 
+            Grid.Row="3" 
+            Orientation="Horizontal" 
+            HorizontalAlignment="Center" 
+            Margin="0,10,0,0">
+
+            <TextBlock 
+                Text="¿No tienes una cuenta? " 
+                Foreground="White" 
+                VerticalAlignment="Center" />
+
+            <TextBlock 
+                Foreground="#4A90E2" 
+                Cursor="Hand" 
+                VerticalAlignment="Center">
                 <Hyperlink Command="{Binding RegisterCommand}">
-                    Regístrate aquí
+                    <Run Text="Regístrate aquí" />
                 </Hyperlink>
             </TextBlock>
         </StackPanel>
     </Grid>
 </UserControl>
+
+
 
 

@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using LoginRegister.Helpers;
+using Microsoft.Extensions.DependencyInjection;
 
 
 namespace LoginRegister.Services
@@ -13,23 +14,9 @@ namespace LoginRegister.Services
 
         public static string Token = string.Empty;
 
-        private LoginDTO loginDTO = new()
-        {
-            UserName = "",
-            Password = "",
-        };
 
-        UserRegistroDTO userRegistroDTO = new()
-        {
-            Name = "",
-            UserName = "",
-            Email = "",
-            Password = "",
-            Role = ""
-        };
+        LoginDTO loginDTO = App.Current.Services.GetService<LoginDTO>();
 
-
-        //CREAR UN METODO SOLO PARA LA RENOVACION DE TOKEN ASI NO HAY QUE ESCRIBIRLO EN EL GET, POST Y PATCH
         public async Task<IEnumerable<T?>> GetAsync(string path)
         {
             try
@@ -58,7 +45,7 @@ namespace LoginRegister.Services
         {
             HttpContent httpContent = new StringContent(JsonSerializer.Serialize(loginDTO), Encoding.UTF8, "application/json");
 
-            HttpResponseMessage requestToken = await httpClient.PostAsync($"{Constants.BASE_URL}{Constants.LOGIN_PATH}/login", httpContent);
+            HttpResponseMessage requestToken = await httpClient.PostAsync($"{Constants.BASE_URL}{Constants.LOGIN_PATH}", httpContent);
 
             string dataTokenRequest = await requestToken.Content.ReadAsStringAsync();
             UserDTO tokenUser = JsonSerializer.Deserialize<UserDTO>(dataTokenRequest);
@@ -84,8 +71,10 @@ namespace LoginRegister.Services
                     var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
                     HttpResponseMessage response = await httpClient.PostAsync($"{Constants.BASE_URL}{path}", content);
+
                     if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                     {
+                       
                         await Authenticate(path, httpClient, response);
 
                         // Realizar la solicitud POST
@@ -124,7 +113,7 @@ namespace LoginRegister.Services
 
                     httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
 
-                    // Serializar el objeto 'data' (PokemonDTO) a JSON
+                    // Serializar el objeto 'data' () a JSON
                     string jsonContent = JsonSerializer.Serialize(data);
 
                     // Crear el contenido HTTP con el tipo adecuado para enviar JSON

@@ -11,6 +11,7 @@ namespace LoginRegister.Service
    public class DicatadorServiceToApi : IDicatadorServiceToApi
    {
         private readonly IHttpJsonProvider<DicatadorDTO> _httpJsonProvider;
+      
 
         public DicatadorServiceToApi(IHttpJsonProvider<DicatadorDTO>  httpJsonProvider) 
         {
@@ -52,7 +53,6 @@ namespace LoginRegister.Service
                 Console.WriteLine(ex.Message);
             }
         }
-
 
     }
    

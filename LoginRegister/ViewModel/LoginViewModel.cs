@@ -14,6 +14,9 @@ namespace LoginRegister.ViewModel
     public partial class LoginViewModel : ViewModelBase
     {
         private readonly IHttpJsonProvider<UserDTO> _httpJsonProvider;
+        private readonly IDicatadorServiceToApi _dicatadorServiceToApi;
+
+       
 
         [ObservableProperty]
         private string _name;
@@ -21,21 +24,22 @@ namespace LoginRegister.ViewModel
         [ObservableProperty]
         private string _passwordView;
 
-        public LoginViewModel(IHttpJsonProvider<UserDTO> httpJsonProvider)
+        public LoginViewModel(IHttpJsonProvider<UserDTO> httpJsonProvider, IDicatadorServiceToApi dicatadorServiceToApi)
         {
             _httpJsonProvider = httpJsonProvider;
-          
+            _dicatadorServiceToApi = dicatadorServiceToApi;
+       
         }
 
         [RelayCommand]
         public async Task Login()
         {
 
-            LoginDTO loginDTO = new()
-            {
-                UserName = Name,
-                Password = PasswordView
-            };
+            App.Current.Services.GetService<LoginDTO>().UserName = Name;
+            App.Current.Services.GetService<LoginDTO>().Password = PasswordView;
+
+
+
 
             if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(PasswordView))
             {
@@ -46,7 +50,7 @@ namespace LoginRegister.ViewModel
             try
             {
                 // Intentar autenticar al usuario
-                UserDTO user = await _httpJsonProvider.LoginPostAsync(Constants.LOGIN_PATH, loginDTO);
+                UserDTO user = await _httpJsonProvider.LoginPostAsync(Constants.LOGIN_PATH, App.Current.Services.GetService<LoginDTO>());
 
                 if (user != null && user.IsSuccess)
                 {

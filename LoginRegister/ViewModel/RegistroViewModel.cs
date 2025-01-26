@@ -61,6 +61,7 @@ namespace LoginRegister.ViewModel
                 UserDTO user = await _httpJsonProvider.RegisterPostAsync(Constants.REGISTER_PATH, userRegistroDTO);
                 if (user != null && user.IsSuccess) {
                  App.Current.Services.GetService<MainViewModel>().SelectedViewModel = App.Current.Services.GetService<MainViewModel>().LoginViewModel;
+                   
 
                 }
                

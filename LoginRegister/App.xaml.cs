@@ -8,6 +8,7 @@ using LoginRegister.Models;
 using LoginRegister.ViewModel;
 using Wpf.Ui;
 using LoginRegister.View;
+using LoginRegister.Helpers;
 
 namespace LoginRegister
 {
@@ -37,22 +38,23 @@ namespace LoginRegister
 
             //view principal
             services.AddSingleton<MainWindow>();
-        
+            services.AddSingleton<AddDicatadorView>();
+
 
             //view viewModels
             services.AddSingleton<MainViewModel>();
             services.AddTransient<DashboardViewModel>();
             services.AddTransient<LoginViewModel>();
-            services.AddTransient<SettingsViewModel>();
+            services.AddSingleton<AddDicatadorViewModel>();
             services.AddTransient<RegistroViewModel>();
             services.AddTransient<ViewModelBase>();
       
 
 
             //Services
+            services.AddSingleton<LoginDTO>();   
             services.AddSingleton<IDicatadorServiceToApi, DicatadorServiceToApi>();
             services.AddSingleton(typeof(IHttpJsonProvider<>), typeof(HttpJsonService<>));
-            services.AddSingleton<INavigationService, NavigationService>();
             return services.BuildServiceProvider();
         }
     }
