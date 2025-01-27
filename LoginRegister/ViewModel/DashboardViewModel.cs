@@ -7,6 +7,7 @@ using LoginRegister.Services;
 using LoginRegister.View;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
+using System.Net.Http;
 using System.Reflection.Metadata;
 using System.Windows.Controls;
 
@@ -88,6 +89,14 @@ public partial class DashboardViewModel : ViewModelBase
         addDicatadorWindow.DataContext = addDicatadorViewModel;
         addDicatadorWindow.ShowDialog();       
         await LoadAsync();
+    }
+
+
+    [RelayCommand]
+    public async Task Logout() 
+    {
+        App.Current.Services.GetService<LoginDTO>().Token = "";
+        App.Current.Services.GetService<MainViewModel>().SelectedViewModel = App.Current.Services.GetService<MainViewModel>().LoginViewModel;
     }
 
     [RelayCommand]

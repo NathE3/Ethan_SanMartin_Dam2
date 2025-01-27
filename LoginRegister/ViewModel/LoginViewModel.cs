@@ -34,6 +34,7 @@ namespace LoginRegister.ViewModel
 
             App.Current.Services.GetService<LoginDTO>().UserName = Name;
             App.Current.Services.GetService<LoginDTO>().Password = PasswordView;
+           
 
 
 

@@ -23,7 +23,7 @@ namespace LoginRegister.Services
             {
                 using HttpClient httpClient = new HttpClient();
                 {
-                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {loginDTO.Token}");
                     HttpResponseMessage request = await httpClient.GetAsync($"{Constants.BASE_URL}{path}");
                     if (request.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                     {
@@ -52,7 +52,7 @@ namespace LoginRegister.Services
 
             Token = tokenUser?.Result?.Token ?? string.Empty;
             httpClient.DefaultRequestHeaders.Remove("Authorization");
-            httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+            httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {loginDTO.Token}");
         }
 
         public async Task<T?> PostAsync(string path, T data)
@@ -62,7 +62,7 @@ namespace LoginRegister.Services
                 using (HttpClient httpClient = new HttpClient())
                 {
 
-                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {loginDTO.Token}");
 
                     // Serializar el objeto 'data' (PokemonDTO) a JSON
                     string jsonContent = JsonSerializer.Serialize(data);
@@ -111,7 +111,7 @@ namespace LoginRegister.Services
                 using (HttpClient httpClient = new HttpClient())
                 {
 
-                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {loginDTO.Token}");
 
                     // Serializar el objeto 'data' () a JSON
                     string jsonContent = JsonSerializer.Serialize(data);
@@ -140,7 +140,7 @@ namespace LoginRegister.Services
                 using (HttpClient httpClient = new HttpClient())
                 {
 
-                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {loginDTO.Token}");
 
                     // Serializar el objeto 'data' (UserRegistroDTO) a JSON
                     string jsonContent = JsonSerializer.Serialize(data);
@@ -171,7 +171,7 @@ namespace LoginRegister.Services
                 using (HttpClient httpClient = new HttpClient())
                 {
                     // Agregar encabezado Authorization si es necesario
-                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {loginDTO.Token}");
 
                     // Serializar el objeto 'data' (dto) a JSON
                     string jsonContent = JsonSerializer.Serialize(data,
@@ -185,12 +185,12 @@ namespace LoginRegister.Services
                     var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
                     // Realizar la solicitud PATCH
-                    HttpResponseMessage request = await httpClient.PatchAsync($"{Constants.BASE_URL}{path}", content);
+                    HttpResponseMessage request = await httpClient.PutAsync($"{Constants.BASE_URL}{path}", content);
 
                     if (request.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                     {
                         await Authenticate(path, httpClient, request);
-                        request = await httpClient.PatchAsync($"{Constants.BASE_URL}{path}", content);
+                        request = await httpClient.PutAsync($"{Constants.BASE_URL}{path}", content);
 
                         if (request.IsSuccessStatusCode)
                         {

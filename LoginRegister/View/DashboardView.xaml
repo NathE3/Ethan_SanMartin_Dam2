@@ -37,6 +37,17 @@
             Width="150"
             HorizontalAlignment="Left" />
 
+        <ui:Button
+        Command="{Binding LogoutCommand, Mode=OneWay}"
+        Content="Logout"
+        Icon="{ui:SymbolIcon Fluent24}"
+        Background="Black" 
+        Foreground="White"
+        VerticalAlignment="Top"
+        Height="20"
+        Width="85"
+        HorizontalAlignment="Left" Grid.Row="2" Margin="10,20,0,0" />
+
         <ui:DataGrid
             Grid.Row="1"
             x:Name="Tabla"
