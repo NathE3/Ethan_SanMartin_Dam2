@@ -5,6 +5,7 @@ using LoginRegister.Helpers;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection.Metadata;
 
 namespace LoginRegister.ViewModel
 {
@@ -54,6 +55,8 @@ namespace LoginRegister.ViewModel
                 {
                     App.Current.Services.GetService<MainViewModel>().SelectedViewModel = App.Current.Services.GetService<MainViewModel>().DashboardViewModel;
                     App.Current.Services.GetService<MainViewModel>().LoadAsync();
+                    Name = string.Empty;
+                    PasswordView = String.Empty;
                  
                 }
                 else
