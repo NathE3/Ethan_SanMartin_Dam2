@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace RestAPI.Models.DTOs
+namespace Ferraro.Models.DTOs
 {
     public class ResponseApi
     {

@@ -1,9 +1,9 @@
-﻿using RestAPI.Models.DTOs.DictadorDto;
-using RestAPI.Models.DTOs.UserDto;
+﻿using Ferraro.Models.DTOs.DictadorDto;
+using Ferraro.Models.DTOs.UserDto;
 using AutoMapper;
-using RestAPI.Models.Entity;
+using Ferraro.Models.Entity;
 
-namespace RestAPI.AutoMapper
+namespace Ferraro.AutoMapper
 {
     public class ApplicationMapper : Profile
     {

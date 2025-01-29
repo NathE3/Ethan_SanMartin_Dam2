@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace RestAPI.Models.Entity
+namespace Ferraro.Models.Entity
 {
     public class AppUser : IdentityUser
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RestAPI.Models.Entity
+namespace Ferraro.Models.Entity
 {
     public class User
     {

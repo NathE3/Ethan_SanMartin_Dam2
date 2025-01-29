@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace RestAPI.Migrations
+namespace Ferraro.Migrations
 {
     /// <inheritdoc />
     public partial class DictadoresMigration : Migration

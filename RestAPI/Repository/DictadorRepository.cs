@@ -1,11 +1,11 @@
-﻿using RestAPI.Data;
-using RestAPI.Repository.IRepository;
+﻿using Ferraro.Data;
+using Ferraro.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
-using RestAPI.Models.Entity;
+using Ferraro.Models.Entity;
 using System.Diagnostics;
 
-namespace RestAPI.Repository
+namespace Ferraro.Repository
 {
     public class DictadorRepository : IDictadorRepository
     {

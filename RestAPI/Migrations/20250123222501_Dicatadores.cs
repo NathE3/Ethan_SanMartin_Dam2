@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace RestAPI.Migrations
+namespace Ferraro.Migrations
 {
     /// <inheritdoc />
     public partial class Dicatadores : Migration

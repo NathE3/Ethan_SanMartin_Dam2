@@ -1,4 +1,4 @@
-﻿namespace RestAPI.Models.DTOs.UserDto
+﻿namespace Ferraro.Models.DTOs.UserDto
 {
     public class UserDto
     {

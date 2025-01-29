@@ -1,6 +1,6 @@
-﻿using RestAPI.Models.Entity;
+﻿using Ferraro.Models.Entity;
 
-namespace RestAPI.Models.DTOs.UserDto
+namespace Ferraro.Models.DTOs.UserDto
 {
     public class UserLoginResponseDto
     {

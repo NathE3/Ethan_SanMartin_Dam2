@@ -1,13 +1,13 @@
-﻿using RestAPI.Models.DTOs;
-using RestAPI.Models.DTOs.UserDto;
-using RestAPI.Models.DTOs.DictadorDto;
-using RestAPI.Repository.IRepository;
+﻿using Ferraro.Models.DTOs;
+using Ferraro.Models.DTOs.UserDto;
+using Ferraro.Models.DTOs.DictadorDto;
+using Ferraro.Repository.IRepository;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace RestAPI.Controllers
+namespace Ferraro.Controllers
 {
     [Route("api/users")]
     [ApiController]

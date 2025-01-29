@@ -1,6 +1,6 @@
-﻿using RestAPI.Models.Entity;
+﻿using Ferraro.Models.Entity;
 
-namespace RestAPI.Repository
+namespace Ferraro.Repository
 {
     public interface IRepository<TEntity> where TEntity : class
     {

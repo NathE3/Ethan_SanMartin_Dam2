@@ -1,4 +1,4 @@
-﻿namespace RestAPI.Attributes
+﻿namespace Ferraro.Attributes
 {
     using System.ComponentModel.DataAnnotations;
     using System.Linq;

@@ -1,7 +1,7 @@
-using RestAPI.AutoMapper;
-using RestAPI.Data;
-using RestAPI.Repository;
-using RestAPI.Repository.IRepository;
+using Ferraro.AutoMapper;
+using Ferraro.Data;
+using Ferraro.Repository;
+using Ferraro.Repository.IRepository;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using RestAPI.Models.Entity;
+using Ferraro.Models.Entity;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);

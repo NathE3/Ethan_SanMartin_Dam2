@@ -1,4 +1,4 @@
-﻿namespace RestAPI.Models.DTOs.DictadorDto
+﻿namespace Ferraro.Models.DTOs.DictadorDto
 {
     public class DicatadorDto : CreateDicatadorDto
     {

@@ -1,7 +1,7 @@
-﻿using RestAPI.Models.DTOs.UserDto;
-using RestAPI.Models.Entity;
+﻿using Ferraro.Models.DTOs.UserDto;
+using Ferraro.Models.Entity;
 
-namespace RestAPI.Repository.IRepository
+namespace Ferraro.Repository.IRepository
 {
     public interface IUserRepository
     {

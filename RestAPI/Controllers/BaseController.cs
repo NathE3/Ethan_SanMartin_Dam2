@@ -1,4 +1,4 @@
-﻿namespace RestAPI.Controllers
+﻿namespace Ferraro.Controllers
 {
     using AutoMapper;
     using Microsoft.AspNetCore.Authorization;
@@ -6,7 +6,7 @@
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using global::RestAPI.Repository;
+    using global::Ferraro.Repository;
     using global::AutoMapper;
 
     namespace RestAPI.Controllers

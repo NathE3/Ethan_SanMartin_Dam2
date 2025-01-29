@@ -1,13 +1,13 @@
 ﻿
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RestAPI.Models.DTOs.DictadorDto;
-using RestAPI.Controllers.RestAPI.Controllers;
-using RestAPI.Models.Entity;
-using RestAPI.Repository.IRepository;
+using Ferraro.Models.DTOs.DictadorDto;
+using Ferraro.Controllers.RestAPI.Controllers;
+using Ferraro.Models.Entity;
+using Ferraro.Repository.IRepository;
 using AutoMapper;
 
-namespace RestAPI.Controllers
+namespace Ferraro.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

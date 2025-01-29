@@ -1,8 +1,8 @@
-﻿using RestAPI.Models.Entity;
-using RestAPI.Repository;
+﻿using Ferraro.Models.Entity;
+using Ferraro.Repository;
 
 
-namespace RestAPI.Repository.IRepository
+namespace Ferraro.Repository.IRepository
 {
     public interface IDictadorRepository : IRepository<DicatadorEntity>
     {
