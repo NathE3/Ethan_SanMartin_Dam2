@@ -20,19 +20,13 @@ namespace FerrariAPI.Models.Entity
         public string Description { get; set; }
 
         [Required]
-        public string AñoSalida { get; set; }
+        public string AnoSalida { get; set; }
 
         [Required]
         public string Cv { get; set; }
 
         [Required]
         public string PrecioEstimado { get; set; }
-
-        [Required]
-        public float PujaInicial { get; set; }
-
-        [Required]
-        public float PujaActual { get; set; }
     }
      
 }

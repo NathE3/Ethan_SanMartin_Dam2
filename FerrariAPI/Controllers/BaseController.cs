@@ -29,6 +29,7 @@
             }
 
             [AllowAnonymous]
+            //[Authorize(Roles = "admin")]
             [HttpGet]
             [ProducesResponseType(StatusCodes.Status200OK)]
             public async Task<IActionResult> GetAll()
@@ -46,7 +47,8 @@
             }
 
             [ApiExplorerSettings(IgnoreApi = true)]
-            [Authorize(Roles = "admin")]
+            //[Authorize(Roles = "admin")]
+            [AllowAnonymous]
             [HttpGet("{id:int}", Name = "[controller]_GetEntity")]
             [ProducesResponseType(StatusCodes.Status200OK)]
             [ProducesResponseType(StatusCodes.Status404NotFound)]

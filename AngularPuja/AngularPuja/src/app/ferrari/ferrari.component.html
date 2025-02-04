@@ -1,0 +1,11 @@
+<section class="listing">
+    <img
+      class="listing-photo"
+      [src]="ferrari.image"
+      [routerLink]="['/details',ferrari.id]"
+      alt="Exterior photo of {{ ferrari.name }}"
+      crossorigin
+    />
+    <h2 class="listing-heading">{{ ferrari.name }}</h2>
+    <p class="listing-location">{{ ferrari.description }}, {{ ferrari.cv }}CV</p>
+  </section>

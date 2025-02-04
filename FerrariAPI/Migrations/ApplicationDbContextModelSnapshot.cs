@@ -100,7 +100,7 @@ namespace FerrariAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AñoSalida")
+                    b.Property<string>("AnoSalida")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -125,15 +125,32 @@ namespace FerrariAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("PujaActual")
-                        .HasColumnType("real");
-
-                    b.Property<float>("PujaInicial")
-                        .HasColumnType("real");
-
                     b.HasKey("Id");
 
                     b.ToTable("Ferraris");
+                });
+
+            modelBuilder.Entity("FerrariAPI.Models.Entity.PujaEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Id_ferrari")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Puja")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pujas");
                 });
 
             modelBuilder.Entity("FerrariAPI.Models.Entity.User", b =>

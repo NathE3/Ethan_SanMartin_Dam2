@@ -24,12 +24,12 @@ namespace FerrariAPI.Repository
             var result = await _context.SaveChangesAsync() >= 0;
             if (result)
             {
-                ClearFerrariCache();
+                ClearCache();
             }
             return result;
         }
 
-        public void ClearFerrariCache()
+        public void ClearCache()
         {
             _cache.Remove(FerrariCacheKey);
         }

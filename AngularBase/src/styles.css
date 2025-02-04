@@ -8,16 +8,16 @@ body {
   font-family: 'Be Vietnam Pro', sans-serif;
 }
 :root {
-  --primary-color: #605DC8;
-  --secondary-color: #8B89E6;
-  --accent-color: #e8e7fa;
-  --shadow-color: #E8E8E8;
+  --primary-color: #000000;
+  --secondary-color: #ff0000;
+  --accent-color: #000000;
+  --shadow-color: #ff0000;
 }
 
 button.primary {
   padding: 10px;
   border: solid 1px var(--primary-color);
   background: var(--primary-color);
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 8px;
 }

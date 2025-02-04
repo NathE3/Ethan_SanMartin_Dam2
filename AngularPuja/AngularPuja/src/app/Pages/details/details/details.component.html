@@ -1,0 +1,31 @@
+<article>
+    <img
+      class="listing-photo"
+      [src]="ferrari.image"
+      alt="Exterior photo of {{ ferrari.name }}"
+      crossorigin
+    />
+    <section class="listing-description">
+      <h2 class="listing-heading">{{ ferrari.name }}</h2>
+      <p class="listing-location">{{ ferrari.description }}, {{ ferrari.anoSalida }}</p>
+    </section>
+    <section class="listing-features">
+      <h2 class="section-heading">Ferrari en puja</h2>
+      <ul>
+        <li>Precio estimado: {{ ferrari.precioEstimado }}</li>
+        <li>Precio actual: {{ferrari.cv }}</li>
+      </ul>
+    </section>
+    <section class="listing-apply">
+
+      <h2 class="section-heading">Puja ahora mismo para llevar un buen Ferrari</h2>
+      <form (submit)="submitApplication()">
+        <label for="puja-Actual">Puja</label>
+        <input id="puja-Actual" type="text" formControlName="pujaActual" />
+        <label for="Name">Name</label>
+        <input  id="Name" type="text" formControlName="Name"/>
+        <button type="submit" class="primary">Puja ahora</button>
+      </form>
+    </section>
+    
+  </article>

@@ -1,34 +1,38 @@
-import { Component,inject} from '@angular/core';
-import {HousingLocationComponent} from '../../components/housing-location/housing-location.component';
-import {HousingLocation} from '../../models/housinglocation'
+import { Component, inject } from '@angular/core';
+import { FerrariLocations } from '../../models/ferrarilocations';
 import { CommonModule } from '@angular/common';
-import {HousingService} from '../../services/housing.service';
+import { FerrarisService } from 'src/app/services/ferraris.service';
+import { FerrariLocationsComponent } from 'src/app/components/ferrrari-component/ferrari-component.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, HousingLocationComponent],
+  imports: [CommonModule, FerrariLocationsComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  housingLocationList: HousingLocation[]=[];
-  filteredLocationList: HousingLocation[]=[];
+  ferrarisService:FerrarisService = inject(FerrarisService);
+  ferrariLocationList: FerrariLocations[] = [];
+  filteredLocationList: FerrariLocations[] = [];
 
-  constructor(private housingService: HousingService) {
-    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
-      this.housingLocationList = housingLocationList;
-      this.filteredLocationList = housingLocationList;
-    });
-  }
+  constructor() 
+  {
+   
+      this.ferrarisService.getEntities().subscribe((data) => {
+      this.ferrariLocationList = data;
+      this.filteredLocationList = data;
+      });
+  } 
+
+
   filterResults(text: string) {
     if (!text) {
-      this.filteredLocationList = this.housingLocationList;
+      this.filteredLocationList = this.ferrariLocationList;
       return;
-    }
-    
-    this.filteredLocationList = this.housingLocationList.filter((housingLocation) =>
-      housingLocation?.city.toLowerCase().includes(text.toLowerCase()),
+    }   
+    this.filteredLocationList = this.ferrariLocationList.filter((ferrariLocation) =>
+      ferrariLocation?.anoSalida.toLowerCase().includes(text.toLowerCase()) ||
+      ferrariLocation?.name.toLowerCase().includes(text.toLowerCase()) 
     );
   }
-  
 }

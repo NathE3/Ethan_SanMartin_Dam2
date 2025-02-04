@@ -1,13 +1,14 @@
 import {Component} from '@angular/core';
-import {HomeComponent} from './pages/home/home.component';
 import {RouterModule} from '@angular/router';
+import {RouterOutlet} from '@angular/router';
+import { FerrariLocationsComponent } from './components/ferrrari-component/ferrari-component.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule],
+  imports: [RouterModule, FerrariLocationsComponent,RouterOutlet ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Pagina Primera Sufrida';
+  title = 'Me quiero morir';
 }

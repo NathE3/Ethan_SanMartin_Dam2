@@ -1,39 +1,55 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HousingLocation } from 'src/app/models/housinglocation';
-import { HousingService } from 'src/app/services/housing.service';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { FerrariLocations } from 'src/app/models/ferrarilocations';
+import { FerrarisService } from 'src/app/services/ferraris.service';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-details',
-  imports: [ReactiveFormsModule],
+  standalone: true, 
+  imports: [ReactiveFormsModule, RouterModule, CommonModule], 
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  styleUrls: ['./details.component.css'],
 })
-export class DetailsComponent {
+export class DetailsComponent implements OnInit {
   route: ActivatedRoute = inject(ActivatedRoute);
+  ferrariService: FerrarisService = inject(FerrarisService); 
 
+  @Input() ferrari!: FerrariLocations; // Ferrari seleccionado
+
+ 
   applyForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
+    name: new FormControl(''), // Nombre del postor
+    puja: new FormControl(0), // Cantidad de la puja
   });
-  
-  housingLocation: HousingLocation | undefined;
-  housingService: HousingService;
 
-  constructor(housingService: HousingService) {
-      const housingLocationId = parseInt(this.route.snapshot.params['id'], 1);
-      housingService.getHousingLocationById(housingLocationId).then((housingLocation) => {
-        this.housingLocation = housingLocation;
-      });
-      this.housingService=housingService;
+  ngOnInit(): void {
+    // Obtén el ID del Ferrari desde la ruta
+    const ferrariId = Number(this.route.snapshot.params['id']);
+
+    // Carga los detalles del Ferrari
+    this.ferrariService.getEntity(ferrariId).subscribe({
+      next: (ferrari) => {
+        this.ferrari = ferrari;
+      },
+      error: (err) => {
+        console.error('Error loading Ferrari details:', err);
+      },
+    });
   }
-  submitApplication() {
-    this.housingService.submitApplication(
-      this.applyForm.value.firstName ?? '',
-      this.applyForm.value.lastName ?? '',
-      this.applyForm.value.email ?? '',
-    );
+
+  // Envía la puja
+  submitApplication(): void {
+    const name = this.applyForm.value.name ?? '';
+    const puja = Number(this.applyForm.value.puja) ?? 0;
+
+    if (name && puja > 0) {
+      this.ferrariService.submitApplication(name, puja, this.ferrari.id, this.ferrari);
+      
+    } else {
+      alert('Please fill out all fields correctly.');
+    }
   }
 }

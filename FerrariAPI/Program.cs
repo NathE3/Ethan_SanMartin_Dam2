@@ -21,6 +21,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Add services to the container.
 builder.Services.AddScoped<IFerrariRepository, FerrariRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IPujaRepository, PujaRepository>();
 builder.Services.AddAutoMapper(typeof(ApplicationMapper));
 //Logger setup
 builder.Logging.ClearProviders();

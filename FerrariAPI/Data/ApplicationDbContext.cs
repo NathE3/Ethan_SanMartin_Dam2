@@ -16,6 +16,7 @@ namespace FerrariAPI.Data
         }
         //Add models here
         public DbSet<FerrariEntity> Ferraris { get; set; }
+        public DbSet<PujaEntity> Pujas { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
 
