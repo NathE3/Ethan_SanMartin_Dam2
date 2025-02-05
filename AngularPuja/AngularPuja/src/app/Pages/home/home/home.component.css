@@ -4,7 +4,7 @@
     row-gap: 14px;
     grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
     margin-top: 50px;
-    color: rgb(255, 255, 255);
+    color: rgb(131, 0, 0);
     justify-content: space-around;
   }
   input[type="text"] {
