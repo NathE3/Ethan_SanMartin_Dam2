@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FerrariAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250203170218_UltimateMigration")]
-    partial class UltimateMigration
+    [Migration("20250206125628_HomeMigrationNum1000000")]
+    partial class HomeMigrationNum1000000
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

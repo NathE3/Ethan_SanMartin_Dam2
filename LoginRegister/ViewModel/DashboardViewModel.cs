@@ -1,14 +1,10 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using LoginRegister.Helpers;
 using LoginRegister.Interface;
 using LoginRegister.Models;
-using LoginRegister.Services;
 using LoginRegister.View;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
-using System.Net.Http;
-using System.Reflection.Metadata;
 using System.Windows.Controls;
 
 namespace LoginRegister.ViewModel;

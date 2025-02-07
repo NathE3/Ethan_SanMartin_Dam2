@@ -5,10 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 using LoginRegister.Services;
 using LoginRegister.Models;
-using LoginRegister.ViewModel;
-using Wpf.Ui;
 using LoginRegister.View;
-using LoginRegister.Helpers;
+
 
 namespace LoginRegister
 {

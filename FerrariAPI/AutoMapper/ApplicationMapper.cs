@@ -3,6 +3,7 @@ using FerrariAPI.Models.DTOs.UserDto;
 using AutoMapper;
 using FerrariAPI.Models.Entity;
 using FerrariAPI.Models.DTOs.FerrariDTO;
+using FerrariAPI.Models.DTOs.PujaDTO;
 
 namespace FerrariApi.AutoMapper
 {
@@ -13,6 +14,8 @@ namespace FerrariApi.AutoMapper
         {
             CreateMap<FerrariEntity, FerrariDTO>().ReverseMap();
             CreateMap<FerrariEntity, CreateFerrariDTO>().ReverseMap();
+            CreateMap<PujaEntity, PujaDTO>().ReverseMap();
+            CreateMap<PujaEntity, CreatePujaDTO>().ReverseMap();
             CreateMap<AppUser, UserDto>().ReverseMap();
         }
     }

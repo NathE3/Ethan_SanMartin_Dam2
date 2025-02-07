@@ -12,9 +12,6 @@ namespace LoginRegister.Services
     internal class HttpJsonService<T> : IHttpJsonProvider<T> where T : class
     {
 
-        public static string Token = string.Empty;
-
-
         LoginDTO loginDTO = App.Current.Services.GetService<LoginDTO>();
 
         public async Task<IEnumerable<T?>> GetAsync(string path)
@@ -50,7 +47,7 @@ namespace LoginRegister.Services
             string dataTokenRequest = await requestToken.Content.ReadAsStringAsync();
             UserDTO tokenUser = JsonSerializer.Deserialize<UserDTO>(dataTokenRequest);
 
-            Token = tokenUser?.Result?.Token ?? string.Empty;
+            loginDTO.Token = tokenUser?.Result?.Token ?? string.Empty;
             httpClient.DefaultRequestHeaders.Remove("Authorization");
             httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {loginDTO.Token}");
         }
