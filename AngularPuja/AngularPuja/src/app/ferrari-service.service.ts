@@ -1,87 +1,142 @@
 import { Injectable } from '@angular/core';
 import { Ferrari } from './Models/ferrari';
-import { Puja } from './Models/puja';
-
+import { Observable } from 'rxjs';
 
 @Injectable({
-providedIn: 'root'
+  providedIn: 'root'
 })
 export class FerrarisService {
-ferrariList: Ferrari[];
-readonly apiUrl = 'http://localhost:5072/api/Ferrari';
-readonly pujaUrl = 'http://localhost:5072/api/Puja';
+  readonly apiUrl = 'http://localhost:5072/api/Ferrari';
+  private authUrl = 'http://localhost:5072/api/users/login';
+  private pujaUrl= 'http://localhost:5072/api/Puja'
+  private token: string | null = null;
 
-
-constructor(){
-    this.ferrariList=[]
-}
-
-async getAllFerrari(): Promise<Ferrari[]> {
-    let headers = new Headers();
-    headers.append('Authorization', '');
-    const data = await fetch(this.apiUrl,{method:'GET',
-      headers: headers,
-     });
-    return (await data.json()) ?? [];
+  constructor() {
+    // Recuperar el token desde localStorage al inicializar el servicio
+    this.token = localStorage.getItem('authToken');
   }
 
-async getFerrariById(id: number): Promise<Ferrari | undefined> {
-    const data = await fetch(`${this.apiUrl}/${id}`);
-    return (await data.json()) ?? {};
+  login(userName: string, password: string): Observable<any> {
+    const credentials = { userName, password };
+    return new Observable<any>(observer => {
+      fetch(this.authUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(credentials)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Login response:', data);
+        if (data?.result?.token) {
+          this.setToken(data.result.token);
+        }
+        observer.next(data);
+      })
+      .catch(error => {
+        observer.error(error);
+      });
+    });
   }
-
-  async postPuja(puja:Puja): Promise<Puja> {
-    let headers = new Headers();
-    headers.append('Authorization', '');
-    headers.append('Content-Type', 'application/json');
-    const data = await fetch(this.pujaUrl,{method:'POST',
-      headers: headers,
-      body: JSON.stringify(puja),
-     });
-    return (await data.json()) ?? [];
-  }
-
-  async getPujaActual(id: number): Promise<number> {
-    let headers = new Headers();
-    headers.append('Authorization', '');
-    const data = await fetch(this.pujaUrl,{method:'GET',
-      headers: headers,
-     });
-    var pujaList: Puja[] = (await data.json()) ?? [];
-    
-    pujaList = pujaList.filter((puja: Puja) => puja.id_ferrari === id);
-    
-    let pujaMaxima =  (await this.getFerrariById(id))?.pujaInicial ?? 0;
-
-    for (let puja of pujaList) {
-      pujaMaxima = pujaMaxima>= puja.puja? pujaMaxima : puja.puja;
-    }
   
-  return pujaMaxima;
-}
-
-  async submitApplication(id: number, name: string, puja: number): Promise<boolean> {
-    
-    if (await this.getPujaActual(id) < puja){
-    const nuevaPuja: Puja = {
-      id: 0,
-      id_ferrari: id,
-      name: name,
-      puja: puja
-    }
-
-    var resultado = await this.postPuja(nuevaPuja);
-    
-    if (resultado &&  
-        'id' in resultado &&
-        'id_ferrari' in resultado &&
-        'name' in resultado &&
-        'puja' in resultado
-    ){
-      return true;
-    }
+  setToken(token: string): void {
+    this.token = token;
+    localStorage.setItem('authToken', token);
   }
-  return false;
-}
 
+  getToken(): string | null {
+    return this.token || localStorage.getItem('authToken');
+  }
+
+  logout(): void {
+    this.token = null;
+    localStorage.removeItem('authToken');
+  }
+
+  getAllFerrari(): Observable<Ferrari[]> {
+    return new Observable<Ferrari[]>(observer => {
+      const headers = this.createAuthHeaders();
+      fetch(this.apiUrl, {
+        method: 'GET',
+        headers: headers
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Response from getAllFerrari:', data);
+        observer.next(data);
+      })
+      .catch(error => {
+        console.error('Error in getAllFerrari:', error);
+        observer.error(error);
+      });
+    });
+  }
+  
+  getFerrariById(id: number): Observable<Ferrari> {
+    console.log(id, this.token);
+    return new Observable<Ferrari>(observer => {
+      const headers = this.createAuthHeaders();
+      console.log(headers);
+      fetch(`${this.apiUrl}/${id}`, {
+        method: 'GET',
+        headers: headers
+      })
+      .then(response => response.json())
+      .then(data => {
+        observer.next(data);
+      })
+      .catch(error => {
+        observer.error(error);
+      });
+    });
+  }
+
+  private createAuthHeaders(): { [key: string]: string } {
+    return {
+      'Authorization': `Bearer ${this.getToken()}`,
+      'Content-Type': 'application/json',
+    };
+  }
+  placeBid(bidData: { price: number; ferrariId: number }): Observable<any> {
+    return new Observable<any>(observer => {
+      const headers = this.createAuthHeaders();
+  
+      fetch(this.pujaUrl, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(bidData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        observer.next(data);
+      })
+      .catch(error => {
+        observer.error(error);
+      });
+    });
+  }
+  
+  getHighestBidForFerrari(ferrariId: number): Observable<any> {
+    return new Observable<any>(observer => {
+      const headers = this.createAuthHeaders();
+      fetch(this.pujaUrl, {
+        method: 'GET',
+        headers: headers
+      })
+      .then(response => response.json())
+      .then((bids: any[]) => {
+        const filteredBids = bids.filter(bid => bid.productId === ferrariId);
+  
+        if (filteredBids.length === 0) {
+          observer.next(null); 
+        } else {
+          const highestBid = filteredBids.reduce((prev, current) => (prev.price > current.price ? prev : current));
+          observer.next(highestBid);
+        }
+      })
+      .catch(error => {
+        observer.error(error);
+      });
+    });
+  }
+  
 }

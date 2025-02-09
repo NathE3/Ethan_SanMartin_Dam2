@@ -1,12 +1,17 @@
 <main>
+  <header class="brand-name">
+    <section class="logo-container">
+      <img [routerLink]="['/']" class="logo" 
+        src="https://github.com/NathE3/Ethan_SanMartin_Dam2/blob/master/imagenes/icono.jpg?raw=true" 
+        alt="logo" aria-hidden="true" />
+    </section>
+  </header>
 
-<header class="brand-name">
-  <section class="logo-container">
-<img class="logo" src="https://github.com/NathE3/Ethan_SanMartin_Dam2/blob/master/imagenes/icono.jpg?raw=true" alt="logo" aria-hidden="true" />
-</section>
-</header>
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
 
-<section class ="content">
-  <router-outlet></router-outlet>
-</section>
+  <footer>
+    <p>&copy; 2024 Subastas de Ferrari. Todos los derechos reservados.</p>
+  </footer>
 </main>

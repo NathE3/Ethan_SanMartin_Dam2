@@ -1,24 +1,72 @@
-:host {
-    --content-padding: 10px;
-    }
-    header {
-    display: block;
-    height: 30px;
-    padding: var(--content-padding);
-    box-shadow: 0px 5px 25px var(--shadow-color);
-    }
-    
-    .content {
-    padding: var(--content-padding);
-    }
 
-    .logo{
-        width: 3% !important;
-        height: auto !important;
-       }
-      
-       .logo-containesr{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .brand-name {
+            background: #690000;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .user-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .user-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .user-rank {
+            font-size: 2.5rem;
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .user-name {
+            font-size: 1.2rem;
+            color: #000000;
+            margin-bottom: 0.3rem;
+        }
+
+        .user-cv {
+            color: #95a5a6;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            font-size: 16px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+          }
+
+     

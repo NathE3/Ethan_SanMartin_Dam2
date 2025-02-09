@@ -1,41 +1,31 @@
- <div class="container">
-        <article class="listing">
-            <section class="foto-container">
-            <img class="foto" src="{{ ferrari?.image }}" alt="Exterior del Ferrari {{ ferrari?.name }}" />
+<div class="container">
+    <article class="listing">
+        <section class="foto-container">
+            <img class="foto" [src]="ferrari?.image" [alt]="'Exterior del Ferrari ' + ferrari?.name" />
+        </section>
+
+        <section class="listing-content">
+            <div class="listing-description">
+                <h1 class="listing-heading">{{ ferrari?.name }}</h1>
+                <p class="listing-location">{{ ferrari?.description }}, Año: {{ ferrari?.anoSalida }}</p>
+            </div>
+
+            <section class="listing-features">
+                <h2 class="section-heading">Detalles del Ferrari</h2>
+                <ul>
+                    <li><strong>Puja Inicial:</strong> {{ ferrari?.pujaInicial }}$</li>
+                    <li><strong>Potencia:</strong> {{ ferrari?.cv }} CV</li>
+                </ul>
             </section>
 
-            <section class="listing-content">
-                <div class="listing-description">
-                    <h1 class="listing-heading">{{ ferrari?.name }}</h1>
-                    <p class="listing-location">{{ ferrari?.description }}, Año: {{ ferrari?.anoSalida }}</p>
-                </div>
-
-                <section class="listing-features">
-                    <h2 class="section-heading">Detalles del Ferrari</h2>
-                    <ul>
-                        <li><strong>Puja Inicial:</strong> {{ ferrari?.pujaInicial }}$</li>
-                        <li><strong>Potencia:</strong> {{ ferrari?.cv }} CV</li>
-                    </ul>
-                </section>
-
-                <section class="listing-apply">
-                    <h2 class="section-heading">¡Participa en la subasta!</h2>
-                    <form (submit)="submitApplication()">
-                        <label for="puja-actual">Tu Puja</label>
-                        <input id="puja-actual" type="number" formControlName="pujaActual" placeholder="Introduce tu oferta" required>
-
-                        <label for="name">Tu Nombre</label>
-                        <input id="name" type="text" formControlName="Name" placeholder="Escribe tu nombre" required>
-
-                        <button type="submit" class="primary">Pujar Ahora</button>
-                    </form>
-                </section>
+            <section class="listing-apply">
+                <h2 class="section-heading">¡Participa en la subasta!</h2>
+                <button (click)="navigateToBidPage()" class="primary">Ir a la subasta</button>
             </section>
-        </article>
-    </div>
+        </section>
+    </article>
+</div>
 
-    <footer>
-        <p>&copy; 2024 Subastas de Ferrari. Todos los derechos reservados.</p>
-    </footer>
+   
 
 

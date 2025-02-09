@@ -1,0 +1,34 @@
+<div class="bid-container" *ngIf="ferrari">
+    <article class="bid-listing">
+        <section class="bid-foto-container">
+            <img class="bid-foto" [src]="ferrari.image" [alt]="'Exterior del Ferrari ' + ferrari.name" />
+        </section>
+
+        <section class="bid-content">
+            <div class="bid-description">
+                <h1 class="bid-heading">Subasta de {{ ferrari.name }}</h1>
+                <p class="bid-location">{{ ferrari.description }}, Año: {{ ferrari.anoSalida }}</p>
+            </div>
+
+            <section class="bid-details">
+                <h2 class="section-heading">Detalles del Ferrari</h2>
+                <ul>
+                    <li><strong>Puja Inicial:</strong> {{ ferrari.pujaInicial }}$</li>
+                    <li><strong>Potencia:</strong> {{ ferrari.cv }} CV</li>
+                    <li><strong>Puja más alta:</strong> {{ highestBid }}$</li>
+                </ul>
+            </section>
+
+            <section class="bid-form">
+                <h2 class="section-heading">¡Haz tu puja!</h2>
+                <form (submit)="submitBid($event)">
+                    <label for="bid-amount">Tu Puja</label>
+                    <input id="bid-amount" type="number" [(ngModel)]="bidAmount" name="bidAmount" placeholder="Introduce tu oferta" required>
+
+                    <button type="submit" class="primary">Pujar Ahora</button>
+                </form>
+            </section>
+        </section>
+    </article>
+</div>
+
