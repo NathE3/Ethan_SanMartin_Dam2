@@ -1,5 +1,6 @@
 export interface Puja {
-    Name:string;
+    id: number|undefined
+    name:string;
     puja:number;
     id_ferrari: number;
   }

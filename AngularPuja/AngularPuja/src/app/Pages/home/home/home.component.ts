@@ -18,7 +18,7 @@ export class HomeComponent {
   constructor() 
   {
    
-      this.ferrarisService.getEntities().subscribe((data: Ferrari[]) => {
+      this.ferrarisService.getAllFerrari().then((data: Ferrari[]) => {
       this.ferrariList = data;
       this.filteredList = data;
       });

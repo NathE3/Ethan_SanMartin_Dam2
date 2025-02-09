@@ -1,18 +1,20 @@
  <div class="container">
         <article class="listing">
-            <img class="listing-photo" src="{{ ferrari.image }}" alt="Exterior del Ferrari {{ ferrari.name }}" />
+            <section class="foto-container">
+            <img class="foto" src="{{ ferrari?.image }}" alt="Exterior del Ferrari {{ ferrari?.name }}" />
+            </section>
 
             <section class="listing-content">
                 <div class="listing-description">
-                    <h1 class="listing-heading">{{ ferrari.name }}</h1>
-                    <p class="listing-location">{{ ferrari.description }}, Año: {{ ferrari.anoSalida }}</p>
+                    <h1 class="listing-heading">{{ ferrari?.name }}</h1>
+                    <p class="listing-location">{{ ferrari?.description }}, Año: {{ ferrari?.anoSalida }}</p>
                 </div>
 
                 <section class="listing-features">
                     <h2 class="section-heading">Detalles del Ferrari</h2>
                     <ul>
-                        <li><strong>Precio estimado:</strong> {{ ferrari.precioEstimado }}$</li>
-                        <li><strong>Potencia:</strong> {{ ferrari.cv }} CV</li>
+                        <li><strong>Puja Inicial:</strong> {{ ferrari?.pujaInicial }}$</li>
+                        <li><strong>Potencia:</strong> {{ ferrari?.cv }} CV</li>
                     </ul>
                 </section>
 

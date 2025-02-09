@@ -130,3 +130,15 @@ footer {
   position: fixed;
   bottom: 0;
 }
+
+
+.foto{
+  width: 60% !important;
+  height: auto !important;
+ }
+
+ .foto-containesr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }

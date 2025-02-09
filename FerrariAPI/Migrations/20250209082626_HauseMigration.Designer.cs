@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FerrariAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250206125628_HomeMigrationNum1000000")]
-    partial class HomeMigrationNum1000000
+    [Migration("20250209082626_HauseMigration")]
+    partial class HauseMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -125,6 +125,10 @@ namespace FerrariAPI.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("PrecioEstimado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PujaInicial")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

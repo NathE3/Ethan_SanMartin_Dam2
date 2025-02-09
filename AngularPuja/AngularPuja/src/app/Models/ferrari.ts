@@ -6,4 +6,5 @@ export interface Ferrari{
     anoSalida: string;
     cv: number;
     precioEstimado: number;
+    pujaInicial: number;
 }

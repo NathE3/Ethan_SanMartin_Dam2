@@ -27,6 +27,9 @@ namespace FerrariAPI.Models.Entity
 
         [Required]
         public string PrecioEstimado { get; set; }
+
+        [Required]
+        public string PujaInicial { get; set; }
     }
      
 }

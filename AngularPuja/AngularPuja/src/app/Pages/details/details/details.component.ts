@@ -15,41 +15,48 @@ import { CommonModule } from '@angular/common';
 })
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
-  ferrariService: FerrarisService = inject(FerrarisService); 
 
-  @Input() ferrari!: Ferrari; 
+  applyForm: FormGroup;
 
- 
-  applyForm = new FormGroup({
-    name: new FormControl(''), 
-    puja: new FormControl(0), 
-  });
+  ferrari: Ferrari | undefined;
+  ferrariService: FerrarisService;
 
-  constructor() {
+  pujaActual: Number|undefined;
 
-    const ferrariId = Number(this.route.snapshot.params['id']);
+  constructor(ferrariService: FerrarisService) {
+    const ferrariId = parseInt(this.route.snapshot.params['id'], 10);
+    ferrariService.getFerrariById(ferrariId).then((ferrari) => {
+      this.ferrari = ferrari;
+      if (ferrari){
+        this.getPuja(ferrari.id)
+      }
+      
+    });
+    this.ferrariService=ferrariService;
 
-
-    this.ferrariService.getEntity(ferrariId).subscribe({
-      next: (ferrari) => {
-        this.ferrari = ferrari;
-      },
-      error: (err) => {
-        console.error('Error loading Ferrari details:', err);
-      },
+    this.applyForm = new FormGroup({
+      nombre: new FormControl<string>(''),
+      puja: new FormControl<Number|undefined>(this.pujaActual ?? 0),
     });
   }
 
+  async getPuja(id: number){
+      this.pujaActual = await this.ferrariService.getPujaActual(id) ?? 0;
+  }
 
-  submitApplication(): void {
-    const name = this.applyForm.value.name ?? '';
-    const puja = Number(this.applyForm.value.puja) ?? 0;
+  async submitApplication() {
 
-    if (name && puja > 0) {
-      this.ferrariService.submitApplication(name, puja, this.ferrari.id, this.ferrari);
-      
-    } else {
-      alert('Operación no válida.');
+    if(this.ferrari && await this.ferrariService.submitApplication(
+      this.ferrari?.id,
+      this.applyForm.value.nombre ?? '',
+      this.applyForm.value.puja ?? 0,
+
+    )){
+      this.pujaActual = this.applyForm.value.puja;
+      console.log('Puja realizada')
+    }
+    else{
+      console.log('Error en la puja')
     }
   }
 }

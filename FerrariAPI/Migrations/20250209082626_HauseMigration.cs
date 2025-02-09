@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace FerrariAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class HomeMigrationNum1000000 : Migration
+    public partial class HauseMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -62,7 +62,8 @@ namespace FerrariAPI.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AnoSalida = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cv = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PrecioEstimado = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    PrecioEstimado = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PujaInicial = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

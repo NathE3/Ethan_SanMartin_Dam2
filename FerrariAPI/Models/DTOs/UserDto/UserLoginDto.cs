@@ -8,7 +8,5 @@ namespace FerrariAPI.Models.DTOs.UserDto
         public string UserName { get; set; }
         [Required(ErrorMessage = "Field required: Password")]      
         public string Password { get; set; }
-
-
     }
 }

@@ -24,5 +24,8 @@ namespace FerrariAPI.Models.DTOs.FerrariDTO
 
         [Required(ErrorMessage = "Puja actual is required")]
         public string PrecioEstimado { get; set; }
+
+        [Required(ErrorMessage = "Puja actual is required")]
+        public string PujaInicial { get; set; }
     }
 }

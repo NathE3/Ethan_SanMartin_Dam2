@@ -18,8 +18,8 @@
   button {
     padding: 10px;
     border: solid 1px var(--primary-color);
-    background: var(--primary-color);
-    color: white;
+    background: black;
+    color: rgb(255, 248, 248);
     border-radius: 8px;
   }
   @media (min-width: 500px) and (max-width: 768px) {
@@ -37,3 +37,4 @@
         grid-template-columns: 1fr;
     }    
   }
+ 

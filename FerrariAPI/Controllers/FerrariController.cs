@@ -14,9 +14,9 @@ namespace FerrariApi.Controllers
     public class FerrariController : BaseController<FerrariEntity, FerrariDTO, CreateFerrariDTO>
     {
      
-            public FerrariController(IFerrariRepository dictadorRepository,
+            public FerrariController(IFerrariRepository ferrariRepository,
                 IMapper mapper, ILogger<IFerrariRepository> logger)
-                : base(dictadorRepository, mapper, logger)
+                : base(ferrariRepository, mapper, logger)
             {
 
             }

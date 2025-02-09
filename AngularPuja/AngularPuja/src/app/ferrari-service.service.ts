@@ -1,76 +1,87 @@
 import { Injectable } from '@angular/core';
 import { Ferrari } from './Models/ferrari';
 import { Puja } from './Models/puja';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+
 
 @Injectable({
 providedIn: 'root'
 })
 export class FerrarisService {
-private apiUrl = 'http://localhost:5072/api/';
+ferrariList: Ferrari[];
+readonly apiUrl = 'http://localhost:5072/api/Ferrari';
+readonly pujaUrl = 'http://localhost:5072/api/Puja';
 
 
-puja: Puja | undefined;
-
-submitApplication(Name: string, puja: number, Id: number, ferrari: Ferrari | undefined) {
-this.puja = {
-Name: Name,
-id_ferrari: Id,
-puja: puja
+constructor(){
+    this.ferrariList=[]
 }
 
-if (ferrari) {
-this.updateEntity(Id, ferrari).subscribe({
-next: (response) => {
-console.log('Puja created successfully:', response);
-},
-error: (err) => {
-console.error('Error creating puja:', err);
-}
-});
+async getAllFerrari(): Promise<Ferrari[]> {
+    let headers = new Headers();
+    headers.append('Authorization', '');
+    const data = await fetch(this.apiUrl,{method:'GET',
+      headers: headers,
+     });
+    return (await data.json()) ?? [];
+  }
+
+async getFerrariById(id: number): Promise<Ferrari | undefined> {
+    const data = await fetch(`${this.apiUrl}/${id}`);
+    return (await data.json()) ?? {};
+  }
+
+  async postPuja(puja:Puja): Promise<Puja> {
+    let headers = new Headers();
+    headers.append('Authorization', '');
+    headers.append('Content-Type', 'application/json');
+    const data = await fetch(this.pujaUrl,{method:'POST',
+      headers: headers,
+      body: JSON.stringify(puja),
+     });
+    return (await data.json()) ?? [];
+  }
+
+  async getPujaActual(id: number): Promise<number> {
+    let headers = new Headers();
+    headers.append('Authorization', '');
+    const data = await fetch(this.pujaUrl,{method:'GET',
+      headers: headers,
+     });
+    var pujaList: Puja[] = (await data.json()) ?? [];
+    
+    pujaList = pujaList.filter((puja: Puja) => puja.id_ferrari === id);
+    
+    let pujaMaxima =  (await this.getFerrariById(id))?.pujaInicial ?? 0;
+
+    for (let puja of pujaList) {
+      pujaMaxima = pujaMaxima>= puja.puja? pujaMaxima : puja.puja;
+    }
+  
+  return pujaMaxima;
 }
 
-if (this.puja) {
-if(ferrari) {
-if(ferrari.precioEstimado < puja){
-this.createPuja(this.puja).subscribe({
-next: (response) => {
-console.log('Puja created successfully:', response);
-},
-error: (err) => {
-console.error('Error creating puja:', err);
-}
-});
-}
-}
-}
+  async submitApplication(id: number, name: string, puja: number): Promise<boolean> {
+    
+    if (await this.getPujaActual(id) < puja){
+    const nuevaPuja: Puja = {
+      id: 0,
+      id_ferrari: id,
+      name: name,
+      puja: puja
+    }
+
+    var resultado = await this.postPuja(nuevaPuja);
+    
+    if (resultado &&  
+        'id' in resultado &&
+        'id_ferrari' in resultado &&
+        'name' in resultado &&
+        'puja' in resultado
+    ){
+      return true;
+    }
+  }
+  return false;
 }
 
-constructor(private http: HttpClient) {
-}
-
-getEntities(): Observable<Ferrari[]> {
-return this.http.get<Ferrari[]>(this.apiUrl+"Ferrari");
-}
-
-getEntity(id: number): Observable<Ferrari> {
-return this.http.get<Ferrari>(`${this.apiUrl+"Ferrari"}/${id}`);
-}
-
-createEntity(entity: Ferrari): Observable<Ferrari> {
-return this.http.post<Ferrari>(this.apiUrl+"Ferrari", entity);
-}
-
-createPuja(entity: Puja): Observable<Puja> {
-return this.http.post<Puja>(this.apiUrl+"Puja", entity);
-}
-
-updateEntity(id: number, entity: Ferrari): Observable<Ferrari> {
-return this.http.put<Ferrari>(`${this.apiUrl+"Ferrari"}/${id}`, entity);
-}
-
-deleteEntity(id: number): Observable<Ferrari> {
-return this.http.delete<Ferrari>(`${this.apiUrl+"Ferrari"}/${id}`);
-}
 }

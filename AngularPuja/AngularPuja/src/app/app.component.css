@@ -11,3 +11,14 @@
     .content {
     padding: var(--content-padding);
     }
+
+    .logo{
+        width: 3% !important;
+        height: auto !important;
+       }
+      
+       .logo-containesr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
