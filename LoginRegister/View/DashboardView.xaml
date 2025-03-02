@@ -10,13 +10,8 @@
     d:DataContext="{d:DesignInstance Type=viewmodels:DashboardViewModel}"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
     ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
-    mc:Ignorable="d" Width="804" Height="441">
-
-    <UserControl.Background>
-        <ImageBrush 
-        ImageSource="/Resources/edificio.jpg" 
-        Stretch="UniformToFill" />
-    </UserControl.Background>
+    mc:Ignorable="d" Width="804" Height="441"
+    Background="Black">
 
     <Grid Margin="42" VerticalAlignment="Top" RenderTransformOrigin="0.502,0.458">
         <Grid.RowDefinitions>
@@ -73,6 +68,17 @@
             <TextBlock Text="{Binding TotalPages, StringFormat=' {0}'}" Foreground="Brown" VerticalAlignment="Center" Margin="10,0" />
             <Button Content="Siguiente" Command="{Binding NextPageCommand}" Margin="10,0" Background="Black"  Foreground="White"/>
         </StackPanel>
+        <ui:Button
+            Command="{Binding InfoCommand, Mode=OneWay}"
+            Content="Informacion"
+            Icon="{ui:SymbolIcon Fluent24}"
+            Margin="189,0,0,0"
+            Background="Black" 
+            Foreground="White"
+            VerticalAlignment="Center"
+            Height="40"
+            Width="150"
+            HorizontalAlignment="Left" />
     </Grid>
 </UserControl>
 

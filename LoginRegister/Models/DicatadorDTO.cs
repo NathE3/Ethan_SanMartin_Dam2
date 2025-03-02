@@ -16,9 +16,12 @@ namespace LoginRegister.Models
 
         [JsonPropertyName("pais")]
         public string Pais { get; set; }
-    
-        }
+
+        [JsonPropertyName("image")]
+        public string Image { get; set; }
+
     }
+}
 
   
   

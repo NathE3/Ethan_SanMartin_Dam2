@@ -20,6 +20,8 @@ namespace Ferraro.Models.Entity
         [Required]
         [MaxLength(20)]
         public string Pais { get; set; }
-     
+
+        public string Image { get; set; }
+
     }
 }

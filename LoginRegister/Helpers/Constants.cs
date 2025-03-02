@@ -15,6 +15,7 @@ namespace LoginRegister.Helpers
         public const string DICATADOR_URL = "Dicatador";
         public const string LOGIN_PATH = "users/login";
         public const string REGISTER_PATH = "users/register";
+        public const string PATH_IMAGE_NOT_FOUND = "Not_found.png";
 
     }
 }

@@ -9,16 +9,10 @@
     xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel" 
     d:DataContext="{d:DesignInstance Type=viewmodels:AddDicatadorViewModel}"
     mc:Ignorable="d"
-    Background="#1E1E2F" Height="450" Width="400"
+    Background="Black" Height="450" Width="400"
     Title="Añadir Dictador">
 
-
-
     <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Height="446" Width="400">
-
-        <Grid.Background>
-            <ImageBrush ImageSource="pack://application:,,,/Resources/edificio.jpg" Stretch="UniformToFill" />
-        </Grid.Background>
 
         <!-- Definir las filas del grid para distribuir los elementos -->
         <Grid.RowDefinitions>
@@ -36,7 +30,7 @@
             Text="Añadir Dicatador" 
             FontSize="28" 
             FontWeight="SemiBold" 
-            Foreground="Black"
+            Foreground="White"
             HorizontalAlignment="Center" 
             Margin="0,20,0,20" 
             Grid.Row="0"/>
@@ -44,7 +38,7 @@
         <!-- Campo Nombre -->
         <TextBlock 
             Text="Nombre Dicatador"
-            Foreground="Black"
+            Foreground="White"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             Margin="135,0,0,0"
@@ -65,7 +59,7 @@
         <!-- Campo Descripción -->
         <TextBlock 
             Text="Descripción"
-            Foreground="Black"
+            Foreground="White"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             Margin="156,0,0,0"
@@ -86,7 +80,7 @@
         <!-- Campo País -->
         <TextBlock 
             Text="País"
-            Foreground="Black"
+            Foreground="White"
             VerticalAlignment="Top"
             HorizontalAlignment="Left"
             Margin="176,40,0,0"

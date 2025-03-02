@@ -13,12 +13,13 @@ public partial class DashboardViewModel : ViewModelBase
 {
     private readonly IDicatadorServiceToApi _dicatadorServiceToApi;
     private readonly AddDicatadorViewModel _addViewModel;
+    private readonly InformacionViewModel _infoViewModel;
 
-    public DashboardViewModel(IDicatadorServiceToApi dicatadorServiceToApi, AddDicatadorViewModel addViewModel)
+    public DashboardViewModel(IDicatadorServiceToApi dicatadorServiceToApi, AddDicatadorViewModel addViewModel, InformacionViewModel infoViewModel)
     {
         _dicatadorServiceToApi = dicatadorServiceToApi;
         _addViewModel = addViewModel;
-
+        _infoViewModel = infoViewModel;
         Dicatadores = new List<DicatadorDTO>(); 
         PagedDicatadores = new ObservableCollection<DicatadorDTO>();
 
@@ -124,5 +125,12 @@ public partial class DashboardViewModel : ViewModelBase
     private bool CanGoToPreviousPage() => CurrentPage > 0;
 
     private bool CanGoToNextPage() => CurrentPage < TotalPages - 1;
+
+    [RelayCommand]
+    public void Info()
+    {
+        App.Current.Services.GetService<MainViewModel>().SelectedViewModel = App.Current.Services.GetService<MainViewModel>().InformacionViewModel;
+        App.Current.Services.GetService<MainViewModel>().LoadAsync();
+    }
 }
 

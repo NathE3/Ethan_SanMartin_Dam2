@@ -28,6 +28,14 @@
             <view:RegistroView/>
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type viewModel:DetallesViewModel}">
+            <view:DetallesView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:InformacionViewModel}">
+            <view:InformacionView/>
+        </DataTemplate>
+
     </Window.Resources>
 
     <Grid>

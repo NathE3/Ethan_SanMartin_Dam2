@@ -45,6 +45,8 @@ namespace LoginRegister
             services.AddTransient<LoginViewModel>();
             services.AddSingleton<AddDicatadorViewModel>();
             services.AddTransient<RegistroViewModel>();
+            services.AddTransient<DetallesViewModel>();
+            services.AddTransient<InformacionViewModel>();
             services.AddTransient<ViewModelBase>();
       
 
@@ -52,7 +54,9 @@ namespace LoginRegister
             //Services
             services.AddSingleton<LoginDTO>();   
             services.AddSingleton<IDicatadorServiceToApi, DicatadorServiceToApi>();
+            services.AddSingleton<IStringUtils, StringUtils>();
             services.AddSingleton(typeof(IHttpJsonProvider<>), typeof(HttpJsonService<>));
+            services.AddSingleton(typeof(IFileService<>), typeof(FileService<>));
             return services.BuildServiceProvider();
         }
     }

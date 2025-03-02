@@ -9,15 +9,8 @@
     xmlns:viewmodels="clr-namespace:LoginRegister.ViewModel" 
     d:DataContext="{d:DesignInstance Type=viewmodels:LoginViewModel}"
     mc:Ignorable="d"
-    Height="434" Width="789" Loaded="UserControl_Loaded">
-
-
-    <UserControl.Background>
-        <ImageBrush 
-            ImageSource="/Resources/edificio.jpg" 
-            Stretch="UniformToFill" />
-    </UserControl.Background>
-
+    Height="434" Width="789" Loaded="UserControl_Loaded"
+    Background="Black">
 
     <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
 
@@ -37,7 +30,7 @@
             Text="Inicio de Sesión" 
             FontSize="28" 
             FontWeight="SemiBold" 
-            Foreground="Black" 
+            Foreground="White" 
             HorizontalAlignment="Center" 
             Margin="0,0,0,20" 
             Grid.Row="0" />
