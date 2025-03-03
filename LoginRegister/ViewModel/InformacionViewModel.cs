@@ -34,6 +34,7 @@ namespace LoginRegister.ViewModel
 
         public override async Task LoadAsync()
         {
+            Items.Clear();
             IEnumerable<DicatadorDTO> dicatatores = await _dicatadorServiceToApi.GetDicatadores();
             foreach (var dicatador in dicatatores)
             {

@@ -112,6 +112,28 @@
                     return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
                 }
             }
+
+            [ApiExplorerSettings(IgnoreApi = true)]
+            [Authorize(Roles = "admin")]
+            [HttpDelete("{id:int}")]
+            [ProducesResponseType(StatusCodes.Status200OK)]
+            [ProducesResponseType(StatusCodes.Status404NotFound)]
+            public async Task<IActionResult> Delete(int id)
+            {
+                try
+                {
+                    var entity = await _repository.GetAsync(id);
+                    if (entity == null) return NotFound();
+
+                    await _repository.DeleteAsync(id);
+                    return Ok();
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error deleting data");
+                    return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                }
+            }
         }
     }
 

@@ -3,8 +3,10 @@ using CommunityToolkit.Mvvm.Input;
 using LoginRegister.Helpers;
 using LoginRegister.Interface;
 using LoginRegister.Models;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 
 
@@ -80,6 +82,14 @@ namespace LoginRegister.ViewModel
             {
                 _fileService.Save(saveFileDialog.FileName, (IEnumerable<DicatadorDTO>)Dicatador);
             }
+        }
+
+        [RelayCommand]
+        public async Task Delete() 
+        {
+            await _httpJsonProvider.Delete(Constants.DICATADOR_URL + "/", Dicatador.Id);
+            MessageBox.Show("Dicatador eliminado con exito.", "Error de eliminación", MessageBoxButton.OK, MessageBoxImage.Warning);
+            App.Current.Services.GetService<MainViewModel>().LoadAsync();
         }
     }
 }

@@ -30,6 +30,7 @@
             <TextBlock Grid.Column="0" Foreground="White" Grid.Row="1" Text="{Binding Dicatador.Description, StringFormat='Descripcion: {0}'}"/>
             <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Margin="10,0,10,10">
                 <Button Grid.Column="0" Grid.Row="1" Content="Save Data" Command="{Binding SaveCommand}" Margin="10,0,30,0" />
+                <Button Grid.Column="0" Grid.Row="1" Content="Delete Dicatador" Command="{Binding DeleteCommand}" Margin="10,0,30,0" />
                 <Button Grid.Column="0" Grid.Row="1" Content="Close" Command="{Binding DataContext.CloseCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
             </StackPanel>
         </StackPanel>

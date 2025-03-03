@@ -207,6 +207,30 @@ namespace LoginRegister.Services
             }
             return default;
         }
+
+        public async Task<T?> Delete(string path, int id)
+        {
+            try
+            {
+                using HttpClient httpClient = new HttpClient();
+                {
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {loginDTO.Token}");
+                    HttpResponseMessage request = await httpClient.DeleteAsync($"{Constants.BASE_URL}{path}{id}");
+                    if (request.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        await Authenticate(path, httpClient, request);
+                        request = await httpClient.DeleteAsync($"{Constants.BASE_URL}{path}{id}");
+                    }
+                    string dataRequest = await request.Content.ReadAsStringAsync();
+                    return JsonSerializer.Deserialize<T>(dataRequest);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return default;
+        }
     }
 }
 

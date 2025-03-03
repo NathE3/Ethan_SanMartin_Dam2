@@ -125,12 +125,6 @@ public partial class DashboardViewModel : ViewModelBase
     private bool CanGoToPreviousPage() => CurrentPage > 0;
 
     private bool CanGoToNextPage() => CurrentPage < TotalPages - 1;
-
-    [RelayCommand]
-    public void Info()
-    {
-        App.Current.Services.GetService<MainViewModel>().SelectedViewModel = App.Current.Services.GetService<MainViewModel>().InformacionViewModel;
-        App.Current.Services.GetService<MainViewModel>().LoadAsync();
-    }
+ 
 }
 
