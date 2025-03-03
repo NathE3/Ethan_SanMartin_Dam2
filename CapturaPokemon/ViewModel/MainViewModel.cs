@@ -7,13 +7,16 @@ namespace CapturaPokemon.ViewModel
     {
         private ViewModelBase? _selectedViewModel;
 
+        public bool IsMenuEnabled { get; }
+
         public MainViewModel(HistoricoViewModel historicoViewModel, BattleViewModel battleViewModel, TeamViewModel teamViewModel, ImportViewModel importViewModel)
         {
             HistoricoViewModel = historicoViewModel;
             BattleViewModel = battleViewModel;
             TeamViewModel = teamViewModel;
             ImportViewModel = importViewModel;
-            _selectedViewModel = battleViewModel; 
+            _selectedViewModel = battleViewModel;
+            IsMenuEnabled = false;
         }
 
         public ViewModelBase? SelectedViewModel

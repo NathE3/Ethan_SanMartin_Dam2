@@ -40,7 +40,6 @@
             <MenuItem Header="_Historico" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding HistoricoViewModel}"/>
             <MenuItem Header="_Battle" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding BattleViewModel}"/>
             <MenuItem Header="_Import" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding ImportViewModel}"/>
-
         </Menu>
 
         <ContentControl  Grid.Row="1" Content="{Binding SelectedViewModel}"/>

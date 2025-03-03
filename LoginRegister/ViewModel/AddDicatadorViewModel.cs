@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using LoginRegister.Interface;
 using LoginRegister.Models;
 using Microsoft.Extensions.DependencyInjection;
+using System.Drawing;
 using System.Windows;
 
 namespace LoginRegister.ViewModel
@@ -37,12 +38,19 @@ namespace LoginRegister.ViewModel
                 return;
             }
 
+           
+
             DicatadorDTO dicatadorDTO = new()
             {
+                
                 Name = Name,
                 Description = Description,
                 Pais = Pais,
             };
+
+            if (string.IsNullOrEmpty(dicatadorDTO.Image)){
+                dicatadorDTO.Image = "";
+            }
 
             try
             {

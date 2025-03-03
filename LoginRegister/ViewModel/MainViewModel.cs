@@ -6,8 +6,8 @@ namespace LoginRegister.ViewModel;
 public partial class MainViewModel : ViewModelBase 
 {
        private ViewModelBase? _selectedViewModel;
-
-        public MainViewModel(DashboardViewModel dashboardViewModel, LoginViewModel loginViewModel, RegistroViewModel registroViewModel, AddDicatadorViewModel addViewModel, InformacionViewModel informacionViewModel, DetallesViewModel detallesViewModel)
+       private bool _isMenuEnabled;
+    public MainViewModel(DashboardViewModel dashboardViewModel, LoginViewModel loginViewModel, RegistroViewModel registroViewModel, AddDicatadorViewModel addViewModel, InformacionViewModel informacionViewModel, DetallesViewModel detallesViewModel)
         {
             DashboardViewModel = dashboardViewModel;
             LoginViewModel = loginViewModel;
@@ -16,15 +16,28 @@ public partial class MainViewModel : ViewModelBase
             InformacionViewModel = informacionViewModel;
             DetallesViewModel = detallesViewModel;
             _selectedViewModel = loginViewModel;
-        }
+            IsMenuEnabled = false;
 
-        public ViewModelBase? SelectedViewModel
+    }
+
+    public ViewModelBase? SelectedViewModel
+    {
+        get => _selectedViewModel;
+        set
         {
-            get => _selectedViewModel;
-            set => SetProperty(ref _selectedViewModel, value);
+            SetProperty(ref _selectedViewModel, value);
+            if (value is LoginViewModel) 
+            {
+                IsMenuEnabled = false;
+            }
+            else 
+            {
+                IsMenuEnabled = true;
+            }  
         }
+    }
 
-        public DashboardViewModel DashboardViewModel { get; }
+    public DashboardViewModel DashboardViewModel { get; }
         public LoginViewModel LoginViewModel { get; }
         public RegistroViewModel RegistroViewModel { get; }
         public AddDicatadorViewModel AddDicatadorViewModel { get; }
@@ -32,8 +45,8 @@ public partial class MainViewModel : ViewModelBase
         public DetallesViewModel DetallesViewModel { get; }
 
 
-    public override async Task LoadAsync()
-        {
+       public override async Task LoadAsync()
+       {
             if (SelectedViewModel is not null)
             {
                 await SelectedViewModel.LoadAsync();
@@ -45,10 +58,16 @@ public partial class MainViewModel : ViewModelBase
         {
             if (parameter is ViewModelBase viewModel)
             {
-                SelectedViewModel = viewModel;
+                SelectedViewModel = viewModel;           
                 await LoadAsync();
             }
         }
+
+         public bool IsMenuEnabled
+            {
+                 get => _isMenuEnabled;
+                 set => SetProperty(ref _isMenuEnabled, value);
+            }
 }
  
 

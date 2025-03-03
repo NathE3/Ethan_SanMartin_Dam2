@@ -37,10 +37,36 @@
         </DataTemplate>
 
     </Window.Resources>
+    
+    
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-        <ContentControl Content="{Binding SelectedViewModel}"/>
+        <Grid Grid.Row="0" Background="Black">
+            <Menu IsEnabled="{Binding IsMenuEnabled}" Background="Black" Foreground="White"  
+          FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+                <Menu.Style>
+                    <Style TargetType="Menu">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding SelectedViewModel}" Value="{x:Type  viewModel:LoginViewModel}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Menu.Style>
+                <MenuItem Header="_Dashboard" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding DashboardViewModel}"/>
+                <MenuItem Header="_Informacion" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding InformacionViewModel}"/>
+                <MenuItem Header="_Login" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding LoginViewModel}"/>
+            </Menu>
+        </Grid>
+
+        <ContentControl  Grid.Row="1" Content="{Binding SelectedViewModel}"/>
 
     </Grid>
 </Window>

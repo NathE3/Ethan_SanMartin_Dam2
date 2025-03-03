@@ -56,7 +56,7 @@ namespace LoginRegister.ViewModel
                     App.Current.Services.GetService<MainViewModel>().SelectedViewModel = App.Current.Services.GetService<MainViewModel>().DashboardViewModel;
                     App.Current.Services.GetService<MainViewModel>().LoadAsync();
                     Name = string.Empty;
-                    PasswordView = String.Empty;
+                    PasswordView = string.Empty;
                  
                 }
                 else

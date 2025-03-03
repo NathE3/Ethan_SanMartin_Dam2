@@ -50,9 +50,9 @@ namespace LoginRegister.ViewModel
             Dicatador = dicatadores.FirstOrDefault(x => x.Id == _dicatadorId) ?? new DicatadorDTO();
         }
 
-        internal void SetParentViewModel(ViewModelBase galaxyOverviewViewModel)
+        internal void SetParentViewModel(ViewModelBase informacionViewModel)
         {
-            if (galaxyOverviewViewModel is InformacionViewModel informacionview)
+            if (informacionViewModel is InformacionViewModel informacionview)
             {
                 _informacionViewModel = informacionview;
             }
