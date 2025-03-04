@@ -53,7 +53,10 @@
                     <Style TargetType="Menu">
                         <Setter Property="Visibility" Value="Visible"/>
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding SelectedViewModel}" Value="{x:Type  viewModel:LoginViewModel}">
+                            <DataTrigger Binding="{Binding SelectedViewModel}" Value="{x:Type viewModel:LoginViewModel}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding SelectedViewModel}" Value="{x:Type viewModel:RegistroViewModel}">
                                 <Setter Property="Visibility" Value="Collapsed"/>
                             </DataTrigger>
                         </Style.Triggers>

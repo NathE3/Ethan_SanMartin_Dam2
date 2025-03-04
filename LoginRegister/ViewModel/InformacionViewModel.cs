@@ -40,7 +40,7 @@ namespace LoginRegister.ViewModel
             {
                 if (string.IsNullOrEmpty(dicatador.Image))
                 {
-                    dicatador.Image = "/Resources/Not_found.png";
+                    dicatador.Image = Constants.PATH_IMAGE_NOT_FOUND;
                 }
                 items.Add(dicatador);
             }

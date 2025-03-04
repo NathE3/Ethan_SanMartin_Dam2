@@ -45,7 +45,7 @@ namespace LoginRegister.ViewModel
             {
                 if (string.IsNullOrEmpty(dicatador.Image))
                 {
-                    dicatador.Image = "/Resources/Not_found.png";
+                    dicatador.Image = Constants.PATH_IMAGE_NOT_FOUND;
                 }
                 Items.Add(dicatador);
             }
@@ -87,7 +87,7 @@ namespace LoginRegister.ViewModel
         [RelayCommand]
         public async Task Delete() 
         {
-            await _httpJsonProvider.Delete(Constants.DICATADOR_URL + "/", Dicatador.Id);
+            await _httpJsonProvider.Delete(Constants.DICATADOR_URL + "/", Dicatador.Id);          
             MessageBox.Show("Dicatador eliminado con exito.", "Error de eliminación", MessageBoxButton.OK, MessageBoxImage.Warning);
             App.Current.Services.GetService<MainViewModel>().LoadAsync();
         }
