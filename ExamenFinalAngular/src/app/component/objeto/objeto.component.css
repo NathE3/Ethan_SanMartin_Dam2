@@ -1,0 +1,45 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.listing-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.listing {
+  width: 350px;
+  height: auto;
+  background: var(--accent-color, #f9f9f9);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+
+.listing:hover {
+  transform: scale(1.05); 
+}
+
+.listing h1 a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.listing h1 a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.listing-heading {
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+}

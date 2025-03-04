@@ -1,0 +1,5 @@
+<div class="listado-objetos">
+  <app-objeto *ngFor="let obj of objetoList" [objeto]="obj"></app-objeto>
+</div>
+
+<a [routerLink]="'/anadir'" class="add-button">Añadir</a>

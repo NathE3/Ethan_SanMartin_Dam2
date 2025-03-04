@@ -61,7 +61,7 @@ namespace LoginRegister.Services
 
                     httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {loginDTO.Token}");
 
-                    // Serializar el objeto 'data' (PokemonDTO) a JSON
+                    // Serializar el objeto 'data' (DTO) a JSON
                     string jsonContent = JsonSerializer.Serialize(data);
 
                     // Crear el contenido HTTP con el tipo adecuado para enviar JSON

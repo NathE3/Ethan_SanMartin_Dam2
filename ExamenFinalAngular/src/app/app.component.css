@@ -1,0 +1,72 @@
+:host {
+  --content-padding: 10px;
+}
+
+header {
+  display: block;
+  height: 60px;
+  padding: var(--content-padding);
+  box-shadow: 0px 5px 25px var(--shadow-color);
+}
+
+.content {
+  padding: var(--content-padding);
+}
+
+.brand-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+@media (max-width: 768px) {
+  /* Para pantallas de menos de 768px (tabletas y móviles) */
+  header {
+    height: auto;
+    padding: 10px 15px; /* Ajusta el relleno */
+  }
+  
+  .brand-name {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Reduce el espacio entre el logo y el texto */
+  }
+
+  .brand-logo {
+    height: 50px; /* Ajusta el tamaño del logo */
+  }
+
+  h1 {
+    font-size: 1.2em; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para pantallas de menos de 480px (móviles) */
+  .brand-name {
+    gap: 3px;
+  }
+
+  h1 {
+    font-size: 1em; /* Ajusta aún más el tamaño del título */
+  }
+  
+  .brand-logo {
+    height: 40px; /* Ajusta el tamaño del logo para pantallas muy pequeñas */
+  }
+}
+
