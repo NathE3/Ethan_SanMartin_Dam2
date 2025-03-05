@@ -76,7 +76,6 @@ namespace LoginRegister.ViewModel
         [RelayCommand]
         private async void Register()
         {
-
             var mainWindow = App.Current.Services.GetService<MainViewModel>();
             mainWindow.SelectedViewModel = App.Current.Services.GetService<MainViewModel>().RegistroViewModel;
         }
