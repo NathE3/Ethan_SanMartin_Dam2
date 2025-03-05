@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Ferraro.Models.Entity;
+using RestAPI.Models.Entity;
 
-namespace Ferraro.Data
+namespace RestAPI.Data
 {
     public class ApplicationDbContext : IdentityDbContext<AppUser>
     {

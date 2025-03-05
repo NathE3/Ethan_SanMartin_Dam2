@@ -1,0 +1,19 @@
+<div class="container">
+  <button class="back-button" (click)="goBack()">⬅ Volver</button>
+  <h1 class="title">Crear Nuevo Objeto</h1>
+
+  <div class="form-group">
+    <label for="name">Nombre:</label>
+    <input id="name" type="text" placeholder="Nombre" [(ngModel)]="nuevoObjeto.name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="boolOption">Opción:</label>
+    <select id="boolOption" [(ngModel)]="nuevoObjeto.boolOption">
+      <option [value]="true">Verdadero</option>
+      <option [value]="false">Falso</option>
+    </select>
+  </div>
+
+  <button class="update-button" (click)="crearObjeto()">Crear</button>
+</div>

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Ferraro.Models.DTOs.DictadorDto
+namespace RestAPI.Models.DTOs.DictadorDto
 {
     public class CreateDicatadorDto
     {

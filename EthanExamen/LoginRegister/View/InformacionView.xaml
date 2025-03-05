@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="LoginRegister.View.InformacionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LoginRegister.View" 
+             xmlns:viewmodel="clr-namespace:LoginRegister.ViewModel"
+             xmlns:view="clr-namespace:LoginRegister.View" 
+             d:DataContext="{d:DesignInstance Type=viewmodel:InformacionViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="Black">
+
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:DetallesViewModel}">
+            <view:DetallesView/>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+           
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10" Grid.Row="0">
+            <TextBox Text="{Binding IdAutorFiltro, Mode=TwoWay}" 
+                     Foreground="Black" 
+                     VerticalAlignment="Top" 
+                     Width="150"
+                     Margin="0,0,10,0"/>
+
+            <Button Content="Filtrar" 
+                    Command="{Binding FiltrarCommand}" 
+                    Foreground="White" 
+                    Background="Gray" 
+                    VerticalAlignment="Top" 
+                    Width="100" />
+        </StackPanel>
+
+      
+        <ScrollViewer Grid.Row="1">
+            <ItemsControl ItemsSource="{Binding Items, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="5">
+                            <StackPanel>
+                                <Button Height="100" Padding="5" Command="{Binding DataContext.SelectViewModelCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding Id}">
+                                    <Image Source="{Binding Image}" Stretch="Uniform"/>
+                                </Button>
+                                <Border Background="Black" Height="50">
+                                    <TextBlock Foreground="White" Text="{Binding Name}" 
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <ContentControl Grid.Row="2" Content="{Binding SelectedViewModel}"/>
+    </Grid>
+</UserControl>

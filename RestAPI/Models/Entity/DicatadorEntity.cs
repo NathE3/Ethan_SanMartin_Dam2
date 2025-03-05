@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Ferraro.Models.Entity
+namespace RestAPI.Models.Entity
 {
     public class DicatadorEntity
     {

@@ -1,0 +1,21 @@
+<div class="container">
+  <button class="back-button" (click)="goBack()">⬅ Volver</button>
+  <h1 class="title">Detalle del Objeto</h1>
+  <p class="subtitle">ID: {{ objeto.id }}</p>
+
+  <div class="form-group">
+    <label for="name">Nombre:</label>
+    <input id="name" type="text" [(ngModel)]="objeto.name" />
+  </div>
+
+  <div class="form-group">
+    <label for="boolOption">Opción:</label>
+    <select id="boolOption" [(ngModel)]="objeto.boolOption">
+      <option [ngValue]="true">Verdadero</option>
+      <option [ngValue]="false">Falso</option>
+    </select>
+  </div>  
+
+  <button class="update-button" (click)="actualizarObjeto()">Actualizar</button>
+  <button class="delete-button" (click)="eliminarObjeto()">Eliminar</button>
+</div>
