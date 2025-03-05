@@ -24,7 +24,7 @@
 
       
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" Margin="10">
-            <TextBlock Grid.Column="0" Foreground="White" Grid.Row="1" Text="{Binding Dicatador.Id, StringFormat='Id: {0}'}"/>
+            <TextBlock Grid.Column="0" Foreground="White" Grid.Row="1" Text="{Binding Dicatador.Id_autor, StringFormat='IdAutor: {0}'}"/>
             <TextBlock Grid.Column="0" Foreground="White" Grid.Row="1" Text="{Binding Dicatador.Name, StringFormat='Name: {0}'}"/>
             <TextBlock Grid.Column="0" Foreground="White" Grid.Row="1" Text="{Binding Dicatador.Pais, StringFormat='Pais: {0}'}"/>
             <TextBlock Grid.Column="0" Foreground="White" Grid.Row="1" Text="{Binding Dicatador.Description, StringFormat='Descripcion: {0}'}"/>

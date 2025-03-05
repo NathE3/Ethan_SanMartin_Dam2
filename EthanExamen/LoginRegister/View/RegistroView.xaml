@@ -14,40 +14,32 @@
     <Grid VerticalAlignment="Center" HorizontalAlignment="Center"  Height="399" Width="316">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-
             <RowDefinition Height="Auto" />
-
             <RowDefinition Height="Auto" />
-
             <RowDefinition Height="Auto" />
-
             <RowDefinition Height="Auto" />
-
             <RowDefinition Height="Auto" />
-
         </Grid.RowDefinitions>
-
 
         <TextBlock 
             Text="Registro de Usuario" 
             FontSize="28" 
             FontWeight="SemiBold" 
-            Foreground="Black"
+            Foreground="White"
             HorizontalAlignment="Center" 
             Margin="0,0,0,30" 
             Grid.Row="0"/>
 
-
         <TextBlock Text="Nombre Completo"
                    Foreground="White"
                    VerticalAlignment="Top"
-                   HorizontalAlignment="Left"
-                   Margin="73,46,0,0"
+                   HorizontalAlignment="Center"
+                   Margin="0,46,0,0"
                    FontSize="14" 
                    IsHitTestVisible="False"/>
         <ui:TextBox 
             Background="White" 
-            Margin="14,70,68,3" 
+            Margin="41,70,41,3" 
             Text="{Binding Name, Mode=TwoWay}"
             BorderBrush="#4A90E2" BorderThickness="1" Padding="10,5" FontSize="14" Grid.RowSpan="3">
             <ui:TextBox.Effect>
@@ -55,18 +47,17 @@
             </ui:TextBox.Effect>
         </ui:TextBox>
 
-
         <TextBlock Text="Nombre de Usuario"
                    Foreground="White"
                    VerticalAlignment="Top"
-                   HorizontalAlignment="Left"
-                   Margin="70,5,0,0"
+                   HorizontalAlignment="Center"
+                   Margin="0,5,0,0"
                    FontSize="14" 
                    IsHitTestVisible="False"
                    Grid.Row="3"/>
         <ui:TextBox 
             Background="White" 
-            Margin="14,5,68,297" 
+            Margin="41,8,41,295" 
             Text="{Binding UserName, Mode=TwoWay}"
             BorderBrush="White" BorderThickness="1" Padding="10,5" FontSize="14"
             Grid.Row="5">
@@ -75,18 +66,17 @@
             </ui:TextBox.Effect>
         </ui:TextBox>
 
-
         <TextBlock Text="Correo Electrónico"
                    Foreground="White"
                    VerticalAlignment="Top"
-                   HorizontalAlignment="Left"
-                   Margin="74,44,0,0"
+                   HorizontalAlignment="Center"
+                   Margin="0,45,0,0"
                    FontSize="14" 
                    IsHitTestVisible="False"
                    Grid.Row="5"/>
         <ui:TextBox 
             Background="White" 
-            Margin="14,62,68,239" 
+            Margin="41,63,41,239" 
             Text="{Binding Email, Mode=TwoWay}"
             BorderBrush="White" BorderThickness="1" Padding="10,5" FontSize="14"
             Grid.Row="5">
@@ -95,18 +85,17 @@
             </ui:TextBox.Effect>
         </ui:TextBox>
 
-
         <TextBlock Text="Contraseña"
                    Foreground="White"
                    VerticalAlignment="Top"
-                   HorizontalAlignment="Left"
-                   Margin="96,100,0,0"
+                   HorizontalAlignment="Center"
+                   Margin="0,101,0,0"
                    FontSize="14" 
                    IsHitTestVisible="False"
                    Grid.Row="5"/>
         <ui:PasswordBox 
             Background="White" 
-            Margin="14,123,68,180" 
+            Margin="41,124,41,180" 
             Password="{Binding Password, Mode=TwoWay}"
             BorderBrush="White" BorderThickness="1" Padding="10,5" FontSize="14"
             Grid.Row="5">
@@ -114,7 +103,6 @@
                 <DropShadowEffect Color="White" Direction="270" BlurRadius="5" ShadowDepth="2"/>
             </ui:PasswordBox.Effect>
         </ui:PasswordBox>
-
 
         <ui:Button 
             Command="{Binding RegistroCommand, Mode=OneWay}"
@@ -124,15 +112,29 @@
             Foreground="White"
             Width="200" 
             Height="50" 
-            HorizontalAlignment="Left" 
+            HorizontalAlignment="Center" 
             VerticalAlignment="Top" 
             Grid.Row="5" 
-            Margin="33,167,0,0" 
+            Margin="0,167,0,0" 
             CornerRadius="25"
             FontSize="16">
             <ui:Button.Effect>
                 <DropShadowEffect Color="White" Direction="270" BlurRadius="10" ShadowDepth="4"/>
             </ui:Button.Effect>
         </ui:Button>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Left" Margin="65,229,0,77">
+
+            <TextBlock Text="¿Ya tienes una cuenta? " Foreground="White" />
+
+            <TextBlock Foreground="#4A90E2" Cursor="Hand">
+            <Hyperlink Command="{Binding LoginCommand}">
+                 <Run Text="Vuelve al login" />
+            </Hyperlink>
+            </TextBlock>
+
+        </StackPanel>
+
     </Grid>
 </UserControl>
+

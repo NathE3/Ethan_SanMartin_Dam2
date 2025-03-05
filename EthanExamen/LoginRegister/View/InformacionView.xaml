@@ -58,8 +58,7 @@
                                     <Image Source="{Binding Image}" Stretch="Uniform"/>
                                 </Button>
                                 <Border Background="Black" Height="50">
-                                    <TextBlock Foreground="White" Text="{Binding Name}" 
-                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <TextBlock Foreground="White" Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Border>
                             </StackPanel>
                         </Border>
